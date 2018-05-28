@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">FWD</string>
+    <string name="workout_button_label">Workout Design</string>
+    <string name="history_button_label">Workout History</string>
+    <string name="generate_workout_button">GENERATE WORKOUT</string>
+
 </resources>

@@ -8,19 +8,7 @@
     tools:context=".CustomWorkout">
 
     <TextView
-        android:id="@+id/step1Header"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="12dp"
-        android:text="Step 1"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/step1Figure" />
-
-    <TextView
-        android:id="@+id/tv_display"
+        android:id="@+id/exerciseTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
@@ -33,50 +21,104 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/step1Figure"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:adjustViewBounds="true"
-        android:cropToPadding="true"
-        android:padding="12dp"
-        android:scaleType="fitCenter"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_display"
-        app:srcCompat="@drawable/push_up_fig_1" />
 
-    <TextView
-        android:id="@+id/step1Instructions"
+    <ScrollView
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:padding="12dp"
-        android:text="Position hands palms-down on the floor, approximately shoulder width apart. They should be about next to your shoulders, with your elbows pointed towards your toes. "
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:paddingLeft="12dp"
-        android:text="Step 1"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/step1Figure" />
-
-    <ImageView
-        android:id="@+id/imageView4"
-        android:layout_width="wrap_content"
         android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/step1Instructions"
-        app:srcCompat="@drawable/push_up_fig_2" />
+        app:layout_constraintTop_toBottomOf="@+id/exerciseTitle"
+        app:layout_constraintVertical_bias="1.0">
+
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/constraintLayoutScrollable"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="145dp">
+
+            <!-- Step 1 -->
+
+            <ImageView
+                android:id="@+id/step1Figure"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/push_up_fig_1" />
+
+            <TextView
+                android:id="@+id/step1Instructions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="Position hands palms-down on the floor, approximately shoulder width apart. They should be about next to your shoulders, with your elbows pointed towards your toes. "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step1Title" />
+
+            <TextView
+                android:id="@+id/step1Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:text="Step 1"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step1Figure" />
+
+
+            <!-- Step 2 -->
+
+            <ImageView
+                android:id="@+id/step2Figure"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:cropToPadding="true"
+                android:padding="12dp"
+                android:scaleType="fitCenter"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/step1Instructions"
+                app:srcCompat="@drawable/push_up_fig_2" />
+
+            <TextView
+                android:id="@+id/step2Instructions"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="12dp"
+                android:text="Position hands palms-down on the floor, approximately shoulder width apart. They should be about next to your shoulders, with your elbows pointed towards your toes. "
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/step2Title"
+                app:layout_constraintTop_toBottomOf="@+id/step2Title" />
+
+            <TextView
+                android:id="@+id/step2Title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="12dp"
+                android:text="Step 2"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="@+id/step2Figure"
+                app:layout_constraintTop_toBottomOf="@+id/step2Figure" />
+
+        </android.support.constraint.ConstraintLayout>
+    </ScrollView>
+
 
 </android.support.constraint.ConstraintLayout>

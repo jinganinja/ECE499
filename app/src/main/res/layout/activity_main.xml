@@ -34,60 +34,125 @@
 
     <Spinner
         android:id="@+id/spinnerTimeDuration"
-        android:layout_width="0dp"
+        android:layout_width="wrap_content"
         android:layout_height="25dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="83dp"
+        android:layout_marginTop="24dp"
+        android:textAlignment="viewEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/textViewPageTitle" />
 
     <Spinner
         android:id="@+id/spinnerEquipment"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="22dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
+        android:textAlignment="viewEnd"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerTimeDuration" />
 
     <Spinner
         android:id="@+id/spinnerCardioVsStrength"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="21dp"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
+        android:textAlignment="viewEnd"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEquipment" />
 
     <Spinner
         android:id="@+id/spinnerTargetedMuscles"
         android:layout_width="0dp"
         android:layout_height="24dp"
+        android:textAlignment="viewEnd"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerCardioVsStrength" />
 
     <Spinner
         android:id="@+id/spinnerFitnessGoal"
+        android:textAlignment="viewEnd"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
         android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTargetedMuscles" />
+
+    <TextView
+        android:id="@+id/textTimeDuration"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
+        android:layout_marginStart="8dp"
+        android:text="Duration of workout: "
+        app:layout_constraintBottom_toTopOf="@+id/spinnerTimeDuration"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerTimeDuration"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTimeDuration" />
+
+    <TextView
+        android:id="@+id/textEquipmentAvail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Equipment Available:"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerEquipment"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerEquipment"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerEquipment" />
+
+    <TextView
+        android:id="@+id/textViewPageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="28dp"
+        android:layout_marginTop="28dp"
+        android:text="Enter Your Workout Info"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textTypeOfWorkout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Type of Workout:"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerCardioVsStrength"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerCardioVsStrength"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCardioVsStrength" />
+
+    <TextView
+        android:id="@+id/textTargetedMuscles"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Targeted Muscle Group:"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerTargetedMuscles"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerTargetedMuscles"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerTargetedMuscles" />
+
+    <TextView
+        android:id="@+id/textFitnesGoal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="Fitness Goal:"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerFitnessGoal"
+        app:layout_constraintEnd_toStartOf="@+id/spinnerFitnessGoal"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerFitnessGoal"
+        app:layout_constraintVertical_bias="0.615" />
 
 
 </android.support.constraint.ConstraintLayout>

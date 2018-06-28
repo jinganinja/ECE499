@@ -4,12 +4,12 @@
   "type": "strength",
   "muscle group": "arms",
   "HIIT": false,
-  "weight loss": {
+  "cardio - indoor": {
       "duration":5,
       "sets": 3,
       "reps": 15,
       "break": 20},
-  "build muscle": {
+  "strength": {
       "duration":6,
       "sets":5,
       "reps": 6,
@@ -20,12 +20,12 @@
     "type": "cardio",
     "muscle group": "n/a",
     "HIIT": true,
-    "weight loss": {
+    "cardio": {
       "duration":5,
       "sets": 3,
       "reps": 25,
       "break": 15},
-    "build muscle": {
+    "strength": {
       "duration":4,
       "sets":5,
       "reps": 6,

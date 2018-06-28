@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
+import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -13,15 +14,21 @@ import android.widget.EditText;
 import android.util.Log;
 import android.widget.Spinner;
 import android.widget.Toast;
+import android.widget.Toolbar;
 
 import com.example.micaela.fwd.CustomWorkout;
 
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
-import java.util.Random;
+import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.Random;
 
+import org.json.JSONObject;
+
+import org.json.JSONObject;
+import org.json.JSONObject;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -32,16 +39,31 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //Declare the generate workout button
     private Button mGenerateWorkout;
+
+    //Declare a temporary button that will take me to other pages for dev purposes
+    //private Button tempButton;
+
+
     //Declare all the dropDown menus
     private Spinner spinnerWorkoutDuration, spinnerEquipment, spinnerCardioVsStrength,
             spinnerTargetedMuscles, spinnerFitnessGoal;
+
+    //Create a JSON object to hold the user-input
+    JSONObject userInput = new JSONObject();
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        mGenerateWorkout = (Button) findViewById(R.id.generateWorkoutButton);
 
+        //put icon into toolbar -- GOAL: move this into a theme
+        //getSupportActionBar().setLogo(R.drawable.push_up_fig_1);
+        //getSupportActionBar().setDisplayUseLogoEnabled(true);
+
+        mGenerateWorkout = (Button) findViewById(R.id.generateWorkoutButton);
+       // tempButton = (Button)findViewById(R.id.button);
 
         //Initialize Spinner objects and link them to their xml id
         spinnerWorkoutDuration = (Spinner) findViewById(R.id.spinnerTimeDuration);
@@ -64,17 +86,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         spinnerTargetedMuscles.setOnItemSelectedListener(this);
         spinnerFitnessGoal.setOnItemSelectedListener(this);
 
-        String hi = new String("hey");
-
-        //WHAT is this piece of code
+        //On-click listener to be used by the generate workout button
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) { //All widgets are "Views" so they can always be passed as an instance of their base-class "View"
                 Button b = (Button) v;
                 System.out.println("the on click listener is working");
+
+
                 //If the Generate workout button was clicked....
                 if (b == mGenerateWorkout){
                     System.out.println("I can see that this was the generate workout button ");
+
+
+                    //HERE I am going to call the background algorithm and pass it the JSON object!
+                    /* Need to be passed some information
+                       -  Names of the chosen exercises (to be called from database)
+                       - Timing details?
+                       ---> then I can pull all info for exercises from the database and display it
+                       in the appropriate UI fields.
+                       ---> going to need to timing or rep details, since that won't be hard-coded
+                       into the database for each activity
+                     */
 
                     //set to context to go in the intent call
                     Context context = MainActivity.this;
@@ -84,42 +117,39 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     // Create the intent that will be used to start the CustomWorkout Activity -- intent
                     // creation needs a context and a destination
                     Intent startCustomWorkoutActivityIntent = new Intent(context, destinationActivity);
+
                     System.out.println("I am calling to start a new activity ");
 
                     // Start the CustomWorkout activity
                     startActivity(startCustomWorkoutActivityIntent);
                 }
+                /*
+                if (b == tempButton) {
+                    System.out.println("I can see that this was the temporary button ");
+
+                    //set to context to go in the intent call
+                    Context context = MainActivity.this;
+
+                    // Store the destination activity in a class to go in the intent call
+                    Class destinationActivity = SelectedExerciseList.class;
+                    // Create the intent that will be used to start the CustomWorkout Activity -- intent
+                    // creation needs a context and a destination
+                    Intent startExerciseListIntent = new Intent(context, destinationActivity);
+
+                    System.out.println("I am calling to start a new activity ");
+
+                    // Start the CustomWorkout activity
+                    startActivity(startExerciseListIntent);
+                }*/
+
             }
         };
 
 
         //Set the on-click listener for the generator workout button
         mGenerateWorkout.setOnClickListener(listener);
+       // tempButton.setOnClickListener(listener);
 
-/*
-        //Set an on-click listener to do something when generateWorkoutButton clicked
-        mGenerateWorkout.setOnClickListener(new View.OnClickListener() {
-
-            // The onClick method is triggered when this button (mDoSomethingCoolButton) is clicked
-            // param v is The view that is clicked. In this case, it's mGenerateWorkout Button.
-
-            @Override
-            public void onClick(View v) {
-
-                //set to context to go in the intent call
-                Context context = MainActivity.this;
-
-                // Store the destination activity in a class to go in the intent call
-                Class destinationActivity = CustomWorkout.class;
-
-                // Create the intent that will be used to start the CustomWorkout Activity -- intent
-                // creation needs a context and a destination
-                Intent startCustomWorkoutActivityIntent = new Intent(context, destinationActivity);
-
-                // Start the CustomWorkout activity
-                startActivity(startCustomWorkoutActivityIntent);
-            }
-        }); */
     }
 
     //Function to Create an array adapter and set adapter
@@ -148,6 +178,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 String item = parent.getItemAtPosition(position).toString();
                 // Showing selected spinner item
                 Toast.makeText(parent.getContext(), "Selected: " + item + "for Time duration", Toast.LENGTH_LONG).show();
+               //Add the selected item to the JSON object
+                try {
+                    userInput.put("time", item);
+                    //Output the JSON object to the command line to check
+                    Log.i("JSON Body", userInput.toString());
+                } catch(Exception e) {
+                    System.out.println("Error with User Input!");
+                }
                 break;
 
             case R.id.spinnerEquipment:
@@ -155,6 +193,17 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 item = parent.getItemAtPosition(position).toString();
                 // Showing selected spinner item
                 Toast.makeText(parent.getContext(), "Selected: " + item + "for Equipment", Toast.LENGTH_LONG).show();
+
+                //Add the user-input to a JSON object
+                try {
+                    userInput.put("equipment", item);
+                    //Output the JSON object to the command line to check
+                    Log.i("JSON Body", userInput.toString());
+                } catch(Exception e) {
+                     System.out.println("Error with User Input!");
+                }
+
+
                 break;
 
             case R.id.spinnerCardioVsStrength:
@@ -162,6 +211,15 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 item = parent.getItemAtPosition(position).toString();
                 // Showing selected spinner item
                 Toast.makeText(parent.getContext(), "Selected: " + item + " for Cardio vs. Strength", Toast.LENGTH_LONG).show();
+
+                //Add the user-input to a JSON object
+                try {
+                    userInput.put("cardioVsStrength", item);
+                    //Output the JSON object to the command line to check
+                    Log.i("JSON Body", userInput.toString());
+                } catch(Exception e) {
+                    System.out.println("Error with User Input!");
+                }
                 break;
 
             case R.id.spinnerTargetedMuscles:
@@ -169,6 +227,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 item = parent.getItemAtPosition(position).toString();
                 // Showing selected spinner item
                 Toast.makeText(parent.getContext(), "Selected: " + item + " for TargetedMucles", Toast.LENGTH_LONG).show();
+                //Add the user-input to a JSON object
+                try {
+                    userInput.put("targetedMuscles", item);
+                    //Output the JSON object to the command line to check
+                    Log.i("JSON Body", userInput.toString());
+                } catch(Exception e) {
+                    System.out.println("Error with User Input!");
+                }
                 break;
 
             case R.id.spinnerFitnessGoal:
@@ -176,8 +242,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 item = parent.getItemAtPosition(position).toString();
                 // Showing selected spinner item
                 Toast.makeText(parent.getContext(), "Selected: " + item + " for Fitness Goal", Toast.LENGTH_LONG).show();
+                //Add the user-input to a JSON object
+
+                try {
+                    userInput.put("fitnessGoal", item);
+                    //Output the JSON object to the command line to check
+                    Log.i("JSON Body", userInput.toString());
+                } catch(Exception e) {
+                    System.out.println("Error with User Input!");
+                }
                 break;
         }
+
     }
 
     public void onNothingSelected(AdapterView<?> arg0){

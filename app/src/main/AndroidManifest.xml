@@ -9,7 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".MainActivity">
+        <activity
+            android:name=".MainActivity">
+        <!-- <activity
+            android:name=".MainActivity"
+            android:theme="@style/AppTheme.Fwd"
+            android:label="FWD"
+            android:launchMode="singleTop"> -->
 
             <!-- Wherever this intent goes is what activity starts on launch! HE -->
             <intent-filter>
@@ -17,7 +23,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CustomWorkout"></activity>
+
+        <activity android:name=".CustomWorkout" />
+        <activity android:name=".SelectedExerciseList" />
+        <!-- android:theme="@style/AppTheme.Fwd"-->
+
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
     </application>
 
 </manifest>

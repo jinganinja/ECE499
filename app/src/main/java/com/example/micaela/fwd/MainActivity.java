@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.JsonReader;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -14,8 +15,11 @@ import com.example.micaela.fwd.CustomWorkout;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
-import org.json.simple.JSONArray;
-import org.json.simple.JSONObject;
+import java.util.Random;
+
+import org.json.JSONArray;
+import org.json.JSONException;
+import org.json.JSONObject;
 import org.json.simple.parser.JSONParser;
 import org.json.simple.parser.ParseException;
 
@@ -65,54 +69,143 @@ public class MainActivity extends AppCompatActivity {
 
         JSONParser parser = new JSONParser();
         try {
-            JSONArray workoutExercises = (JSONArray) parser.parse(new FileReader("/main/json/exercises.json"));
-            JSONArray allAvailableExercises = (JSONArray) parser.parse(new FileReader("/main/json/exercises.json"));
+            JSONArray iterationExercises = (JSONArray) parser.parse(new FileReader("/main/json/exercises.json"));
+            JSONArray allExercises = (JSONArray) parser.parse(new FileReader("/main/json/exercises.json"));
+
             // check equipment to see if we can minimize exercises based on that
-            if (!equipment) {
-                for (Object obj:allAvailableExercises) {
-                    // remove all the exercises that require equipment
-                }
-            }
+            if (!equipment)
+                iterationExercises = removeEquipmentRequired(iterationExercises, allExercises);
+
             // check the muscle group to minimize the exercises
-            if (muscleGroup != "full body") {
-                for (Object obj:allAvailableExercises) {
-                    // remove exercises that are not for that muscle group
-                }
+            if (!muscleGroup.equals("full body")) {
+                iterationExercises = removeUnapplicableMuscleExercises(iterationExercises, allExercises, muscleGroup);
             }
+
             // check the type to minimize the exercises
-            String userExerciseType;
-            for (Object obj:allAvailableExercises) {
-                JSONObject exercise = (JSONObject) obj;
-                userExerciseType = (String) exercise.get("type");
-                if (userExerciseType != type || !userExerciseType.equals("both")) {
-                    // remove that type of exercise
+            iterationExercises = removeUnapplicableTypeExercises(iterationExercises, allExercises, type);
+
+            // start checking if we have enough exercises and creating the workout
+            int exerciseCount = allExercises.length();
+            int numExercisesNeeded = numExercisesRequired(duration);
+
+            if (exerciseCount < numExercisesNeeded) {
+                // throw an error saying that we can't make that kind of workout?
+            } else {
+                // apply the random number generator that gives a number between 0 and length and
+                // then adds that exercises to workout then removes it from the list and repeats
+                // until we have as many as we need
+
+                JSONArray workoutGenerated = generateWorkoutFromExercises(numExercisesNeeded, allExercises);
+                Boolean workoutDurationCorrect = checkWorkoutTime(workoutGenerated, type, duration);
+                if (workoutDurationCorrect) {
+                    // post workout
+                } else {
+                    // cry
                 }
             }
-            // determine how many exercises needed for the duration
-            // determine if we have enough
-            // build a random number generator for that many things and generate a random number
-            // use the random number to add that exercise to the workout
-            // remove that exercise from the list and repeat
-            // complete building the workout
+
             // check that we have the right amount of time for the duration given for the workout built
             // post workout
         } catch (FileNotFoundException e) {
             e.printStackTrace();
-            return;
         } catch (IOException e) {
             e.printStackTrace();
-            return;
         } catch (ParseException e) {
             e.printStackTrace();
-            return;
         }
+    }
 
-
+    public int generateRandomNumber(int range) {
+        Random rand = new Random();
+        return rand.nextInt(range);
     }
 
     public JSONArray createHIIT(int duration, boolean equipment, String muscleGroup, String type) {
         // create workout
         return null;
+    }
+
+    public JSONArray removeEquipmentRequired(JSONArray iterationExercises, JSONArray allExercises) {
+        for (int i = 0; i < iterationExercises.length(); i++) {
+            // remove all the exercises that require equipment
+            try {
+                JSONObject exercise = (JSONObject) iterationExercises.get(i);
+                if (exercise.getBoolean("equipment"))
+                    allExercises.remove(i);
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        return allExercises;
+    }
+
+    public JSONArray removeUnapplicableMuscleExercises(JSONArray iterationExercises, JSONArray allExercises, String muscleGroup) {
+        try {
+            for (int i = 0; i < iterationExercises.length(); i++) {
+                // remove exercises that are not for that muscle group
+                JSONObject exercise = (JSONObject) iterationExercises.get(i);
+                if (!exercise.getString("muscle group").equals(muscleGroup))
+                    allExercises.remove(i);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return allExercises;
+    }
+
+    public JSONArray removeUnapplicableTypeExercises(JSONArray iterationExercises, JSONArray allExercises, String type) {
+        try {
+            for (int i = 0; i < iterationExercises.length(); i++) {
+                // remove exercises that are not for that muscle group
+                JSONObject exercise = (JSONObject) iterationExercises.get(i);
+                if (!exercise.getString("type").equals(type))
+                    allExercises.remove(i);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return allExercises;
+    }
+
+    public JSONArray generateWorkoutFromExercises(int numExercisesNeeded, JSONArray allExercises) {
+        JSONArray workoutGenerated = new JSONArray();
+        try {
+            for (int i = 0; i < numExercisesNeeded; i++){
+                int randomNumber = generateRandomNumber(allExercises.length());
+                workoutGenerated.put(allExercises.get(randomNumber));
+                allExercises.remove(randomNumber);
+            }
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+        return workoutGenerated;
+    }
+
+    public int numExercisesRequired(int duration) {
+        // create a decision maker that decides how many exercises needed per time unit
+        int num = 0;
+        return num;
+    }
+
+    public boolean checkWorkoutTime(JSONArray workout, String type, int duration) {
+        int totalWorkoutTime = 0;
+        for (int i = 0; i < workout.length(); i++) {
+            // check the type of workout
+            // get the proper duration thing for that type
+            // add to total duration of workout
+            try {
+                JSONObject exercise = (JSONObject) workout.get(i);
+                JSONObject exerciseType = exercise.getJSONObject(type);
+                int time = exerciseType.getInt("duration");
+                totalWorkoutTime = totalWorkoutTime + time;
+            } catch (JSONException e) {
+                e.printStackTrace();
+            }
+        }
+        if (duration == totalWorkoutTime)
+            return true;
+        else
+            return false;
     }
 }
 

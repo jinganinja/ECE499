@@ -11,6 +11,7 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+
 import android.util.Log;
 import android.widget.Spinner;
 import android.widget.Toast;
@@ -36,6 +37,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //Declare the generate workout button
     private Button mGenerateWorkout;
+
     //Declare a temporary button that will take me to other pages for dev purposes
     //private Button tempButton;
     //Declare all the dropDown menus
@@ -225,8 +227,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // adds the applicable ones to the current workout potential exercises list. From that list
         // there will be a random number generator that picks the number of exercises that will be
         // used for the workout.
-
-
 
 
         JSONParser parser = new JSONParser();

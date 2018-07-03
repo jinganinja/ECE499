@@ -31,5 +31,4 @@ dependencies {
     //Check that this dependency still necessary
     //compile 'com.android.support:recyclerview-v7:27.1.1'
 
->>>>>>> User selections put into JSON object
 }

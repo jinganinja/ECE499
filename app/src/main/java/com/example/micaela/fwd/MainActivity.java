@@ -77,9 +77,8 @@ public class MainActivity extends AppCompatActivity {
                 iterationExercises = removeEquipmentRequired(iterationExercises, allExercises);
 
             // check the muscle group to minimize the exercises
-            if (!muscleGroup.equals("full body")) {
+            if (!muscleGroup.equals("full body"))
                 iterationExercises = removeUnapplicableMuscleExercises(iterationExercises, allExercises, muscleGroup);
-            }
 
             // check the type to minimize the exercises
             iterationExercises = removeUnapplicableTypeExercises(iterationExercises, allExercises, type);
@@ -91,21 +90,22 @@ public class MainActivity extends AppCompatActivity {
             if (exerciseCount < numExercisesNeeded) {
                 // throw an error saying that we can't make that kind of workout?
             } else {
-                // apply the random number generator that gives a number between 0 and length and
-                // then adds that exercises to workout then removes it from the list and repeats
-                // until we have as many as we need
-
-                JSONArray workoutGenerated = generateWorkoutFromExercises(numExercisesNeeded, allExercises);
+                // generate workout from a random number generator that picks an exercise at random
+                // and adds it to the workout (repeats until workout created)
+                JSONArray workoutGenerated = new JSONArray();
+                if (!muscleGroup.equals("full body"))
+                    workoutGenerated = generateWorkoutFromExercises(numExercisesNeeded, allExercises);
+                else {
+                    workoutGenerated = generateFullBodyWorkout(duration, allExercises);
+                }
                 Boolean workoutDurationCorrect = checkWorkoutTime(workoutGenerated, type, duration);
                 if (workoutDurationCorrect) {
                     // post workout
                 } else {
-                    // cry
+                    // throw an error or retry the whole thing
                 }
             }
 
-            // check that we have the right amount of time for the duration given for the workout built
-            // post workout
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -181,6 +181,12 @@ public class MainActivity extends AppCompatActivity {
         return workoutGenerated;
     }
 
+    public JSONArray generateFullBodyWorkout(int duration, JSONArray allExercises) {
+        // look at duration and consider just doing a HIIT
+        // if longer than 30 then create a full body workout
+        return null;
+    }
+
     public int numExercisesRequired(int duration) {
         // create a decision maker that decides how many exercises needed per time unit
         int num = 0;
@@ -202,7 +208,7 @@ public class MainActivity extends AppCompatActivity {
                 e.printStackTrace();
             }
         }
-        if (duration == totalWorkoutTime)
+        if (duration < totalWorkoutTime + 3 && duration > totalWorkoutTime - 3)
             return true;
         else
             return false;

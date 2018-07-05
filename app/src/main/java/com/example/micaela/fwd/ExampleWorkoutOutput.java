@@ -30,14 +30,14 @@ public class ExampleWorkoutOutput {
     public ExampleWorkoutOutput() {
 
         JSONArray workout = new JSONArray();
-        setExample("Pushups", 3, 11);
-        setExample("Bicep Curls",1, 30);
-        setExample("Burpees", 2, 15);
+        setExample("Pushups", 3, 11, "TagLine goes here for Pushups");
+        setExample("Bicep Curls",1, 30, "TagLine goes here for Bicep Curls");
+        setExample("Burpees", 2, 15, "TagLine goes here for Burpees");
         Log.d(TAG, "ExampleWorkoutOutput: "+ this.example.toString());
     }
 
 
-    public void setExample(String name, int sets, int reps) {
+    public void setExample(String name, int sets, int reps, String tagLine) {
         this.example = example;
         JSONObject exercise = new JSONObject();
         JSONObject steps = new JSONObject();
@@ -55,9 +55,10 @@ public class ExampleWorkoutOutput {
             exercise.put("description", description);
 
             //put reps, sets, and image path for an exercise
+            exercise.put("tagLine",tagLine);
             exercise.put("reps",reps);
             exercise.put("sets", sets);
-            exercise.put("image", "main/res/drawable/push_up_fig_1.png");
+            exercise.put("img", "main/res/drawable/push_up_fig_1.png");
 
             //Add the exercise to our output array
             this.example.put(exercise);

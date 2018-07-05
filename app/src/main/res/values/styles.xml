@@ -9,7 +9,7 @@
         <item name="android:windowBackground">@color/primaryTextColor</item>
 
         <!-- can customize further here by doing things like changing the text color"-->
-       <!-- <item name="android:textColorSecondary">@color/secondaryText</item>
+        <!-- <item name="android:textColorSecondary">@color/secondaryText</item>
         <item name="android:icon">@color/icons</item>
         <item name="android:windowBackground">@color/colorPrimaryLight</item>
         <item name="workoutBackgroudColor">@color/primaryLight</item> -->
@@ -25,6 +25,15 @@
     <style name="AppTheme.Fwd" parent="@style/AppTheme">
         <item name="actionBarStyle">@style/ActionBar.Solid.Fwd.NoTitle</item>
     </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
     <!--
     <style name="AppTheme.NoActionBar">

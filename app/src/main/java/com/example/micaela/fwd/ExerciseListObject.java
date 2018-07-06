@@ -1,12 +1,16 @@
-/*Class to hold  objects for list of exercises in CustomWorkout Page*/
+/*Class so that each exercise in the selected custom workout can be stored as an object for
+* easy access in the UI
+* */
 
 package com.example.micaela.fwd;
+
+import org.json.JSONArray;
 
 public class ExerciseListObject {
     private String name;
     private String tagLine;
     private String img;
-    private String description; //ToDo Deal with description as a JSON array (and images associated for each step?
+    private JSONArray description; //ToDo Deal with description as a JSON array (and images associated for each step?)
     private String reps;
     private String sets;
 
@@ -34,11 +38,11 @@ public class ExerciseListObject {
         this.img = img;
     }
 
-    public String getDescription() {
+    public JSONArray getDescription() {
         return description;
     }
 
-    public void setDescription(String description) {
+    public void setDescription(JSONArray description) {
         this.description = description;
     }
 

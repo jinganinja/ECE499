@@ -1,12 +1,21 @@
+/*
+CustomWorkoutListAdapter is a class to create the custom ArrayAdapter necessary for our scrollable
+list of exercises. It takes the xml and turns it into actual objects.
+ */
 package com.example.micaela.fwd;
 
 import android.content.Context;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
+import android.media.ThumbnailUtils;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.util.BitSet;
 import java.util.List;
 
 public class CustomWorkoutListAdapter extends ArrayAdapter {
@@ -35,6 +44,8 @@ public class CustomWorkoutListAdapter extends ArrayAdapter {
 
         //Going to have this use viewholder
         ViewHolder viewHolder;
+        //Want a thumbnail of our image to display in this list
+        //Bitmap bmThumbnail;
 
         //Conditional: only inflate new view if they aren't any leftover view
         if (convertView == null) {
@@ -48,15 +59,21 @@ public class CustomWorkoutListAdapter extends ArrayAdapter {
 
         ExerciseListObject currentExercise = exercises.get(position);
         viewHolder.exerciseName.setText(currentExercise.getName());
-        viewHolder.exerciseCoverPhoto.setText(currentExercise.getImg());
         viewHolder.exerciseTagLine.setText(currentExercise.getTagLine());
+        //ToDo Change this so that the image isn't static
+        viewHolder.exerciseCoverPhoto.setImageResource(R.drawable.push_up_fig_1);
+
+        //Deal with the thumbnail image
+        //bmThumbnail = ThumbnailUtils.extractThumbnail(BitmapFactory.decodeFile(currentExercise.getImg()), 120, 72);
+        //viewHolder.exerciseCoverPhoto.setImageBitmap(bmThumbnail);
 
         return convertView;
     }
 
+    //Class to hold the Viewtypes that get used repeatedly in this List
     private class ViewHolder{
         final TextView exerciseName;
-        final TextView exerciseCoverPhoto; //Thumbnail photo
+        final ImageView exerciseCoverPhoto; //Thumbnail photo
         final TextView exerciseTagLine;  //Tagline to go in the list (Ex. duration or reps )
 
         ViewHolder(View v) {

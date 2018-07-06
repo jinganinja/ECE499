@@ -1,5 +1,6 @@
 /* THIS IS A TEMPORARY FUNCTION CREATED ONLY FOR TESTING PURPOSES TO TEST UI W/O BACKEND
- *
+ * Creates a JSON array with a format similar to that which will be passed from the back-end of
+ * the workoutgenerator to the front end
  */
 package com.example.micaela.fwd;
 

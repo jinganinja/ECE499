@@ -20,19 +20,15 @@ public class ParseJSONForUI {
 
         this.exercises = new ArrayList<>();
 
-        Log.d(TAG, "ParseJSONForUI: Made it to the constructor");
-        //JSONArray exercisesJSON = null;
-
         //Turn the String passed in the bundle back into JSON Array
         try {
             JSONArray exercisesJSON = new JSONArray(exercisesJSONString);
+            //Call function to Convert JSON array to ArrayList
             JSONArrayToArrayList(exercisesJSON);
 
         } catch (JSONException e) {
             Log.d(TAG, "onCreate: Error retrieving the JSON array of generated exercisesJSON!");
         }
-        //Call function to Convert JSON array to ArrayList
-
     }
 
     private void JSONArrayToArrayList(JSONArray exercisesJSONArray) {
@@ -41,14 +37,13 @@ public class ParseJSONForUI {
         //Loop through each item in the JSONArray and feed it into my ListArray
         for (int i = 0; i < exercisesJSONArray.length(); i++) {
             try {
-                //ToDo Ask Jarrett about the structure of this try-catch loop
                 //Create a temporary ExerciseListObject and JSONObject to hold the current item in array
                 ExerciseListObject exerciseObj = new ExerciseListObject();
                 JSONObject exerciseJSONObj = exercisesJSONArray.getJSONObject(i);
                 Log.d(TAG, "JSONArrayToArrayList: "+exerciseJSONObj.toString());
                 Log.d(TAG, "JSONArrayToArrayList: successfully created a JSON object from the String ");
-                //Set the parameters of the ExerciseListObject
-                // ToDo: Check if this is the correct usage of the word 'parameters'
+
+                //Set the fields of the ExerciseListObject
                 Log.d(TAG, "JSONArrayToArrayList: " + exerciseJSONObj.get("name").toString());
                 exerciseObj.setName(exerciseJSONObj.get("name").toString());
                 exerciseObj.setTagLine(exerciseJSONObj.get("tagLine").toString());
@@ -59,11 +54,8 @@ public class ParseJSONForUI {
 
                 Log.d(TAG, "JSONArrayToArrayList: Sucessfully turned the JSON objects into ExerciseListObject Objects");
                 //Add each ExerciseListObject to my ArrayList
-                Log.d(TAG, "JSONArrayToArrayList: "+ exerciseObj.toString());
-                Log.d(TAG, "JSONArrayToArrayList: "+ this.exercises.toString());
                 this.exercises.add(exerciseObj);
 
-                //exercisesJSONObjects.add(exercisesJSONArray.getJSONObject(i));
             } catch (JSONException e) {
                 Log.e(TAG, "JSONArrayToArrayList: Error Converting JSONArray to ArrayList!");
             }

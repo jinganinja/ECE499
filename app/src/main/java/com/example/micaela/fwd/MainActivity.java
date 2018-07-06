@@ -1,5 +1,7 @@
 package com.example.micaela.fwd;
 
+import com.example.micaela.fwd.CustomWorkout;
+
 import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
@@ -16,8 +18,6 @@ import android.util.Log;
 import android.widget.Spinner;
 import android.widget.Toast;
 import android.widget.Toolbar;
-
-import com.example.micaela.fwd.CustomWorkout;
 
 import java.io.File;
 import java.io.IOException;
@@ -115,11 +115,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 }
             }
         };
-
         //Set the on-click listener for the generator workout button
         mGenerateWorkout.setOnClickListener(listener);
-        // tempButton.setOnClickListener(listener);
-
     }
 
     //Function to Create an array adapter and set adapter
@@ -137,7 +134,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     @Override
     public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
         //Check which spinner was selected and which item was selected for that category
-        final String TAG = "onItemSelected";
+        final String TAG = "onItemsSelected";
 
         switch (parent.getId()) {
             case R.id.spinnerTimeDuration:
@@ -218,7 +215,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void onNothingSelected(AdapterView<?> arg0){
-        // TODO Deal with this Auto-generated method stub
+        // TODO Deal with this
     }
 
     //**************************Back-end******************************************************

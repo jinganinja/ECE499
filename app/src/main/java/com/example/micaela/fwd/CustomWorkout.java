@@ -6,15 +6,10 @@ re-generate your workout if you do not like the current one.
 package com.example.micaela.fwd;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ListView;
-import android.widget.TextView;
-
-import org.json.JSONArray;
-import org.json.JSONException;
 
 public class CustomWorkout extends AppCompatActivity {
 
@@ -38,14 +33,11 @@ public class CustomWorkout extends AppCompatActivity {
 
         Log.d(TAG, "onCreate: parsing the JSON for UI");
         //Parse JSON to feed into list and call the custom array adapter for listview to inflate and populate Layout
-       ParseJSONForUI parseJSONForUI = new ParseJSONForUI(jsonArrayWorkout);
+        ParseJSONForUI parseJSONForUI = new ParseJSONForUI(jsonArrayWorkout);
 
         Log.d(TAG, "onCreate: Calling the custom Workout Adapter");
         CustomWorkoutListAdapter customWorkoutListAdapter = new CustomWorkoutListAdapter(
                 CustomWorkout.this, R.layout.list_record, parseJSONForUI.getExercises());
         listExercises.setAdapter(customWorkoutListAdapter);
     }
-
-
-
 }

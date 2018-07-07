@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -109,6 +111,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     //Need to convert JSON array to string to add it to intent and pass to the second page
                     startCustomWorkoutActivityIntent.putExtra("workout", workoutResults.toString());
 
+                    //ToDO: Add extra content to the bundle to pass - the list of leftover exercises
+
                     Log.d(TAG, "onClick: Starting a new Activity....");
                     // Start the CustomWorkout activity
                     startActivity(startCustomWorkoutActivityIntent);
@@ -117,6 +121,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         };
         //Set the on-click listener for the generator workout button
         mGenerateWorkout.setOnClickListener(listener);
+    }
+
+    //Add the menu to the top of the screen
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    //Add functionality when button item selected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id  = item.getItemId();
+        return super.onOptionsItemSelected(item);
     }
 
     //Function to Create an array adapter and set adapter

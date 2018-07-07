@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CustomWorkoutList">
+    tools:context=".CustomWorkout">
 
     <ListView
         android:id="@+id/xmlListview"
@@ -19,5 +19,26 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0" />
 
-</android.support.constraint.ConstraintLayout>
 
+    <!--Implement Custom Floating Action Button -->
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    <Button
+        android:layout_margin="15dp"
+        android:layout_width="210dp"
+        android:layout_height="70dp"
+        android:drawablePadding="0dp"
+        android:text="Regenerate"
+        android:textSize="19sp"
+        android:textColor="#FFFFFF"
+        android:drawableStart="@drawable/ic_repeat_white_24dp"
+        android:paddingLeft="26dp"
+        android:paddingRight="26dp"
+        android:background="@drawable/btn_rectangle"
+        android:id="@+id/shuffle_fab"
+        android:layout_gravity="center|bottom" />
+    </android.support.design.widget.CoordinatorLayout>
+
+</android.support.constraint.ConstraintLayout>

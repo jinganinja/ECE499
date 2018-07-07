@@ -4,7 +4,7 @@ android {
     compileSdkVersion 27
     defaultConfig {
         applicationId "com.example.micaela.fwd"
-        minSdkVersion 27
+        minSdkVersion 27 //Todo: Check if this is appropriate.
         targetSdkVersion 27
         versionCode 1
         versionName "1.0"

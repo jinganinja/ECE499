@@ -12,15 +12,20 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.Toast;
+
+import java.util.List;
 
 public class CustomWorkout extends AppCompatActivity {
 
     private ListView listExercises;
     private static final String TAG = "Custom Workout";
     private Button shuffleFab;
+    private List<ExerciseListObject> exercises;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,12 +36,16 @@ public class CustomWorkout extends AppCompatActivity {
         Log.d(TAG, "onCreate: Setting up the Layout");
         setContentView(R.layout.activity_custom_workout_list); //Layout for this page
         listExercises = (ListView) findViewById(R.id.xmlListview);//Located in activity_custom_workout_list.xml
+        //Todo: Try both overScroll class and also padding in listview to add blank space at bottom
+        //listExercises.setOverScrollMode(ListView.OVER_SCROLL_IF_CONTENT_SCROLLS);
 
         //Create floating action button to 'shuffle' workout results
+        //Todo: Ensure that floating action button doesnt block the last workout on the scrollable list -- may need to modify design
         shuffleFab = (Button) findViewById(R.id.shuffle_fab);
         shuffleFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                Toast.makeText(CustomWorkout.this, "You clicked Regenerate!", Toast.LENGTH_SHORT).show();
                 //ToDO: if button clicked, then need to call shuffle function
                 //Need to ensure that shuffle function retrieves new workout and new 'leftover' exercises arrays
                 //Need to add both of these items to the bundle, and modify the bundle before calling this activity to restart
@@ -45,7 +54,6 @@ public class CustomWorkout extends AppCompatActivity {
 //                startActivity(shuffleWorkoutIntent);
             }
         });
-
 
         Log.d(TAG, "onCreate: Retrieving the custom workout info from Bundle");
         //Get the information passed in the bundle as a String (originally a JSONArray in prev Activity)
@@ -57,8 +65,79 @@ public class CustomWorkout extends AppCompatActivity {
         ParseJSONForUI parseJSONForUI = new ParseJSONForUI(jsonArrayWorkout);
 
         Log.d(TAG, "onCreate: Calling the custom Workout Adapter");
+        exercises = parseJSONForUI.getExercises();
         CustomWorkoutListAdapter customWorkoutListAdapter = new CustomWorkoutListAdapter(
-                CustomWorkout.this, R.layout.list_record, parseJSONForUI.getExercises());
+                CustomWorkout.this, R.layout.list_record, exercises);
         listExercises.setAdapter(customWorkoutListAdapter);
+        //Create onClick listener
+        listExercises.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+            @Override
+            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                Toast.makeText(CustomWorkout.this, exercises.get(position).getName().toString(), Toast.LENGTH_SHORT).show();
+
+                //Need to add stuff to the Bundle to pass on to the next activity (tutorial activity)
+
+
+
+
+
+
+
+//                switch (parent.getId()) {
+//                    case R.id.spinnerTimeDuration:
+//
+//                        try {
+//
+//                        } catch (Exception e) {
+//                        }
+//                        break;
+//
+//                    case R.id.spinnerEquipment:
+//
+//                        try {
+//
+//                        } catch (Exception e) {
+//
+//                        }
+//                        break;
+//
+//                    case R.id.spinnerCardioVsStrength:
+//
+//                        try {
+//
+//                        } catch(Exception e) {
+//                        }
+//                        break;
+//
+//                    case R.id.spinnerTargetedMuscles:
+//
+//                        try {
+//
+//                        } catch(Exception e) {
+//
+//                        }
+//                        break;
+//
+//                    case R.id.spinnerFitnessGoal:
+//
+//                        try {
+//
+//                        } catch(Exception e) {
+//                        }
+//                        break;
+//                }
+
+
+
+
+
+
+
+
+
+            }
+        });
+
+
     }
 }

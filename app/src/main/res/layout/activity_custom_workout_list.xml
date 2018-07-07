@@ -17,8 +17,20 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:clipToPadding="false"
 
+        />
+
+
+
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:paddingTop="20dp"-->
+    <!--android:paddingBottom="20dp"-->
+    <!--android:clipToPadding="false-->
 
     <!--Implement Custom Floating Action Button -->
     <android.support.design.widget.CoordinatorLayout

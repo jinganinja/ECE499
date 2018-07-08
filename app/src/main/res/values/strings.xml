@@ -2,6 +2,46 @@
     <string name="app_name">FWD</string>
     <string name="workout_button_label">Workout Design</string>
     <string name="history_button_label">Workout History</string>
-    <string name="generate_workout_button">GENERATE WORKOUT</string>
+    <string name="generate_workout_button">DESIGN WORKOUT</string>
+
+    <!-- Inputs for Workout Generator-->
+    <string-array name="duration_of_workout">
+        <item>10 mins</item>
+        <item>15 mins</item>
+        <item>20 mins</item>
+        <item>25 mins</item>
+        <item>30 mins</item>
+        <item>45 mins</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+    </string-array>
+
+
+    <!--This list should include more items and let user select multiple-->
+    <string-array name="equipment_available">
+        <item>Gym Facility</item>
+        <item>None (Bodyweight)</item>
+    </string-array>
+
+    <string-array name="type_of_workout">
+        <item>Indoor Cardio</item>
+        <item>Outdoor Cardio</item>
+        <item>HIIT</item>
+        <item>Strength</item>
+    </string-array>
+
+    <string-array name="muscles_targeted">
+        <item>Arms</item>
+        <item>Legs</item>
+        <item>Core</item>
+        <item>Full Body </item>
+    </string-array>
+
+
+    <string-array name="fitness_goal">
+        <item>Weight Loss</item>
+        <item>Muscle Gain</item>
+    </string-array>
+    <string name="title_activity_custom_workout_list">CustomWorkoutList</string>
 
 </resources>

@@ -1,0 +1,44 @@
+[
+  {"name": "Biking",
+    "equipment": true
+  },
+  {"name": "Elliptical",
+    "equipment": true
+  },
+  {"name": "Rowing",
+    "equipment": true
+  },
+  {"name": "Speed Ladder",
+    "equipment": true
+  },
+  {"name": "Track Sprints",
+    "equipment": true
+  },
+  {"name": "Stair Sprints",
+    "equipment": true
+  },
+  {"name": "Bike Sprints",
+    "equipment": true
+  },
+  {"name": "Step Ups or Stair Master",
+    "equipment": false
+  },
+  {"name": "Walk/Run",
+    "equipment": false
+  },
+  {"name": "Hill Repeats",
+    "equipment": false
+  },
+  {"name": "Negative Split - Run/Walk",
+    "equipment": false
+  },
+  {"name": "30/60 Sprint",
+    "equipment": false
+  },
+  {"name": "Lines",
+    "equipment": false
+  },
+  {"name": "Pyramid Drop",
+    "equipment": false
+  }
+]

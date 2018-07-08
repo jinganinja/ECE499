@@ -1,10 +1,11 @@
 <resources>
     <string name="app_name">FWD</string>
-    <string name="workout_button_label">Workout Design</string>
-    <string name="history_button_label">Workout History</string>
-    <string name="generate_workout_button">Design Workout</string>
-    <string name="shuffle_button">Regenerate</string>
+    <string name="regenerate_button">Regenerate</string>
+    <string name="generate_workout_button">Generate Workout</string>
 
+    <!--Titles for Each Activity-->
+    <string name ="customWorkoutPageTitle">Your Custom Workout</string>
+    <string name ="mainActivityWorkoutPageTitle">Fast Workout Designer</string>
 
     <!-- Inputs for Workout Generator-->
     <string-array name="duration_of_workout">

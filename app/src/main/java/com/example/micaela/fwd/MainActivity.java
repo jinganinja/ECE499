@@ -17,12 +17,10 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.support.v7.widget.Toolbar;
 
-
 import android.util.Log;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
-
 
 import java.io.File;
 import java.io.IOException;
@@ -31,8 +29,6 @@ import java.io.FileNotFoundException;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Random;
-
-
 
 import org.json.JSONObject;
 import org.json.JSONArray;
@@ -45,53 +41,49 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Declare the generate workout button
     private Button mGenerateWorkout;
 
-    //Declare a temporary button that will take me to other pages for dev purposes
-    //private Button tempButton;
-    //Declare all the dropDown menus
-    private Spinner spinnerWorkoutDuration, spinnerEquipment, spinnerCardioVsStrength,
-            spinnerTargetedMuscles, spinnerFitnessGoal;
     //Create a JSON instance to hold the user-input
     JSONObject userInput = new JSONObject();
     //Create a JSON instance to hold the generated workout info
     JSONArray workoutResults = new JSONArray();
+    final String TAG = "MainActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        Spinner spinnerWorkoutDuration, spinnerEquipment, spinnerCardioVsStrength,
+                spinnerTargetedMuscles;
 
         //Set up Custom Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        toolbar = findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        } else {
+            Log.e(TAG, "onCreate: Support Action bar is null!");
+        }
         TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
-        pageTitle.setText("Fast Workout Designer");
+        pageTitle.setText(getString(R.string.mainActivityWorkoutPageTitle));
 
-        final String TAG = "MainActivity";
         mGenerateWorkout = (Button) findViewById(R.id.generateWorkoutButton);
-        //tempButton = (Button)findViewById(R.id.button);
 
         //Initialize Spinner objects and link them to their xml id
         spinnerWorkoutDuration = (Spinner) findViewById(R.id.spinnerTimeDuration);
         spinnerEquipment = (Spinner) findViewById(R.id.spinnerEquipment);
         spinnerCardioVsStrength = (Spinner) findViewById(R.id.spinnerCardioVsStrength);
         spinnerTargetedMuscles = (Spinner) findViewById(R.id.spinnerTargetedMuscles);
-        spinnerFitnessGoal = (Spinner) findViewById(R.id.spinnerFitnessGoal);
 
         //For each spinner, call the array adapter
         createArrayAdapter(R.array.duration_of_workout, spinnerWorkoutDuration); //Right now just calling it for the duration of workout
         createArrayAdapter(R.array.equipment_available, spinnerEquipment);
         createArrayAdapter(R.array.type_of_workout, spinnerCardioVsStrength);
         createArrayAdapter(R.array.muscles_targeted, spinnerTargetedMuscles);
-        createArrayAdapter(R.array.fitness_goal, spinnerFitnessGoal);
 
         // Spinner click listener
         spinnerWorkoutDuration.setOnItemSelectedListener(this);
         spinnerEquipment.setOnItemSelectedListener(this);
         spinnerCardioVsStrength.setOnItemSelectedListener(this);
         spinnerTargetedMuscles.setOnItemSelectedListener(this);
-        spinnerFitnessGoal.setOnItemSelectedListener(this);
 
         //On-click listener to be used by the generate workout button
         View.OnClickListener listener = new View.OnClickListener() {
@@ -101,11 +93,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 System.out.println("the on click listener is working");
 
                 //If the Generate workout button was clicked....
-                if (b == mGenerateWorkout){
+                if (b == mGenerateWorkout) {
                     Log.d(TAG, "onClick: The generate workout button has been clicked");
                     Log.d(TAG, "onClick: Calling the generate workout method");
 
-                   //Calling the TEMP class 'ExampleWorkoutOutput' for testing purposes
+                    //Calling the TEMP class 'ExampleWorkoutOutput' for testing purposes
                     //Todo Call the backend code as an AsyncTask since since Stack output says too many activities on the main thread
                     ExampleWorkoutOutput example = new ExampleWorkoutOutput();
                     workoutResults = example.getExample();
@@ -143,7 +135,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Add functionality when button item selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id  = item.getItemId();
+        int id = item.getItemId();
         return super.onOptionsItemSelected(item);
     }
 
@@ -205,7 +197,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     userInput.put("cardioVsStrength", item);
                     //Output the JSON object to the command line to check
                     Log.i("JSON Body", userInput.toString());
-                } catch(Exception e) {
+                } catch (Exception e) {
                     Log.e(TAG, "onItemSelected: Error with User Input!");
                 }
                 break;
@@ -220,29 +212,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     userInput.put("targetedMuscles", item);
                     //Output the JSON object to the command line to check
                     Log.i("JSON Body", userInput.toString());
-                } catch(Exception e) {
-                    Log.e(TAG, "onItemSelected: Error with User Input!");
-                }
-                break;
-
-            case R.id.spinnerFitnessGoal:
-                // On selecting a spinner item
-                item = parent.getItemAtPosition(position).toString();
-                // Showing selected spinner item
-                Toast.makeText(parent.getContext(), "Selected: " + item + " for Fitness Goal", Toast.LENGTH_LONG).show();
-                //Add the user-input to a JSON object
-                try {
-                    userInput.put("fitnessGoal", item);
-                    //Output the JSON object to the command line to check
-                    Log.i("JSON Body", userInput.toString());
-                } catch(Exception e) {
+                } catch (Exception e) {
                     Log.e(TAG, "onItemSelected: Error with User Input!");
                 }
                 break;
         }
     }
 
-    public void onNothingSelected(AdapterView<?> arg0){
+    public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Deal with this
     }
 
@@ -358,7 +335,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public JSONArray generateWorkoutFromExercises(int numExercisesNeeded, JSONArray allExercises) {
         JSONArray workoutGenerated = new JSONArray();
         try {
-            for (int i = 0; i < numExercisesNeeded; i++){
+            for (int i = 0; i < numExercisesNeeded; i++) {
                 int randomNumber = generateRandomNumber(allExercises.length());
                 workoutGenerated.put(allExercises.get(randomNumber));
                 allExercises.remove(randomNumber);

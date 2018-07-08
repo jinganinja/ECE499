@@ -21,8 +21,7 @@ public class TutorialListAdapter extends ArrayAdapter {
 
     //Constructor
     public TutorialListAdapter(Context context, int layoutResource, List<String> description, List<String> descripImgs) {
-        super(context, layoutResource); //Calling the super constructor!
-        Log.d(TAG, "TutorialListAdapter: MAKE IT TO THE CONSTRUCTOR");
+        super(context, layoutResource);
         this.layoutResource = layoutResource;
         this.layoutInflater = LayoutInflater.from(context);
         this.description = description;

@@ -4,13 +4,14 @@
 
 package com.example.micaela.fwd;
 
-import org.json.JSONArray;
+import java.util.List;
 
 public class ExerciseListObject {
     private String name;
     private String tagLine;
     private String img;
-    private JSONArray description; //ToDo Deal with description as a JSON array (and images associated for each step?)
+    private List<String> description;
+    private List<String> descripImgs;
     private String reps;
     private String sets;
 
@@ -38,12 +39,20 @@ public class ExerciseListObject {
         this.img = img;
     }
 
-    public JSONArray getDescription() {
+    public List<String> getDescription() {
         return description;
     }
 
-    public void setDescription(JSONArray description) {
+    public void setDescription(List<String> description) {
         this.description = description;
+    }
+
+    public List<String> getDescripImgs() {
+        return descripImgs;
+    }
+
+    public void setDescripImgs(List<String> descripImgs) {
+        this.descripImgs = descripImgs;
     }
 
     public String getReps() {

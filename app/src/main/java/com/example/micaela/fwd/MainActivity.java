@@ -8,16 +8,21 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.JsonReader;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.support.v7.widget.Toolbar;
+
 
 import android.util.Log;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -26,6 +31,8 @@ import java.io.FileNotFoundException;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Random;
+
+
 
 import org.json.JSONObject;
 import org.json.JSONArray;
@@ -53,9 +60,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //put icon into toolbar -- GOAL: move this into a theme
-        //getSupportActionBar().setLogo(R.drawable.push_up_fig_1);
-        //getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //Set up Custom Toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        toolbar = findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
+        pageTitle.setText("Fast Workout Designer");
+
         final String TAG = "MainActivity";
         mGenerateWorkout = (Button) findViewById(R.id.generateWorkoutButton);
         //tempButton = (Button)findViewById(R.id.button);
@@ -109,6 +121,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     //Need to convert JSON array to string to add it to intent and pass to the second page
                     startCustomWorkoutActivityIntent.putExtra("workout", workoutResults.toString());
 
+                    //ToDO: Add extra content to the bundle to pass - the list of leftover exercises
+
                     Log.d(TAG, "onClick: Starting a new Activity....");
                     // Start the CustomWorkout activity
                     startActivity(startCustomWorkoutActivityIntent);
@@ -117,6 +131,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         };
         //Set the on-click listener for the generator workout button
         mGenerateWorkout.setOnClickListener(listener);
+    }
+
+    //Add the menu to the top of the screen
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    //Add functionality when button item selected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id  = item.getItemId();
+        return super.onOptionsItemSelected(item);
     }
 
     //Function to Create an array adapter and set adapter

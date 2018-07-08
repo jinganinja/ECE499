@@ -4,16 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CustomWorkout">
+    tools:context=".ExerciseTutorial">
 
     <include
         android:id="@+id/tool_bar"
         layout="@layout/tool_bar" />
 
-
-
     <ListView
-        android:id="@+id/xmlListview"
+        android:id="@+id/xmlTutListView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginBottom="8dp"
@@ -26,30 +24,11 @@
         app:layout_constraintVertical_bias="0.0"
         android:paddingBottom="20dp"
         android:clipToPadding="false"
-
         />
 
-
-
-    <!--Implement Custom Floating Action Button -->
-    <android.support.design.widget.CoordinatorLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
-
-    <Button
-        android:layout_margin="15dp"
-        android:layout_width="210dp"
-        android:layout_height="70dp"
-        android:drawablePadding="0dp"
-        android:text="Regenerate"
-        android:textSize="19sp"
-        android:textColor="#FFFFFF"
-        android:drawableStart="@drawable/ic_repeat_white_24dp"
-        android:paddingLeft="26dp"
-        android:paddingRight="26dp"
-        android:background="@drawable/btn_rectangle"
-        android:id="@+id/shuffle_fab"
-        android:layout_gravity="center|bottom" />
-    </android.support.design.widget.CoordinatorLayout>
-
 </android.support.constraint.ConstraintLayout>
+
+
+
+
+

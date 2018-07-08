@@ -88,6 +88,7 @@ public class CustomWorkout extends AppCompatActivity {
                 Bundle extras  = new Bundle();
                 extras.putString("workout", jsonArrayWorkout);
                 extras.putInt("index",position);
+                Log.d(TAG, "onItemClick: THE POSITION OF THE ITEM YOU CLICKED: "+position);
                 startExerciseTutorialIntent.putExtras(extras);
 
                 Log.d(TAG, "onClick: Starting Exercise Tutorial Activity....");

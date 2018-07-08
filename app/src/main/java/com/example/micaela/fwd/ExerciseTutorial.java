@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.widget.ListView;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -22,18 +23,12 @@ public class ExerciseTutorial extends AppCompatActivity {
         setContentView(R.layout.activity_exercise_tutorial);
         tutorialSteps = (ListView) findViewById(R.id.xmlTutListView);
 
-        //Set up Toolbar at top to have the name of the exercise in it
-        //Toolbar stufffs
-        Toolbar toolbar = findViewById(R.id.tool_bar);
-        setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
-        //getSupportActionBar().setTitle("Test");
-
         //Get data from bundle
         try {
             Intent intent = getIntent();
             Bundle extras = intent.getExtras();
-            int position = extras.getInt("position");
+            int position = extras.getInt("index");
+            Log.d(TAG, "onCreate: THE POSITION RECIEVED FROM THE BUNDLE IS: "+ position);
             String jsonArrayWorkout = extras.getString("workout");
             ParseJSONForUI parseJSONForUI = new ParseJSONForUI(jsonArrayWorkout);
             allExercises = parseJSONForUI.getExercises();
@@ -43,6 +38,15 @@ public class ExerciseTutorial extends AppCompatActivity {
         }
         Log.d(TAG, "onCreate: GOT THE SHIT FROM THE BUNDLE");
         //Call the adapter for the Listview
+
+        //Set up Toolbar at top to have the name of the exercise in it
+        //Toolbar stufffs
+        Toolbar toolbar = findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
+        Log.d(TAG, "onCreate: The Name of the current Exercise is:" + exercise.getName());
+        pageTitle.setText(exercise.getName());
 
         TutorialListAdapter tutorialListAdapter = new TutorialListAdapter(
                 ExerciseTutorial.this, R.layout.tutorial_list_item, exercise.getDescription(), exercise.getDescripImgs());

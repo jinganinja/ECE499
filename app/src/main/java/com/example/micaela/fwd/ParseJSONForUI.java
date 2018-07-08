@@ -30,7 +30,7 @@ public class ParseJSONForUI {
             //Call function to Convert JSON array to ArrayList
             JSONArrayToArrayList(exercisesJSON);
         } catch (JSONException e) {
-            Log.d(TAG, "onCreate: Error retrieving the JSON array of generated exercisesJSON!");
+            Log.e(TAG, "onCreate: Error retrieving the JSON array of generated exercisesJSON!");
         }
     }
 
@@ -43,11 +43,11 @@ public class ParseJSONForUI {
                 //Create a temporary ExerciseListObject and JSONObject to hold the current item in array
                 ExerciseListObject exerciseObj = new ExerciseListObject();
                 JSONObject exerciseJSONObj = exercisesJSONArray.getJSONObject(i);
-                Log.d(TAG, "JSONArrayToArrayList: " + exerciseJSONObj.toString());
-                Log.d(TAG, "JSONArrayToArrayList: successfully created a JSON object from the String ");
+                //Log.d(TAG, "JSONArrayToArrayList: " + exerciseJSONObj.toString());
+                //Log.d(TAG, "JSONArrayToArrayList: successfully created a JSON object from the String ");
 
                 //Set the fields of the ExerciseListObject
-                Log.d(TAG, "JSONArrayToArrayList: " + exerciseJSONObj.get("name").toString());
+                //Log.d(TAG, "JSONArrayToArrayList: " + exerciseJSONObj.get("name").toString());
                 exerciseObj.setName(exerciseJSONObj.get("name").toString());
                 exerciseObj.setTagLine(exerciseJSONObj.get("tagLine").toString());
                 exerciseObj.setImg(exerciseJSONObj.get("coverImg").toString());
@@ -68,7 +68,7 @@ public class ParseJSONForUI {
                 //Get description images in a List<String> too
                 exerciseObj.setDescripImgs(getImagesfromJSON(descripImgsObjectJSON, descriptionArrayJSON));
 
-                Log.d(TAG, "JSONArrayToArrayList: Sucessfully turned the JSON objects into ExerciseListObject Objects");
+                //Log.d(TAG, "JSONArrayToArrayList: Sucessfully turned the JSON objects into ExerciseListObject Objects");
                 //Add each ExerciseListObject to my ArrayList
                 this.exercises.add(exerciseObj);
 
@@ -88,8 +88,8 @@ public class ParseJSONForUI {
                 currentObj = descriptionArray.getJSONObject(i);
                 //Get the value of the first object
                 String keyValue = getKeyIdentifier(currentObj);
-                Log.d(TAG, "getDescription: HERE IS MY KEY:"+keyValue);
-                Log.d(TAG, "getDescription: HERE IS MY VALUE:"+currentObj.getString(keyValue));
+                //Log.d(TAG, "getDescription: HERE IS MY KEY:"+keyValue);
+                //Log.d(TAG, "getDescription: HERE IS MY VALUE:"+currentObj.getString(keyValue));
                 description.add(currentObj.getString(keyValue));
             } catch (JSONException e) {
                 Log.e(TAG, "getDescription: Error reading description from JSON!");

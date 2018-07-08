@@ -13,7 +13,6 @@
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:text="Pushups"
         android:textSize="21sp"
         android:layout_gravity = "center"
         style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"

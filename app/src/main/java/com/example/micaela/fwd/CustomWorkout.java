@@ -26,6 +26,7 @@ public class CustomWorkout extends AppCompatActivity {
     private static final String TAG = "Custom Workout";
     private Button shuffleFab;
     private List<ExerciseListObject> exercises;
+    String jsonArrayWorkout;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -58,7 +59,7 @@ public class CustomWorkout extends AppCompatActivity {
         Log.d(TAG, "onCreate: Retrieving the custom workout info from Bundle");
         //Get the information passed in the bundle as a String (originally a JSONArray in prev Activity)
         Intent intent  = getIntent();
-        String jsonArrayWorkout = intent.getStringExtra("workout");
+        jsonArrayWorkout = intent.getStringExtra("workout");
 
         Log.d(TAG, "onCreate: parsing the JSON for UI");
         //Parse JSON to feed into list and call the custom array adapter for listview to inflate and populate Layout
@@ -77,67 +78,21 @@ public class CustomWorkout extends AppCompatActivity {
 
                 //Need to add stuff to the Bundle to pass on to the next activity (tutorial activity)
 
+                //set to context to go in the intent call
+                Context context = CustomWorkout.this;
+                // Store the destination activity in a class to go in the intent call
+                Class destinationActivity = ExerciseTutorial.class;
+                // Create the intent that will be used to start Exercise Tutorial
+                Intent startExerciseTutorialIntent = new Intent(context, destinationActivity);
+                //Add the exercise of interest to the Bundle to pass on to the next activity -- pass in the form of string that we got
+                Bundle extras  = new Bundle();
+                extras.putString("workout", jsonArrayWorkout);
+                extras.putInt("index",position);
+                startExerciseTutorialIntent.putExtras(extras);
 
-
-
-
-
-
-//                switch (parent.getId()) {
-//                    case R.id.spinnerTimeDuration:
-//
-//                        try {
-//
-//                        } catch (Exception e) {
-//                        }
-//                        break;
-//
-//                    case R.id.spinnerEquipment:
-//
-//                        try {
-//
-//                        } catch (Exception e) {
-//
-//                        }
-//                        break;
-//
-//                    case R.id.spinnerCardioVsStrength:
-//
-//                        try {
-//
-//                        } catch(Exception e) {
-//                        }
-//                        break;
-//
-//                    case R.id.spinnerTargetedMuscles:
-//
-//                        try {
-//
-//                        } catch(Exception e) {
-//
-//                        }
-//                        break;
-//
-//                    case R.id.spinnerFitnessGoal:
-//
-//                        try {
-//
-//                        } catch(Exception e) {
-//                        }
-//                        break;
-//                }
-
-
-
-
-
-
-
-
-
+                Log.d(TAG, "onClick: Starting Exercise Tutorial Activity....");
+                startActivity(startExerciseTutorialIntent);
             }
         });
-
-
     }
 }

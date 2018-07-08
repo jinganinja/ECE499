@@ -1,47 +1,12 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/primaryTextColor</item>
-
-        <!-- can customize further here by doing things like changing the text color"-->
-        <!-- <item name="android:textColorSecondary">@color/secondaryText</item>
-        <item name="android:icon">@color/icons</item>
-        <item name="android:windowBackground">@color/colorPrimaryLight</item>
-        <item name="workoutBackgroudColor">@color/primaryLight</item> -->
     </style>
-
-    <!-- Create a style that shows our logo instead of a title in the action bar -->
-    <style name="ActionBar.Solid.Fwd.NoTitle" parent="@style/Widget.AppCompat.Light.ActionBar.Solid.Inverse">
-        <item name="displayOptions">useLogo|showHome</item>
-        <item name="logo">@drawable/logowhite</item>
-    </style>
-
-    <!--Create a style for Main Activity that uses the custom action bar style -->
-    <style name="AppTheme.Fwd" parent="@style/AppTheme">
-        <item name="actionBarStyle">@style/ActionBar.Solid.Fwd.NoTitle</item>
-    </style>
-
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">true</item>
-    </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
-
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
-
-    <!--
-    <style name="AppTheme.NoActionBar">
-        <item name="windowActionBar">false</item>
-        <item name="windowNoTitle">false</item>
-    </style>
-
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar"/>
-    <style name="AppTheme.PopOverlay" parent="ThemeOverlay.AppCompat.Light"/> -->
 
 </resources>

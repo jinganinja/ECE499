@@ -6,6 +6,12 @@
     android:layout_height="match_parent"
     tools:context=".CustomWorkout">
 
+    <include
+        android:id="@+id/tool_bar"
+        layout="@layout/tool_bar" />
+
+
+
     <ListView
         android:id="@+id/xmlListview"
         android:layout_width="0dp"
@@ -16,21 +22,14 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tool_bar"
         app:layout_constraintVertical_bias="0.0"
-        android:paddingTop="20dp"
         android:paddingBottom="20dp"
         android:clipToPadding="false"
 
         />
 
 
-
-    <!--android:layout_width="match_parent"-->
-    <!--android:layout_height="match_parent"-->
-    <!--android:paddingTop="20dp"-->
-    <!--android:paddingBottom="20dp"-->
-    <!--android:clipToPadding="false-->
 
     <!--Implement Custom Floating Action Button -->
     <android.support.design.widget.CoordinatorLayout

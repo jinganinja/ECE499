@@ -7,15 +7,15 @@ package com.example.micaela.fwd;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ImageButton;
 import android.widget.ListView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.List;
@@ -37,6 +37,14 @@ public class CustomWorkout extends AppCompatActivity {
         Log.d(TAG, "onCreate: Setting up the Layout");
         setContentView(R.layout.activity_custom_workout_list); //Layout for this page
         listExercises = (ListView) findViewById(R.id.xmlListview);//Located in activity_custom_workout_list.xml
+
+        //Set the custom Toolbar
+        Toolbar toolbar = findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
+        pageTitle.setText("Your Custom Workout");
+
         //Todo: Try both overScroll class and also padding in listview to add blank space at bottom
         //listExercises.setOverScrollMode(ListView.OVER_SCROLL_IF_CONTENT_SCROLLS);
 
@@ -50,15 +58,15 @@ public class CustomWorkout extends AppCompatActivity {
                 //ToDO: if button clicked, then need to call shuffle function
                 //Need to ensure that shuffle function retrieves new workout and new 'leftover' exercises arrays
                 //Need to add both of these items to the bundle, and modify the bundle before calling this activity to restart
-//                Intent shuffleWorkoutIntent = new Intent(CustomWorkout.this, CustomWorkout.class);
-//                shuffleWorkoutIntent.putExtra(....);
-//                startActivity(shuffleWorkoutIntent);
+                //Intent shuffleWorkoutIntent = new Intent(CustomWorkout.this, CustomWorkout.class);
+                //shuffleWorkoutIntent.putExtra(....);
+                //startActivity(shuffleWorkoutIntent);
             }
         });
 
         Log.d(TAG, "onCreate: Retrieving the custom workout info from Bundle");
         //Get the information passed in the bundle as a String (originally a JSONArray in prev Activity)
-        Intent intent  = getIntent();
+        Intent intent = getIntent();
         jsonArrayWorkout = intent.getStringExtra("workout");
 
         Log.d(TAG, "onCreate: parsing the JSON for UI");
@@ -76,8 +84,6 @@ public class CustomWorkout extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 Toast.makeText(CustomWorkout.this, exercises.get(position).getName().toString(), Toast.LENGTH_SHORT).show();
 
-                //Need to add stuff to the Bundle to pass on to the next activity (tutorial activity)
-
                 //set to context to go in the intent call
                 Context context = CustomWorkout.this;
                 // Store the destination activity in a class to go in the intent call
@@ -85,10 +91,9 @@ public class CustomWorkout extends AppCompatActivity {
                 // Create the intent that will be used to start Exercise Tutorial
                 Intent startExerciseTutorialIntent = new Intent(context, destinationActivity);
                 //Add the exercise of interest to the Bundle to pass on to the next activity -- pass in the form of string that we got
-                Bundle extras  = new Bundle();
+                Bundle extras = new Bundle();
                 extras.putString("workout", jsonArrayWorkout);
-                extras.putInt("index",position);
-                Log.d(TAG, "onItemClick: THE POSITION OF THE ITEM YOU CLICKED: "+position);
+                extras.putInt("index", position);
                 startExerciseTutorialIntent.putExtras(extras);
 
                 Log.d(TAG, "onClick: Starting Exercise Tutorial Activity....");

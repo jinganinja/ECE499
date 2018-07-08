@@ -1,3 +1,5 @@
+/*This is the Activity Page that shows the step-by-step instructions for a given exercise*/
+
 package com.example.micaela.fwd;
 
 import android.content.Intent;
@@ -9,7 +11,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.List;
-
 public class ExerciseTutorial extends AppCompatActivity {
 
     private ListView tutorialSteps;
@@ -28,16 +29,13 @@ public class ExerciseTutorial extends AppCompatActivity {
             Intent intent = getIntent();
             Bundle extras = intent.getExtras();
             int position = extras.getInt("index");
-            Log.d(TAG, "onCreate: THE POSITION RECIEVED FROM THE BUNDLE IS: "+ position);
             String jsonArrayWorkout = extras.getString("workout");
             ParseJSONForUI parseJSONForUI = new ParseJSONForUI(jsonArrayWorkout);
             allExercises = parseJSONForUI.getExercises();
             exercise = allExercises.get(position);
         } catch (Exception e) {
-            Log.d(TAG, "onCreate: Error retriving data from bundle!");
+            Log.e(TAG, "onCreate: Error retriving data from bundle!");
         }
-        Log.d(TAG, "onCreate: GOT THE SHIT FROM THE BUNDLE");
-        //Call the adapter for the Listview
 
         //Set up Toolbar at top to have the name of the exercise in it
         //Toolbar stufffs
@@ -48,6 +46,7 @@ public class ExerciseTutorial extends AppCompatActivity {
         Log.d(TAG, "onCreate: The Name of the current Exercise is:" + exercise.getName());
         pageTitle.setText(exercise.getName());
 
+        //Call the adapter for the Listview
         TutorialListAdapter tutorialListAdapter = new TutorialListAdapter(
                 ExerciseTutorial.this, R.layout.tutorial_list_item, exercise.getDescription(), exercise.getDescripImgs());
         tutorialSteps.setAdapter(tutorialListAdapter);

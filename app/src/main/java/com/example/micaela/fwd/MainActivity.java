@@ -15,11 +15,14 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
+import android.support.v7.widget.Toolbar;
+
 
 import android.util.Log;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.widget.Toast;
-import android.widget.Toolbar;
+
 
 import java.io.File;
 import java.io.IOException;
@@ -28,6 +31,8 @@ import java.io.FileNotFoundException;
 import java.io.StringWriter;
 import java.util.ArrayList;
 import java.util.Random;
+
+
 
 import org.json.JSONObject;
 import org.json.JSONArray;
@@ -55,9 +60,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        //put icon into toolbar -- GOAL: move this into a theme
-        //getSupportActionBar().setLogo(R.drawable.push_up_fig_1);
-        //getSupportActionBar().setDisplayUseLogoEnabled(true);
+        //Set up Custom Toolbar
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
+        toolbar = findViewById(R.id.tool_bar);
+        setSupportActionBar(toolbar);
+        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
+        pageTitle.setText("Fast Workout Designer");
+
         final String TAG = "MainActivity";
         mGenerateWorkout = (Button) findViewById(R.id.generateWorkoutButton);
         //tempButton = (Button)findViewById(R.id.button);

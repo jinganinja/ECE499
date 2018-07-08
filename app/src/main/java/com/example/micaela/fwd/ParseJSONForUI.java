@@ -1,6 +1,6 @@
 /*
-This class parses the JSON received from backed into native format to be easily passed from
-Activities in a bundle, and for easy access.
+This class parses the JSON received from backed into native format to be easily displayed in ListView
+and for easy front-end access.
  */
 
 package com.example.micaela.fwd;
@@ -11,7 +11,6 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-import java.lang.reflect.Array;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -43,32 +42,22 @@ public class ParseJSONForUI {
                 //Create a temporary ExerciseListObject and JSONObject to hold the current item in array
                 ExerciseListObject exerciseObj = new ExerciseListObject();
                 JSONObject exerciseJSONObj = exercisesJSONArray.getJSONObject(i);
-                //Log.d(TAG, "JSONArrayToArrayList: " + exerciseJSONObj.toString());
-                //Log.d(TAG, "JSONArrayToArrayList: successfully created a JSON object from the String ");
 
                 //Set the fields of the ExerciseListObject
-                //Log.d(TAG, "JSONArrayToArrayList: " + exerciseJSONObj.get("name").toString());
                 exerciseObj.setName(exerciseJSONObj.get("name").toString());
                 exerciseObj.setTagLine(exerciseJSONObj.get("tagLine").toString());
                 exerciseObj.setImg(exerciseJSONObj.get("coverImg").toString());
                 exerciseObj.setReps(exerciseJSONObj.get("reps").toString());
                 exerciseObj.setSets(exerciseJSONObj.get("sets").toString());
 
-                //TODO: Address whether or not this fits the final layout of instructions and images
-                /*The Steps are difficult to deal with. Here I am making two arrayLists: One for the steps
-                and one for the images. If there is no corresponding image for the step, the the list has a
-                value of "" in that position.
-                 */
-
-                JSONArray descriptionArrayJSON = (JSONArray) exerciseJSONObj.get("description");
                 //Get description in a List<String> and set the description of the current exerciseObj
+                JSONArray descriptionArrayJSON = (JSONArray) exerciseJSONObj.get("description");
                 exerciseObj.setDescription(getDescriptionfromJSON(descriptionArrayJSON));
 
-                JSONObject descripImgsObjectJSON = (JSONObject) exerciseJSONObj.get("descripImgs");
                 //Get description images in a List<String> too
+                JSONObject descripImgsObjectJSON = (JSONObject) exerciseJSONObj.get("descripImgs");
                 exerciseObj.setDescripImgs(getImagesfromJSON(descripImgsObjectJSON, descriptionArrayJSON));
 
-                //Log.d(TAG, "JSONArrayToArrayList: Sucessfully turned the JSON objects into ExerciseListObject Objects");
                 //Add each ExerciseListObject to my ArrayList
                 this.exercises.add(exerciseObj);
 
@@ -88,8 +77,6 @@ public class ParseJSONForUI {
                 currentObj = descriptionArray.getJSONObject(i);
                 //Get the value of the first object
                 String keyValue = getKeyIdentifier(currentObj);
-                //Log.d(TAG, "getDescription: HERE IS MY KEY:"+keyValue);
-                //Log.d(TAG, "getDescription: HERE IS MY VALUE:"+currentObj.getString(keyValue));
                 description.add(currentObj.getString(keyValue));
             } catch (JSONException e) {
                 Log.e(TAG, "getDescription: Error reading description from JSON!");
@@ -139,5 +126,4 @@ public class ParseJSONForUI {
     public ArrayList<ExerciseListObject> getExercises() {
         return exercises;
     }
-
 }

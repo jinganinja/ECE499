@@ -12,11 +12,9 @@
         <item>10 mins</item>
         <item>15 mins</item>
         <item>20 mins</item>
-        <item>25 mins</item>
         <item>30 mins</item>
         <item>45 mins</item>
         <item>1 hour</item>
-        <item>2 hours</item>
     </string-array>
 
 
@@ -27,8 +25,7 @@
     </string-array>
 
     <string-array name="type_of_workout">
-        <item>Indoor Cardio</item>
-        <item>Outdoor Cardio</item>
+        <item>Cardio</item>
         <item>HIIT</item>
         <item>Strength</item>
     </string-array>
@@ -37,14 +34,8 @@
         <item>Arms</item>
         <item>Legs</item>
         <item>Core</item>
-        <item>Full Body </item>
     </string-array>
 
-
-    <string-array name="fitness_goal">
-        <item>Weight Loss</item>
-        <item>Muscle Gain</item>
-    </string-array>
     <string name="title_activity_custom_workout_list">CustomWorkoutList</string>
 
 </resources>

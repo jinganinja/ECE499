@@ -46,13 +46,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Create a JSON instance to hold the generated workout info
     JSONArray workoutResults = new JSONArray();
     final String TAG = "MainActivity";
+    private Spinner spinnerWorkoutDuration, spinnerEquipment, spinnerCardioVsStrength,
+            spinnerTargetedMuscles;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        Spinner spinnerWorkoutDuration, spinnerEquipment, spinnerCardioVsStrength,
-                spinnerTargetedMuscles;
+        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.testmain);
 
         //Set up Custom Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
@@ -78,6 +79,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         createArrayAdapter(R.array.equipment_available, spinnerEquipment);
         createArrayAdapter(R.array.type_of_workout, spinnerCardioVsStrength);
         createArrayAdapter(R.array.muscles_targeted, spinnerTargetedMuscles);
+
+        //Set the Muscles targeted to hidden
+        spinnerTargetedMuscles.setVisibility(View.GONE);
 
         // Spinner click listener
         spinnerWorkoutDuration.setOnItemSelectedListener(this);
@@ -197,6 +201,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     userInput.put("cardioVsStrength", item);
                     //Output the JSON object to the command line to check
                     Log.i("JSON Body", userInput.toString());
+
+                    //Remove the muscle group option if cardio selected
+                    if (item.equals("Strength")){
+                        spinnerTargetedMuscles.setVisibility(View.VISIBLE);
+                    } else {
+                        spinnerTargetedMuscles.setVisibility(View.GONE);
+                    }
                 } catch (Exception e) {
                     Log.e(TAG, "onItemSelected: Error with User Input!");
                 }

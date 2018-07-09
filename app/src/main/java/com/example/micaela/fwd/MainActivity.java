@@ -107,8 +107,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                    //Calling the TEMP class 'ExampleWorkoutOutput' for testing purposes
                     //Todo Call the backend code as an AsyncTask since since Stack output says too many activities on the main thread
-                    ExampleWorkoutOutput example = new ExampleWorkoutOutput();
-                    workoutResults = example.getExample();
+                    try {
+                        boolean equipment = false;
+                        int duration = Integer.parseInt(userInput.getString("time"));
+                        if (userInput.getString("equipment").equals("Gym Facility"))
+                            equipment = true;
+                        else if (userInput.getString("equipment").equals("None (Bodyweight"))
+                            equipment = false;
+                        String muscleGroup = userInput.getString("targetedMuscles");
+                        String type = userInput.getString("cardioVsStrength");
+                        workoutResults = createWorkout(duration, equipment, muscleGroup, type);
+                        ExampleWorkoutOutput example = new ExampleWorkoutOutput();
+                        workoutResults = example.getExample();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
 
                     //set to context to go in the intent call
                     Context context = MainActivity.this;
@@ -247,7 +261,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     //**************************Back-end******************************************************
-    public void createWorkout(int duration, boolean equipment, String muscleGroup, String type) {
+    public JSONArray createWorkout(int duration, boolean equipment, String muscleGroup, String type) {
         // This function takes all of the potential workout exercises and iterates through them and
         // adds the applicable ones to the current workout potential exercises list. From that list
         // there will be a random number generator that picks the number of exercises that will be
@@ -291,6 +305,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 } else {
                     // throw an error or retry the whole thing
                 }
+                return null;
             }
 
         } catch (FileNotFoundException e) {

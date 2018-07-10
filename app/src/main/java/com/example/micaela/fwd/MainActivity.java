@@ -1,7 +1,9 @@
 package com.example.micaela.fwd;
 
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -115,12 +117,12 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         Intent startCustomWorkoutActivityIntent = new Intent(context, destinationActivity);
 
                         //Need to convert JSON array to string to add it to intent and pass to the second page
-                        //startCustomWorkoutActivityIntent.putExtra("workout", workoutResults.toString());
+                        startCustomWorkoutActivityIntent.putExtra("workout", workoutResults.toString());
 
                         //ToDO: Add extra content to the bundle to pass - the list of leftover exercises
                         Log.d(TAG, "onClick: Starting a new Activity....");
                         // Start the CustomWorkout activity
-                        //startActivity(startCustomWorkoutActivityIntent);
+                        startActivity(startCustomWorkoutActivityIntent);
                     }
                 }
             }
@@ -283,25 +285,36 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     //Function to check that the user has selected input for all fields
     private boolean confirmAllOptionsSelected() {
+        String message = null;
         try {
 
-            Log.d(TAG, "confirmAllOptionsSelected: "+userInput.get("time"));
+            Log.d(TAG, "confirmAllOptionsSelected: " + userInput.get("time"));
             if (userInput.getString("time").equals("")) {
+                message = "Enter your time duration.";
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your time duration.");
+                showAlertDialogButtonClicked(message);
                 return false;
             }
             if (userInput.getString("equipment").equals("")) {
+                message = "Enter your eqipment.";
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your equipment.");
+                showAlertDialogButtonClicked(message);
+
                 return false;
             }
             if (userInput.getString("cardioVsStrength").equals("")) {
+                message = "Enter your type of workout.";
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your type of workout.");
+                showAlertDialogButtonClicked(message);
+
                 return false;
             }
             if (userInput.getString("targetedMuscles").equals("")) {
                 Log.d(TAG, "confirmAllOptionsSelected: Nothing selected for targeted muscles.");
                 if (userInput.getString("cardioVsStrength").equals("Strength")) {
+                    message = "Enter your targeted muscles.";
                     Log.d(TAG, "confirmAllOptionsSelected: Enter your targeted muscles.");
+                    showAlertDialogButtonClicked(message);
                     return false;
                 }
             }
@@ -311,6 +324,32 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             return false;
         }
         return true;
+    }
+
+    //Make a function to have a pop-up when fields not all selected
+    public void showAlertDialogButtonClicked(String message) {
+
+        // setup the alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("You Forgot Something!");
+        builder.setMessage(message);
+
+        // add the buttons
+        builder.setPositiveButton("OK", null);
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+
+                // we're good
+            }
+        });
+
+
     }
 
 

@@ -9,6 +9,7 @@
 
     <!-- Inputs for Workout Generator-->
     <string-array name="duration_of_workout">
+        <item>Time Duration</item>
         <item>10 mins</item>
         <item>15 mins</item>
         <item>20 mins</item>
@@ -20,17 +21,20 @@
 
     <!--This list should include more items and let user select multiple-->
     <string-array name="equipment_available">
+        <item>Equipment Available</item>
         <item>Gym Facility</item>
         <item>None (Bodyweight)</item>
     </string-array>
 
     <string-array name="type_of_workout">
+        <item>Type of Workout</item>
         <item>Cardio</item>
         <item>HIIT</item>
         <item>Strength</item>
     </string-array>
 
     <string-array name="muscles_targeted">
+        <item>"Targeted Muscles"</item>
         <item>Arms</item>
         <item>Legs</item>
         <item>Core</item>

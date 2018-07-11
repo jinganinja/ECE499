@@ -1,38 +1,30 @@
 package com.example.micaela.fwd;
 
-import com.example.micaela.fwd.CustomWorkout;
-
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.JsonReader;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
-import android.widget.ArrayAdapter;
 import android.widget.Button;
-import android.widget.EditText;
 import android.support.v7.widget.Toolbar;
 
-
-import android.util.Log;
+import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
-
-import java.io.File;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
-import java.io.StringWriter;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
-
-
 
 import org.json.JSONObject;
 import org.json.JSONArray;
@@ -45,53 +37,56 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Declare the generate workout button
     private Button mGenerateWorkout;
 
-    //Declare a temporary button that will take me to other pages for dev purposes
-    //private Button tempButton;
-    //Declare all the dropDown menus
-    private Spinner spinnerWorkoutDuration, spinnerEquipment, spinnerCardioVsStrength,
-            spinnerTargetedMuscles, spinnerFitnessGoal;
     //Create a JSON instance to hold the user-input
     JSONObject userInput = new JSONObject();
     //Create a JSON instance to hold the generated workout info
     JSONArray workoutResults = new JSONArray();
+    final String TAG = "MainActivity";
+    private Spinner spinnerWorkoutDuration, spinnerEquipment, spinnerCardioVsStrength,
+            spinnerTargetedMuscles;
+    ImageView targetedMusclesIcon;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_layout);
 
         //Set up Custom Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
-        toolbar = findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
-        getSupportActionBar().setDisplayShowTitleEnabled(false);
+        if (getSupportActionBar() != null) {
+            getSupportActionBar().setDisplayShowTitleEnabled(false);
+        } else {
+            Log.e(TAG, "onCreate: Support Action bar is null!");
+        }
         TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
-        pageTitle.setText("Fast Workout Designer");
+        pageTitle.setText(getString(R.string.mainActivityWorkoutPageTitle));
 
-        final String TAG = "MainActivity";
         mGenerateWorkout = (Button) findViewById(R.id.generateWorkoutButton);
-        //tempButton = (Button)findViewById(R.id.button);
 
         //Initialize Spinner objects and link them to their xml id
         spinnerWorkoutDuration = (Spinner) findViewById(R.id.spinnerTimeDuration);
         spinnerEquipment = (Spinner) findViewById(R.id.spinnerEquipment);
         spinnerCardioVsStrength = (Spinner) findViewById(R.id.spinnerCardioVsStrength);
         spinnerTargetedMuscles = (Spinner) findViewById(R.id.spinnerTargetedMuscles);
-        spinnerFitnessGoal = (Spinner) findViewById(R.id.spinnerFitnessGoal);
+        targetedMusclesIcon = (ImageView) findViewById(R.id.iconMuscleDropDown);
 
         //For each spinner, call the array adapter
         createArrayAdapter(R.array.duration_of_workout, spinnerWorkoutDuration); //Right now just calling it for the duration of workout
         createArrayAdapter(R.array.equipment_available, spinnerEquipment);
         createArrayAdapter(R.array.type_of_workout, spinnerCardioVsStrength);
         createArrayAdapter(R.array.muscles_targeted, spinnerTargetedMuscles);
-        createArrayAdapter(R.array.fitness_goal, spinnerFitnessGoal);
+
+        //Set the Muscles targeted to hidden
+        spinnerTargetedMuscles.setVisibility(View.GONE);
+        targetedMusclesIcon.setVisibility(View.GONE);
 
         // Spinner click listener
         spinnerWorkoutDuration.setOnItemSelectedListener(this);
         spinnerEquipment.setOnItemSelectedListener(this);
         spinnerCardioVsStrength.setOnItemSelectedListener(this);
         spinnerTargetedMuscles.setOnItemSelectedListener(this);
-        spinnerFitnessGoal.setOnItemSelectedListener(this);
 
         //On-click listener to be used by the generate workout button
         View.OnClickListener listener = new View.OnClickListener() {
@@ -101,6 +96,51 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 System.out.println("the on click listener is working");
 
                 //If the Generate workout button was clicked....
+
+                if (b == mGenerateWorkout) {
+
+                    //Check to make sure that all the fields are selected
+                    Log.d(TAG, "onClick: " + userInput.toString());
+                    if (confirmAllOptionsSelected()) {
+
+                        Log.d(TAG, "onClick: The generate workout button has been clicked");
+                        Log.d(TAG, "onClick: Calling the generate workout method");
+
+                        //Calling the TEMP class 'ExampleWorkoutOutput' for testing purposes
+                        //Todo Call the backend code as an AsyncTask since since Stack output says too many activities on the main thread
+                        try {
+                        boolean equipment = false;
+                            int duration = Integer.parseInt(userInput.getString("time"));
+                            if (userInput.getString("equipment").equals("Gym Facility"))
+                                equipment = true;
+                            else if (userInput.getString("equipment").equals("None (Bodyweight"))
+                                equipment = false;
+                            String muscleGroup = userInput.getString("targetedMuscles");
+                            String type = userInput.getString("cardioVsStrength");
+                            workoutResults = createWorkout(duration, equipment, muscleGroup, type);
+                            ExampleWorkoutOutput example = new ExampleWorkoutOutput();
+                            workoutResults = example.getExample();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                      
+                        //set to context to go in the intent call
+                        Context context = MainActivity.this;
+                        // Store the destination activity in a class to go in the intent call
+                        Class destinationActivity = CustomWorkout.class;
+                        // Create the intent that will be used to start the CustomWorkout Activity -- intent
+                        // creation needs a context and a destination
+                        Intent startCustomWorkoutActivityIntent = new Intent(context, destinationActivity);
+
+                        //Need to convert JSON array to string to add it to intent and pass to the second page
+                        startCustomWorkoutActivityIntent.putExtra("workout", workoutResults.toString());
+
+                        //ToDO: Add extra content to the bundle to pass - the list of leftover exercises
+                        Log.d(TAG, "onClick: Starting a new Activity....");
+                        // Start the CustomWorkout activity
+                        startActivity(startCustomWorkoutActivityIntent);
+                    }
+
                 if (b == mGenerateWorkout){
                     Log.d(TAG, "onClick: The generate workout button has been clicked");
                     Log.d(TAG, "onClick: Calling the generate workout method");
@@ -140,6 +180,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                     Log.d(TAG, "onClick: Starting a new Activity....");
                     // Start the CustomWorkout activity
                     startActivity(startCustomWorkoutActivityIntent);
+
                 }
             }
         };
@@ -157,19 +198,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     //Add functionality when button item selected
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        int id  = item.getItemId();
+        int id = item.getItemId();
         return super.onOptionsItemSelected(item);
     }
 
     //Function to Create an array adapter and set adapter
     public void createArrayAdapter(int textArrayResId, Spinner spinner) {
-        // Create an ArrayAdapter using the string array and a default spinner layout
-        ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
-                textArrayResId, android.R.layout.simple_spinner_item);
-        // Specify the layout to use when the list of choices appears
-        adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        // Apply the adapter to the spinner
-        spinner.setAdapter(adapter);
+        CustomSpinnerAdapter customSpinnerAdapter = new CustomSpinnerAdapter(MainActivity.this, getResources().getStringArray(textArrayResId));
+        spinner.setAdapter(customSpinnerAdapter);
     }
 
     //Create a function that responds to the selections from the dropdown menu
@@ -180,85 +216,201 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
         switch (parent.getId()) {
             case R.id.spinnerTimeDuration:
-                // On selecting a spinner item
-                String item = parent.getItemAtPosition(position).toString();
-                // Showing selected spinner item
-                Toast.makeText(parent.getContext(), "Selected: " + item + "for Time duration", Toast.LENGTH_LONG).show();
-                //Add the selected item to the JSON object
-                try {
-                    userInput.put("time", item);
-                    //Output the JSON object to the command line to check
-                    Log.i("JSON Body", userInput.toString());
-                } catch (Exception e) {
-                    Log.e(TAG, "onItemSelected: Error with User Input!");
+                //Check to make sure that it isn't the default selection
+                if (position == 0) {
+                    try {
+                        userInput.put("time", "");
+                    } catch (Exception e) {
+                        Log.e(TAG, "onItemSelected: Error with User Input!");
+                    }
+                } else {
+
+                    // On selecting a spinner item
+                    String item = parent.getItemAtPosition(position).toString();
+                    // Showing selected spinner item
+                    Toast.makeText(parent.getContext(), "Selected: " + item + "for Time duration", Toast.LENGTH_LONG).show();
+                    //Add the selected item to the JSON object
+                    try {
+                        userInput.put("time", item);
+                        //Output the JSON object to the command line to check
+                        Log.i("JSON Body", userInput.toString());
+                    } catch (Exception e) {
+                        Log.e(TAG, "onItemSelected: Error with User Input!");
+                    }
                 }
+
                 break;
 
             case R.id.spinnerEquipment:
-                // On selecting a spinner item
-                item = parent.getItemAtPosition(position).toString();
-                // Showing selected spinner item
-                Toast.makeText(parent.getContext(), "Selected: " + item + "for Equipment", Toast.LENGTH_LONG).show();
-                //Add the user-input to a JSON object
-                try {
-                    userInput.put("equipment", item);
-                    //Output the JSON object to the command line to check
-                    Log.i("JSON Body", userInput.toString());
-                } catch (Exception e) {
-                    Log.e(TAG, "onItemSelected: Error with User Input!");
-                }
-                break;
+                //Check to make sure that it isn't the default selection
+                if (position == 0) {
 
-            case R.id.spinnerCardioVsStrength:
-                // On selecting a spinner item
-                item = parent.getItemAtPosition(position).toString();
-                // Showing selected spinner item
-                Toast.makeText(parent.getContext(), "Selected: " + item + " for Cardio vs. Strength", Toast.LENGTH_LONG).show();
-                //Add the user-input to a JSON object
-                try {
-                    userInput.put("cardioVsStrength", item);
-                    //Output the JSON object to the command line to check
-                    Log.i("JSON Body", userInput.toString());
-                } catch(Exception e) {
-                    Log.e(TAG, "onItemSelected: Error with User Input!");
+                    try {
+                        userInput.put("equipment", "");
+                    } catch (Exception e) {
+                        Log.e(TAG, "onItemSelected: Error with User Input!");
+                    }
+                } else {
+
+                    // On selecting a spinner item
+                    String item = parent.getItemAtPosition(position).toString();
+                    // Showing selected spinner item
+                    Toast.makeText(parent.getContext(), "Selected: " + item + "for Equipment", Toast.LENGTH_LONG).show();
+                    //Add the user-input to a JSON object
+                    try {
+                        userInput.put("equipment", item);
+                        //Output the JSON object to the command line to check
+                        Log.i("JSON Body", userInput.toString());
+                    } catch (Exception e) {
+                        Log.e(TAG, "onItemSelected: Error with User Input!");
+                    }
                 }
                 break;
 
             case R.id.spinnerTargetedMuscles:
-                // On selecting a spinner item
-                item = parent.getItemAtPosition(position).toString();
-                // Showing selected spinner item
-                Toast.makeText(parent.getContext(), "Selected: " + item + " for TargetedMucles", Toast.LENGTH_LONG).show();
-                //Add the user-input to a JSON object
-                try {
-                    userInput.put("targetedMuscles", item);
-                    //Output the JSON object to the command line to check
-                    Log.i("JSON Body", userInput.toString());
-                } catch(Exception e) {
-                    Log.e(TAG, "onItemSelected: Error with User Input!");
+                //Check to make sure that it isn't the default selection
+                if (position == 0) {
+                    try {
+                        userInput.put("targetedMuscles", "");
+                    } catch (Exception e) {
+                        Log.e(TAG, "onItemSelected: Error with User Input!");
+                    }
+                } else {
+                    // On selecting a spinner item
+                    String item = parent.getItemAtPosition(position).toString();
+                    // Showing selected spinner item
+                    Toast.makeText(parent.getContext(), "Selected: " + item + " for TargetedMuscles", Toast.LENGTH_LONG).show();
+                    //Add the user-input to a JSON object
+                    try {
+                        userInput.put("targetedMuscles", item);
+                        //Output the JSON object to the command line to check
+                        Log.i("JSON Body", userInput.toString());
+
+                    } catch (Exception e) {
+                        Log.e(TAG, "onItemSelected: Error with User Input!");
+                    }
                 }
                 break;
 
-            case R.id.spinnerFitnessGoal:
-                // On selecting a spinner item
-                item = parent.getItemAtPosition(position).toString();
-                // Showing selected spinner item
-                Toast.makeText(parent.getContext(), "Selected: " + item + " for Fitness Goal", Toast.LENGTH_LONG).show();
-                //Add the user-input to a JSON object
-                try {
-                    userInput.put("fitnessGoal", item);
-                    //Output the JSON object to the command line to check
-                    Log.i("JSON Body", userInput.toString());
-                } catch(Exception e) {
-                    Log.e(TAG, "onItemSelected: Error with User Input!");
+            case R.id.spinnerCardioVsStrength:
+                //Check to make sure that it isn't the default selection
+                if (position == 0) {
+                    try {
+                        userInput.put("cardioVsStrength", "");
+                    } catch (Exception e) {
+                        Log.e(TAG, "onItemSelected: Error with User Input!");
+                    }
+                } else {
+                    // On selecting a spinner item
+                    String item = parent.getItemAtPosition(position).toString();
+                    // Showing selected spinner item
+                    Toast.makeText(parent.getContext(), "Selected: " + item + " for cardioVsStrength", Toast.LENGTH_LONG).show();
+                    //Add the user-input to a JSON object
+                    try {
+                        userInput.put("cardioVsStrength", item);
+                        //Output the JSON object to the command line to check
+                        Log.i("JSON Body", userInput.toString());
+                        //Remove the muscle group option if cardio selected
+                        if (item.equals("Strength")) {
+                            spinnerTargetedMuscles.setVisibility(View.VISIBLE);
+                            targetedMusclesIcon.setVisibility(View.VISIBLE);
+
+                        } else {
+                            spinnerTargetedMuscles.setVisibility(View.GONE);
+                            targetedMusclesIcon.setVisibility(View.GONE);
+                            spinnerTargetedMuscles.setSelection(0);
+                            try {
+                                if (userInput.has("targetedMuscles")) {userInput.remove("targetedMuscles");}
+                               // userInput.put("targetedMuscles", "");
+                            } catch (Exception e) {
+                                Log.e(TAG, "onItemSelected: Error with User Input");
+                            }
+                        }
+                    } catch (JSONException e) {
+                        Log.e(TAG, "onItemSelected: Error with User Input!");
+                    }
                 }
                 break;
         }
     }
 
-    public void onNothingSelected(AdapterView<?> arg0){
+    public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Deal with this
     }
+
+    //Function to check that the user has selected input for all fields
+    private boolean confirmAllOptionsSelected() {
+        String message = "Enter your";
+        List<String> missingItems= new ArrayList<String> ();
+        boolean allOptionsSelected = true;// Start off with the assumption everything is good!
+        try {
+            Log.d(TAG, "confirmAllOptionsSelected: userInput" + userInput.toString());
+            if (userInput.getString("time").equals("")) {
+                 missingItems.add("time duration");
+                Log.d(TAG, "confirmAllOptionsSelected: Enter your time duration.");
+                allOptionsSelected = false;
+            }
+            if (userInput.getString("equipment").equals("")) {
+                missingItems.add("equipment");
+                Log.d(TAG, "confirmAllOptionsSelected: Enter your equipment.");
+                allOptionsSelected = false;
+            }
+            if (userInput.getString("cardioVsStrength").equals("")) {
+                missingItems.add("type of workout");
+                Log.d(TAG, "confirmAllOptionsSelected: Enter your type of workout.");
+                allOptionsSelected = false;
+            }
+            if (userInput.has("targetedMuscles") && userInput.getString("targetedMuscles").equals("")){
+                Log.d(TAG, "confirmAllOptionsSelected: Nothing selected for targeted muscles.");
+                if (userInput.getString("cardioVsStrength").equals("Strength")) {
+                    missingItems.add("targeted muscles");
+                    Log.d(TAG, "confirmAllOptionsSelected: Enter your targeted muscles.");
+                    allOptionsSelected = false;
+                }
+            }
+        } catch (JSONException e) {
+            Log.e(TAG, "confirmAllOptionsSelected: Error Reading JSON!");
+            showAlertDialogButtonClicked("Error Reading JSON!");
+            return false;
+        }
+
+        if (!allOptionsSelected){
+            //Add all the missing items to the message to be displayed
+            int i; //Declare counter of items
+            for (i= 0; i < missingItems.size()-1; i++){ //subtract 1 to deal with last item separately
+                message = message+" "+missingItems.get(i)+",";
+            }
+            //Add the last item to the message
+            message = message + " and "+ missingItems.get(i)+".";
+            showAlertDialogButtonClicked(message);
+            return false;
+        }
+        return true;
+    }
+
+    //Make a function to have a pop-up when fields not all selected
+    public void showAlertDialogButtonClicked(String message) {
+
+        // setup the alert builder
+        AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setTitle("You Forgot Something!");
+        builder.setMessage(message);
+
+        // add the buttons
+        builder.setPositiveButton("OK", null);
+
+        // create and show the alert dialog
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                // we're good
+            }
+        });
+    }
+
 
     //**************************Back-end******************************************************
     public JSONArray createWorkout(int duration, boolean equipment, String muscleGroup, String type) {
@@ -329,6 +481,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return null;
     }
 
+
     public JSONArray createHIITWorkout(int duration, boolean equipment) {
         JSONParser parser = new JSONParser();
         try {
@@ -351,7 +504,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return null;
     }
 
-    public JSONArray removeEquipmentRequired(JSONArray iterationExercises, JSONArray allExercises) {
+    public JSONArray removeEquipmentRequired(JSONArray iterationExercises, JSONArray
+            allExercises) {
         for (int i = 0; i < iterationExercises.length(); i++) {
             // remove all the exercises that require equipment
             try {
@@ -434,6 +588,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return 0;
     }
 
+
     public JSONArray removeUnapplicableMuscleExercises(JSONArray iterationExercises, JSONArray allExercises, String muscleGroup) {
         try {
             for (int i = 0; i < iterationExercises.length(); i++) {
@@ -448,10 +603,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return allExercises;
     }
 
-    public JSONArray generateWorkoutFromExercises(int numExercisesNeeded, JSONArray allExercises) {
+    public JSONArray generateWorkoutFromExercises(int numExercisesNeeded, JSONArray
+            allExercises) {
         JSONArray workoutGenerated = new JSONArray();
         try {
-            for (int i = 0; i < numExercisesNeeded; i++){
+            for (int i = 0; i < numExercisesNeeded; i++) {
                 int randomNumber = generateRandomNumber(allExercises.length());
                 workoutGenerated.put(allExercises.get(randomNumber));
                 allExercises.remove(randomNumber);

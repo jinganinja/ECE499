@@ -11,8 +11,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:paddingLeft="12dp"
-        android:text="Step 1"
+        android:paddingStart="12dp"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -29,8 +28,8 @@
         android:scaleType="fitCenter"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/stepTitle"
-        app:srcCompat="@drawable/push_up_fig_1" />
+        app:layout_constraintTop_toBottomOf="@+id/stepTitle" />
+    <!--app:srcCompat="@drawable/push_up_fig_1"-->
 
     <TextView
         android:id="@+id/stepInstructions"
@@ -43,13 +42,11 @@
         android:paddingRight="12dp"
         android:paddingStart="12dp"
         android:paddingTop="0dp"
-        android:text="Position hands palms-down on the floor, approximately shoulder width apart. They should be about next to your shoulders, with your elbows pointed towards your toes. "
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/stepFigure"
         app:layout_constraintVertical_bias="0.0" />
-
 
 </android.support.constraint.ConstraintLayout>

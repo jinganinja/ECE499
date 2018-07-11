@@ -101,25 +101,25 @@ public class ParseJSONForUI {
                 while (imageKeys.hasNext()) {
                     String imageKey = (String) imageKeys.next();
                     //If the description and the image both have the same key...
-                    if (imageKey == descripKey) {
+                    if (imageKey.equals(descripKey)) {
                         descripImgs.add(descripImgsObject.getString(imageKey));
                         foundImage = true;
                     }
                 }
-                if (foundImage == false) descripImgs.add(null);
+                if (!foundImage) descripImgs.add(null);
             } catch (JSONException e) {
                 Log.e(TAG, "getDescription: Error reading description from JSON!");
             }
+            Log.d(TAG, "getImagesfromJSON: Files for images"+ descripImgs.toString());
         }//End of for loop
         return descripImgs;
     }
 
     //getKeyIdentifier only appropirate for use on description JSONArray where each Object contains only
     //ONE key-value pair
-    public String getKeyIdentifier (JSONObject currentObject){
+    private String getKeyIdentifier (JSONObject currentObject){
         Iterator<String> keys = currentObject.keys();
-        String keyValue = (String) keys.next(); //Only need to do this once because only one key-value pair here!
-        return keyValue;
+        return (String) keys.next(); //Only need to do this once because only one key-value pair here!
     }
 
     //Returns the information that was in the JSONArray in the format of a list of ExerciseListObjects

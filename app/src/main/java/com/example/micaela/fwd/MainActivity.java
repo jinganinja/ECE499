@@ -22,6 +22,8 @@ import android.widget.Toast;
 import java.io.IOException;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Random;
 
 import org.json.JSONObject;
@@ -282,45 +284,62 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         // TODO Deal with this
     }
 
-
     //Function to check that the user has selected input for all fields
     private boolean confirmAllOptionsSelected() {
-        String message = null;
+        String message = "Enter your";
+        List<String> missingItems= new ArrayList<String> ();
+        boolean allOptionsSelected = true;// Start off with the assumption everything is good!
         try {
-
-            Log.d(TAG, "confirmAllOptionsSelected: " + userInput.get("time"));
+            Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 1");
+            Log.d(TAG, "confirmAllOptionsSelected: " + userInput.toString());
             if (userInput.getString("time").equals("")) {
-                message = "Enter your time duration.";
+                 missingItems.add("time duration");
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your time duration.");
-                showAlertDialogButtonClicked(message);
-                return false;
+                allOptionsSelected = false;
+                Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 2");
+
             }
             if (userInput.getString("equipment").equals("")) {
-                message = "Enter your eqipment.";
+                missingItems.add("eqipment");
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your equipment.");
-                showAlertDialogButtonClicked(message);
+                allOptionsSelected = false;
+                Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 3");
 
-                return false;
             }
             if (userInput.getString("cardioVsStrength").equals("")) {
-                message = "Enter your type of workout.";
+                missingItems.add("type of workout");
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your type of workout.");
-                showAlertDialogButtonClicked(message);
+                allOptionsSelected = false;
+                Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 4");
 
-                return false;
             }
-            if (userInput.getString("targetedMuscles").equals("")) {
+            if (userInput.has("targetedMuscles") && userInput.getString("targetedMuscles").equals("")){
+                Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 5");
                 Log.d(TAG, "confirmAllOptionsSelected: Nothing selected for targeted muscles.");
                 if (userInput.getString("cardioVsStrength").equals("Strength")) {
-                    message = "Enter your targeted muscles.";
+                    Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 6");
+
+                    missingItems.add("targeted muscles");
                     Log.d(TAG, "confirmAllOptionsSelected: Enter your targeted muscles.");
-                    showAlertDialogButtonClicked(message);
-                    return false;
+                    allOptionsSelected = false;
+
                 }
             }
-
         } catch (JSONException e) {
             Log.e(TAG, "confirmAllOptionsSelected: Error Reading JSON!");
+            showAlertDialogButtonClicked("Error Reading JSON!");
+            return false;
+        }
+
+        if (!allOptionsSelected){
+            //Add all the missing items to the message to be displayed
+            int i; //Declare counter of items
+            for (i= 0; i < missingItems.size()-1; i++){ //subtract 1 to deal with last item separately
+                message = message+" "+missingItems.get(i)+",";
+            }
+            //Add the last item to the message
+            message = message + " and "+ missingItems.get(i)+".";
+            showAlertDialogButtonClicked(message);
             return false;
         }
         return true;
@@ -344,12 +363,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         builder.setPositiveButton("OK", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-
                 // we're good
             }
         });
-
-
     }
 
 

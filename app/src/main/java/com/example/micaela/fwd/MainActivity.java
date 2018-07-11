@@ -163,7 +163,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             case R.id.spinnerTimeDuration:
                 //Check to make sure that it isn't the default selection
                 if (position == 0) {
-
                     try {
                         userInput.put("time", "");
                     } catch (Exception e) {
@@ -266,13 +265,13 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                             targetedMusclesIcon.setVisibility(View.GONE);
                             spinnerTargetedMuscles.setSelection(0);
                             try {
-                                userInput.put("targetedMuscles", "");
-                            } catch (JSONException e) {
+                                if (userInput.has("targetedMuscles")) {userInput.remove("targetedMuscles");}
+                               // userInput.put("targetedMuscles", "");
+                            } catch (Exception e) {
                                 Log.e(TAG, "onItemSelected: Error with User Input");
                             }
-
                         }
-                    } catch (Exception e) {
+                    } catch (JSONException e) {
                         Log.e(TAG, "onItemSelected: Error with User Input!");
                     }
                 }
@@ -290,39 +289,28 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         List<String> missingItems= new ArrayList<String> ();
         boolean allOptionsSelected = true;// Start off with the assumption everything is good!
         try {
-            Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 1");
-            Log.d(TAG, "confirmAllOptionsSelected: " + userInput.toString());
+            Log.d(TAG, "confirmAllOptionsSelected: userInput" + userInput.toString());
             if (userInput.getString("time").equals("")) {
                  missingItems.add("time duration");
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your time duration.");
                 allOptionsSelected = false;
-                Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 2");
-
             }
             if (userInput.getString("equipment").equals("")) {
-                missingItems.add("eqipment");
+                missingItems.add("equipment");
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your equipment.");
                 allOptionsSelected = false;
-                Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 3");
-
             }
             if (userInput.getString("cardioVsStrength").equals("")) {
                 missingItems.add("type of workout");
                 Log.d(TAG, "confirmAllOptionsSelected: Enter your type of workout.");
                 allOptionsSelected = false;
-                Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 4");
-
             }
             if (userInput.has("targetedMuscles") && userInput.getString("targetedMuscles").equals("")){
-                Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 5");
                 Log.d(TAG, "confirmAllOptionsSelected: Nothing selected for targeted muscles.");
                 if (userInput.getString("cardioVsStrength").equals("Strength")) {
-                    Log.d(TAG, "confirmAllOptionsSelected: MADE IT TO 6");
-
                     missingItems.add("targeted muscles");
                     Log.d(TAG, "confirmAllOptionsSelected: Enter your targeted muscles.");
                     allOptionsSelected = false;
-
                 }
             }
         } catch (JSONException e) {

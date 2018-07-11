@@ -96,6 +96,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 System.out.println("the on click listener is working");
 
                 //If the Generate workout button was clicked....
+
                 if (b == mGenerateWorkout) {
 
                     //Check to make sure that all the fields are selected
@@ -107,9 +108,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                         //Calling the TEMP class 'ExampleWorkoutOutput' for testing purposes
                         //Todo Call the backend code as an AsyncTask since since Stack output says too many activities on the main thread
-                        ExampleWorkoutOutput example = new ExampleWorkoutOutput();
-                        workoutResults = example.getExample();
-
+                        try {
+                        boolean equipment = false;
+                            int duration = Integer.parseInt(userInput.getString("time"));
+                            if (userInput.getString("equipment").equals("Gym Facility"))
+                                equipment = true;
+                            else if (userInput.getString("equipment").equals("None (Bodyweight"))
+                                equipment = false;
+                            String muscleGroup = userInput.getString("targetedMuscles");
+                            String type = userInput.getString("cardioVsStrength");
+                            workoutResults = createWorkout(duration, equipment, muscleGroup, type);
+                            ExampleWorkoutOutput example = new ExampleWorkoutOutput();
+                            workoutResults = example.getExample();
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                      
                         //set to context to go in the intent call
                         Context context = MainActivity.this;
                         // Store the destination activity in a class to go in the intent call
@@ -126,6 +140,47 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         // Start the CustomWorkout activity
                         startActivity(startCustomWorkoutActivityIntent);
                     }
+
+                if (b == mGenerateWorkout){
+                    Log.d(TAG, "onClick: The generate workout button has been clicked");
+                    Log.d(TAG, "onClick: Calling the generate workout method");
+
+                   //Calling the TEMP class 'ExampleWorkoutOutput' for testing purposes
+                    //Todo Call the backend code as an AsyncTask since since Stack output says too many activities on the main thread
+                    try {
+                        boolean equipment = false;
+                        int duration = Integer.parseInt(userInput.getString("time"));
+                        if (userInput.getString("equipment").equals("Gym Facility"))
+                            equipment = true;
+                        else if (userInput.getString("equipment").equals("None (Bodyweight"))
+                            equipment = false;
+                        String muscleGroup = userInput.getString("targetedMuscles");
+                        String type = userInput.getString("cardioVsStrength");
+                        workoutResults = createWorkout(duration, equipment, muscleGroup, type);
+                        ExampleWorkoutOutput example = new ExampleWorkoutOutput();
+                        workoutResults = example.getExample();
+                    } catch (JSONException e) {
+                        e.printStackTrace();
+                    }
+
+
+                    //set to context to go in the intent call
+                    Context context = MainActivity.this;
+                    // Store the destination activity in a class to go in the intent call
+                    Class destinationActivity = CustomWorkout.class;
+                    // Create the intent that will be used to start the CustomWorkout Activity -- intent
+                    // creation needs a context and a destination
+                    Intent startCustomWorkoutActivityIntent = new Intent(context, destinationActivity);
+
+                    //Need to convert JSON array to string to add it to intent and pass to the second page
+                    startCustomWorkoutActivityIntent.putExtra("workout", workoutResults.toString());
+
+                    //ToDO: Add extra content to the bundle to pass - the list of leftover exercises
+
+                    Log.d(TAG, "onClick: Starting a new Activity....");
+                    // Start the CustomWorkout activity
+                    startActivity(startCustomWorkoutActivityIntent);
+
                 }
             }
         };
@@ -358,58 +413,20 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
 
     //**************************Back-end******************************************************
-    public void createWorkout(int duration, boolean equipment, String muscleGroup, String type) {
+    public JSONArray createWorkout(int duration, boolean equipment, String muscleGroup, String type) {
         // This function takes all of the potential workout exercises and iterates through them and
         // adds the applicable ones to the current workout potential exercises list. From that list
         // there will be a random number generator that picks the number of exercises that will be
         // used for the workout.
 
-
-        JSONParser parser = new JSONParser();
-        try {
-            JSONArray iterationExercises = (JSONArray) parser.parse(new FileReader("/main/json/exercises.json"));
-            JSONArray allExercises = (JSONArray) parser.parse(new FileReader("/main/json/exercises.json"));
-
-            // check equipment to see if we can minimize exercises based on that
-            if (!equipment)
-                iterationExercises = removeEquipmentRequired(iterationExercises, allExercises);
-
-            // check the muscle group to minimize the exercises
-            if (!muscleGroup.equals("full body"))
-                iterationExercises = removeUnapplicableMuscleExercises(iterationExercises, allExercises, muscleGroup);
-
-            // check the type to minimize the exercises
-            iterationExercises = removeUnapplicableTypeExercises(iterationExercises, allExercises, type);
-
-            // start checking if we have enough exercises and creating the workout
-            int exerciseCount = allExercises.length();
-            int numExercisesNeeded = numExercisesRequired(duration);
-
-            if (exerciseCount < numExercisesNeeded) {
-                // throw an error saying that we can't make that kind of workout?
-            } else {
-                // generate workout from a random number generator that picks an exercise at random
-                // and adds it to the workout (repeats until workout created)
-                JSONArray workoutGenerated = new JSONArray();
-                if (!muscleGroup.equals("full body"))
-                    workoutGenerated = generateWorkoutFromExercises(numExercisesNeeded, allExercises);
-                else {
-                    workoutGenerated = generateFullBodyWorkout(duration, allExercises);
-                }
-                Boolean workoutDurationCorrect = checkWorkoutTime(workoutGenerated, type, duration);
-                if (workoutDurationCorrect) {
-                    // post workout
-                } else {
-                    // throw an error or retry the whole thing
-                }
-            }
-
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParseException e) {
-            e.printStackTrace();
+        if (type.equals("Cardio")) {
+            return createCardioWorkout(duration, equipment);
+        } else if (type.equals("Strength")) {
+            return createStrengthWorkout(duration, equipment, muscleGroup);
+        } else if (type.equals("HIIT")) {
+            return createHIITWorkout(duration, equipment);
+        } else {
+            return null;
         }
     }
 
@@ -418,11 +435,73 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return rand.nextInt(range);
     }
 
-    public JSONArray createHIIT(int duration, boolean equipment, String muscleGroup, String
-            type) {
-        // create workout
+    public JSONArray createCardioWorkout(int duration, boolean equipment) {
+        JSONParser parser = new JSONParser();
+        try {
+            JSONArray allExercises = (JSONArray) parser.parse(new FileReader("/main/json/cardioExercises.json"));
+            JSONArray iterationExercises = (JSONArray) parser.parse(new FileReader("/main/json/cardioExercises.json"));
+            if (!equipment)
+                allExercises = removeEquipmentRequired(iterationExercises, allExercises);
+            int exerciseCount = cardioNumExercisesForDuration(duration);
+            if (exerciseCount < allExercises.length()){
+                return generateWorkoutFromExercises(exerciseCount, allExercises);
+            } else {
+                return null;
+            }
+        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         return null;
+    }
 
+    public JSONArray createStrengthWorkout(int duration, boolean equipment, String muscleGroup) {
+        JSONParser parser = new JSONParser();
+        try {
+            JSONArray allExercises = (JSONArray) parser.parse(new FileReader("/main/json/strengthExercises.json"));
+            JSONArray iterationExercises = (JSONArray) parser.parse(new FileReader("/main/json/strengthExercises.json"));
+            if (!equipment)
+                allExercises = removeEquipmentRequired(iterationExercises, allExercises);
+            allExercises = removeUnapplicableMuscleExercises(iterationExercises, allExercises, muscleGroup);
+            int exerciseCount = strengthNumExercisesForDuration(duration);
+            if (exerciseCount < allExercises.length()){
+                return generateWorkoutFromExercises(exerciseCount, allExercises);
+            } else {
+                return null;
+            }        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+
+    public JSONArray createHIITWorkout(int duration, boolean equipment) {
+        JSONParser parser = new JSONParser();
+        try {
+            JSONArray allExercises = (JSONArray) parser.parse(new FileReader("/main/json/HIITExercises.json"));
+            JSONArray iterationExercises = (JSONArray) parser.parse(new FileReader("/main/json/HIITExercises.json"));
+            if (!equipment)
+                allExercises = removeEquipmentRequired(iterationExercises, allExercises);
+            int exerciseCount = HIITNumExercisesForDuration(duration);
+            if (exerciseCount < allExercises.length()){
+                return generateWorkoutFromExercises(exerciseCount, allExercises);
+            } else {
+                return null;
+            }        } catch (FileNotFoundException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return null;
     }
 
     public JSONArray removeEquipmentRequired(JSONArray iterationExercises, JSONArray
@@ -440,28 +519,82 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return allExercises;
     }
 
-    public JSONArray removeUnapplicableMuscleExercises(JSONArray iterationExercises, JSONArray
-            allExercises, String muscleGroup) {
+    public int cardioNumExercisesForDuration(int duration) {
+        switch(duration) {
+            case 10:
+                return 1;
+
+            case 15:
+                return 2;
+
+            case 20:
+                return 2;
+
+            case 30:
+                return 3;
+
+            case 45:
+                return 4;
+
+            case 60:
+                return 6;
+        }
+        return 0;
+    }
+
+    public int strengthNumExercisesForDuration(int duration) {
+        switch(duration) {
+            case 10:
+                return 3;
+
+            case 15:
+                return 5;
+
+            case 20:
+                return 7;
+
+            case 30:
+                return 10;
+
+            case 45:
+                return 15;
+
+            case 60:
+                return 20;
+        }
+        return 0;
+    }
+
+    public int HIITNumExercisesForDuration(int duration) { // duration can only equal one of: [10, 15, 20, 30, 45, 60]
+        switch(duration) {
+            case 10:
+                return 7;
+
+            case 15:
+                return 10;
+
+            case 20:
+                return 14;
+
+            case 30:
+                return 21;
+
+            case 45:
+                return 30;
+
+            case 60:
+                return 39;
+        }
+        return 0;
+    }
+
+
+    public JSONArray removeUnapplicableMuscleExercises(JSONArray iterationExercises, JSONArray allExercises, String muscleGroup) {
         try {
             for (int i = 0; i < iterationExercises.length(); i++) {
                 // remove exercises that are not for that muscle group
                 JSONObject exercise = (JSONObject) iterationExercises.get(i);
                 if (!exercise.getString("muscle group").equals(muscleGroup))
-                    allExercises.remove(i);
-            }
-        } catch (JSONException e) {
-            e.printStackTrace();
-        }
-        return allExercises;
-    }
-
-    public JSONArray removeUnapplicableTypeExercises(JSONArray iterationExercises, JSONArray
-            allExercises, String type) {
-        try {
-            for (int i = 0; i < iterationExercises.length(); i++) {
-                // remove exercises that are not for that muscle group
-                JSONObject exercise = (JSONObject) iterationExercises.get(i);
-                if (!exercise.getString("type").equals(type))
                     allExercises.remove(i);
             }
         } catch (JSONException e) {
@@ -484,39 +617,5 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         return workoutGenerated;
     }
-
-    public JSONArray generateFullBodyWorkout(int duration, JSONArray allExercises) {
-        // look at duration and consider just doing a HIIT
-        // if longer than 30 then create a full body workout
-        return null;
-    }
-
-    public int numExercisesRequired(int duration) {
-        // create a decision maker that decides how many exercises needed per time unit
-        int num = 0;
-        return num;
-    }
-
-    public boolean checkWorkoutTime(JSONArray workout, String type, int duration) {
-        int totalWorkoutTime = 0;
-        for (int i = 0; i < workout.length(); i++) {
-            // check the type of workout
-            // get the proper duration thing for that type
-            // add to total duration of workout
-            try {
-                JSONObject exercise = (JSONObject) workout.get(i);
-                JSONObject exerciseType = exercise.getJSONObject(type);
-                int time = exerciseType.getInt("duration");
-                totalWorkoutTime = totalWorkoutTime + time;
-            } catch (JSONException e) {
-                e.printStackTrace();
-            }
-        }
-        if (duration < totalWorkoutTime + 3 && duration > totalWorkoutTime - 3)
-            return true;
-        else
-            return false;
-    }
-
 }
 

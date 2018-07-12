@@ -137,9 +137,7 @@
         app:layout_constraintBottom_toBottomOf="@+id/spinnerEquipment"
         app:layout_constraintEnd_toEndOf="@+id/spinnerEquipment"
         app:layout_constraintTop_toTopOf="@+id/spinnerEquipment"
-        app:srcCompat="@drawable/ic_down" /><![CDATA[
+        app:srcCompat="@drawable/ic_down" />
 
-    />
 
-]]>
 </android.support.constraint.ConstraintLayout>

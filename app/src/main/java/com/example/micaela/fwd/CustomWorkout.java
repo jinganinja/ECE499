@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.Button;
@@ -37,6 +39,9 @@ public class CustomWorkout extends AppCompatActivity {
         Log.d(TAG, "onCreate: Setting up the Layout");
         setContentView(R.layout.activity_custom_workout_list); //Layout for this page
         listExercises = (ListView) findViewById(R.id.xmlListview);//Located in activity_custom_workout_list.xml
+
+        //Getting the menu!
+      //  onCreateOptionsMenu(R.menu.menu);
 
         //Set the custom Toolbar
         Toolbar toolbar = findViewById(R.id.tool_bar);
@@ -101,4 +106,28 @@ public class CustomWorkout extends AppCompatActivity {
             }
         });
     }
+    //Add the menu to the top of the screen
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    //Add functionality when button item selected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menuNewWrkout:
+                //Restart the main activity fresh
+                Intent startNewWorkout = new Intent(this, MainActivity.class);
+                startNewWorkout.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startNewWorkout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(startNewWorkout);
+                return true;
+            //Could add other options here
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+
 }

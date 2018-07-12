@@ -149,20 +149,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         mGenerateWorkout.setOnClickListener(listener);
     }
 
-    //Add the menu to the top of the screen
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    //Add functionality when button item selected
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        return super.onOptionsItemSelected(item);
-    }
-
     //Function to Create an array adapter and set adapter
     public void createArrayAdapter(int textArrayResId, Spinner spinner) {
         CustomSpinnerAdapter customSpinnerAdapter = new CustomSpinnerAdapter(MainActivity.this, getResources().getStringArray(textArrayResId));
@@ -301,7 +287,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-
     //Function to check that the user has selected input for all fields
     private boolean confirmAllOptionsSelected() {
         String message = "Enter your";
@@ -374,7 +359,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
     }
-
 
     //**************************Back-end******************************************************
     public JSONArray createWorkout(int duration, boolean equipment, String muscleGroup, String type) {

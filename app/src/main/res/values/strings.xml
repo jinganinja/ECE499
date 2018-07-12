@@ -23,7 +23,7 @@
     <string-array name="equipment_available">
         <item>Equipment Available</item>
         <item>Gym Facility</item>
-        <item>None (Bodyweight)</item>
+        <item>Bodyweight Only</item>
     </string-array>
 
     <string-array name="type_of_workout">

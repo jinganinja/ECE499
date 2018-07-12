@@ -56,7 +56,7 @@ public class CustomSpinnerAdapter extends BaseAdapter implements SpinnerAdapter 
         }
         return view;
     }
-
+    //This is the default view
     public View getView(int i, View view, ViewGroup viewgroup) {
         TextView txt = new TextView(context);
         txt.setGravity(Gravity.CENTER);
@@ -64,7 +64,12 @@ public class CustomSpinnerAdapter extends BaseAdapter implements SpinnerAdapter 
         txt.setTextSize(18);
         txt.setText(dropDownItems.get(i));
         txt.setTextColor(Color.parseColor("#FFFFFF"));
-        return txt;
+        if (i!=0) {
+            viewgroup.setBackground(context.getDrawable(R.drawable.spinner_background_dark));
+        } else {
+            viewgroup.setBackground(context.getDrawable(R.drawable.spinner_background));
+        }
+            return txt;
     }
 
 }

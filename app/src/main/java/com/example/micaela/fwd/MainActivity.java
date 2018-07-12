@@ -79,8 +79,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         createArrayAdapter(R.array.muscles_targeted, spinnerTargetedMuscles);
 
         //Set the Muscles targeted to hidden
-        spinnerTargetedMuscles.setVisibility(View.GONE);
-        targetedMusclesIcon.setVisibility(View.GONE);
+        showTargetedMuscles(false);
 
         // Spinner click listener
         spinnerWorkoutDuration.setOnItemSelectedListener(this);
@@ -108,22 +107,24 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
                         //Calling the TEMP class 'ExampleWorkoutOutput' for testing purposes
                         //Todo Call the backend code as an AsyncTask since since Stack output says too many activities on the main thread
-                        try {
-                        boolean equipment = false;
-                            int duration = Integer.parseInt(userInput.getString("time"));
-                            if (userInput.getString("equipment").equals("Gym Facility"))
-                                equipment = true;
-                            else if (userInput.getString("equipment").equals("None (Bodyweight"))
-                                equipment = false;
-                            String muscleGroup = userInput.getString("targetedMuscles");
-                            String type = userInput.getString("cardioVsStrength");
-                            workoutResults = createWorkout(duration, equipment, muscleGroup, type);
-                            ExampleWorkoutOutput example = new ExampleWorkoutOutput();
-                            workoutResults = example.getExample();
-                        } catch (JSONException e) {
-                            e.printStackTrace();
-                        }
-                      
+                        //Todo: parse the time from strings "20 min" to int "20"
+//                        try {
+//                            boolean equipment = false;
+//                            int duration = Integer.parseInt(userInput.getString("time"));
+//                            if (userInput.getString("equipment").equals("Gym Facility"))
+//                                equipment = true;
+//                            else if (userInput.getString("equipment").equals("Bodyweight Only"))
+//                                equipment = false;
+//                            String muscleGroup = userInput.getString("targetedMuscles");
+//                            String type = userInput.getString("cardioVsStrength");
+//                            workoutResults = createWorkout(duration, equipment, muscleGroup, type);
+                              ExampleWorkoutOutput example = new ExampleWorkoutOutput();
+                              workoutResults = example.getExample();
+//                        } catch (JSONException e) {
+//                            e.printStackTrace();
+//                        }
+
+
                         //set to context to go in the intent call
                         Context context = MainActivity.this;
                         // Store the destination activity in a class to go in the intent call
@@ -140,46 +141,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         // Start the CustomWorkout activity
                         startActivity(startCustomWorkoutActivityIntent);
                     }
-
-                if (b == mGenerateWorkout){
-                    Log.d(TAG, "onClick: The generate workout button has been clicked");
-                    Log.d(TAG, "onClick: Calling the generate workout method");
-
-                   //Calling the TEMP class 'ExampleWorkoutOutput' for testing purposes
-                    //Todo Call the backend code as an AsyncTask since since Stack output says too many activities on the main thread
-                    try {
-                        boolean equipment = false;
-                        int duration = Integer.parseInt(userInput.getString("time"));
-                        if (userInput.getString("equipment").equals("Gym Facility"))
-                            equipment = true;
-                        else if (userInput.getString("equipment").equals("None (Bodyweight"))
-                            equipment = false;
-                        String muscleGroup = userInput.getString("targetedMuscles");
-                        String type = userInput.getString("cardioVsStrength");
-                        workoutResults = createWorkout(duration, equipment, muscleGroup, type);
-                        ExampleWorkoutOutput example = new ExampleWorkoutOutput();
-                        workoutResults = example.getExample();
-                    } catch (JSONException e) {
-                        e.printStackTrace();
-                    }
-
-
-                    //set to context to go in the intent call
-                    Context context = MainActivity.this;
-                    // Store the destination activity in a class to go in the intent call
-                    Class destinationActivity = CustomWorkout.class;
-                    // Create the intent that will be used to start the CustomWorkout Activity -- intent
-                    // creation needs a context and a destination
-                    Intent startCustomWorkoutActivityIntent = new Intent(context, destinationActivity);
-
-                    //Need to convert JSON array to string to add it to intent and pass to the second page
-                    startCustomWorkoutActivityIntent.putExtra("workout", workoutResults.toString());
-
-                    //ToDO: Add extra content to the bundle to pass - the list of leftover exercises
-
-                    Log.d(TAG, "onClick: Starting a new Activity....");
-                    // Start the CustomWorkout activity
-                    startActivity(startCustomWorkoutActivityIntent);
 
                 }
             }
@@ -297,6 +258,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 if (position == 0) {
                     try {
                         userInput.put("cardioVsStrength", "");
+                        showTargetedMuscles(false);
                     } catch (Exception e) {
                         Log.e(TAG, "onItemSelected: Error with User Input!");
                     }
@@ -312,20 +274,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         Log.i("JSON Body", userInput.toString());
                         //Remove the muscle group option if cardio selected
                         if (item.equals("Strength")) {
-                            spinnerTargetedMuscles.setVisibility(View.VISIBLE);
-                            targetedMusclesIcon.setVisibility(View.VISIBLE);
-
+                            showTargetedMuscles(true);
                         } else {
-                            spinnerTargetedMuscles.setVisibility(View.GONE);
-                            targetedMusclesIcon.setVisibility(View.GONE);
-                            spinnerTargetedMuscles.setSelection(0);
-                            try {
-                                if (userInput.has("targetedMuscles")) {userInput.remove("targetedMuscles");}
-                               // userInput.put("targetedMuscles", "");
-                            } catch (Exception e) {
-                                Log.e(TAG, "onItemSelected: Error with User Input");
-                            }
-                        }
+                            showTargetedMuscles(false); }
                     } catch (JSONException e) {
                         Log.e(TAG, "onItemSelected: Error with User Input!");
                     }
@@ -337,6 +288,19 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public void onNothingSelected(AdapterView<?> arg0) {
         // TODO Deal with this
     }
+
+    public void showTargetedMuscles(boolean show){
+        if (show){
+            spinnerTargetedMuscles.setVisibility(View.VISIBLE);
+            targetedMusclesIcon.setVisibility(View.VISIBLE);
+        } else {
+            spinnerTargetedMuscles.setVisibility(View.GONE);
+            targetedMusclesIcon.setVisibility(View.GONE);
+            spinnerTargetedMuscles.setSelection(0);
+            if (userInput.has("targetedMuscles")) {userInput.remove("targetedMuscles");}
+        }
+    }
+
 
     //Function to check that the user has selected input for all fields
     private boolean confirmAllOptionsSelected() {

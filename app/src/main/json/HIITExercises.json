@@ -6,13 +6,6 @@
       "duration": 5
     }
   },
-  {"name": "Mountain Climbers",
-    "equipment": false,
-    "HIIT": true,
-    "cardio": {
-      "duration": 1
-    }
-  },
   {"name": "Jumping Jacks",
     "equipment": false,
     "HIIT": true,
@@ -27,13 +20,101 @@
       "duration": 1
     }
   },
-  {"name": "Flutter Kick",
+  {"name": "Burpees",
     "equipment": false,
     "HIIT": true,
     "cardio": {
-      "duration": 0.75
+      "duration": 0
     }
   },
+  {"name": "Butt Kicks",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 1
+    }
+  },
+
+
+  {"name": "Bicep Curls",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 1
+    }
+  },
+  {"name": "Tricep Kickbacks",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 1
+    }
+  },
+  {"name": "Dumbbell Thrusters",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 1
+    }
+  },
+  {"name": "Hammer Curl to Press",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 1
+    }
+  },
+  {"name": "Push Ups",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Plank to Push Up",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Plank Ups",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Inch Worm",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Plank Taps",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Plank Walks (Lateral)",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Plank Jacks",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+
+
   {"name": "Squat Jumps",
     "equipment": false,
     "HIIT": true,
@@ -55,21 +136,37 @@
       "duration": 1
     }
   },
-  {"name": "Butt Kicks",
-    "equipment": false,
-    "HIIT": true,
-    "cardio": {
-      "duration": 1
-    }
-  },
-  {"name": "Ladder - one on one",
+  {"name": "Side Lunges",
     "equipment": true,
     "HIIT": true,
     "cardio": {
       "duration": 0
     }
   },
-  {"name": "Ladder - one foot",
+  {"name": "Walking Lunges",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Bulgarian Split Squat",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Step Ups",
+  "equipment": false,
+  "HIIT": true,
+  "cardio": {
+    "duration": 0
+  }
+},
+
+
+  {"name": "Ladder - one on one",
     "equipment": true,
     "HIIT": true,
     "cardio": {
@@ -82,5 +179,110 @@
     "cardio": {
       "duration": 0
     }
-  }
+  },
+  {"name": "Pull Ups (assisted)",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Front Plank",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Side Plank",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Calf Raises",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Bicycle Crunches",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Flutter Kick",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0.75
+    }
+  },
+  {"name": "Sit Ups",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Heel Taps",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Leg Raises",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Toe Touches",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "V Ups",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Ab Wheel Rollouts",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Russian Twists",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Pike to Superman (exercise ball)",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  },
+  {"name": "Mountain Climbers",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 1
+    }
+  },
 ]

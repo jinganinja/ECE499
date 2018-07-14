@@ -43,7 +43,7 @@
       "duration": 1
     }
   },
-  {"name": "Tricep Kickbacks",
+  {"name": "Triceps Kickbacks",
     "equipment": true,
     "HIIT": true,
     "cardio": {
@@ -129,7 +129,14 @@
       "duration": 1
     }
   },
-  {"name": "Lateral Jumps",
+  {"name": "Lateral Jumps (One Foot)",
+    "equipment": false,
+    "HIIT": true,
+    "cardio": {
+      "duration": 1
+    }
+  },
+  {"name": "Lateral Jumps (Two Feet)",
     "equipment": false,
     "HIIT": true,
     "cardio": {
@@ -166,13 +173,6 @@
 },
 
 
-  {"name": "Ladder - one on one",
-    "equipment": true,
-    "HIIT": true,
-    "cardio": {
-      "duration": 0
-    }
-  },
   {"name": "Kettle Bell Swings",
     "equipment": true,
     "HIIT": true,
@@ -257,7 +257,7 @@
       "duration": 0
     }
   },
-  {"name": "Ab Wheel Rollouts",
+  {"name": "Ab Wheel Roll-Outs",
     "equipment": true,
     "HIIT": true,
     "cardio": {
@@ -285,4 +285,11 @@
       "duration": 1
     }
   },
+  {"name": "Ladder Circuit",
+    "equipment": true,
+    "HIIT": true,
+    "cardio": {
+      "duration": 0
+    }
+  }
 ]

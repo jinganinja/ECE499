@@ -17,10 +17,7 @@
   {"name": "Stair Sprints",
     "equipment": true
   },
-  {"name": "Bike Sprints",
-    "equipment": true
-  },
-  {"name": "Step Ups or Stair Master",
+  {"name": "Step Ups",
     "equipment": false
   },
   {"name": "Walk/Run",
@@ -29,7 +26,7 @@
   {"name": "Hill Repeats",
     "equipment": false
   },
-  {"name": "Negative Split - Run/Walk",
+  {"name": "Negative Split",
     "equipment": false
   },
   {"name": "30/60 Sprint",

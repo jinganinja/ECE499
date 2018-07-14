@@ -1,0 +1,288 @@
+[
+  {
+    "name": "Biking",
+    "description": [
+      {
+        "Step 1": "For this you can use either a stationary bike or traveling bike."
+      },
+      {
+        "Step 2": "If on a stationary bike, you can do some intervals. for 5 minutes spend 30 seconds sitting going as hard as you can on middle resistance, then for 30 seconds increase the resistance and do not sit down. do this 5 times in total."
+      },
+      {
+        "Step 3": ""
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Biking",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Elliptical",
+    "description": [
+      {
+        "Step 1": "A possible interval you could do on the elliptical is: 2 minute warm-up (low resistance), 2 minutes at a medium resistance, 2 minutes at a high resistance. 2 minutes back to medium resistance hands-free, 2 minutes same resistance backwards, 2 minutes back to warm-up resistance."
+      },
+      {
+        "Step 2": "Make sure you keep your posture straight and do not crouch over."
+      },
+      {
+        "Step 3": ""
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Elliptical",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Rowing",
+    "description": [
+      {
+        "Step 1": "The correct body sequence in the rowing stroke on the push out is: legs, body, arms. And in reverse to return to the beginning is: arms, body, legs."
+      },
+      {
+        "Step 2": "An interval you may want to try is: warm up for 2-4 minutes. Set the flywheel between 3-5, row for 500m as hard as you can, take a 2 minute break. Row 500m as hard as you can with only a 1min 45 sec break."
+      },
+      {
+        "Step 3": "Continue this 4 more times, decreasing your rest by 15 seconds every interval. Make sure to exhale on the push, and inhale on the return. Keep your core braced during the duration of the workout."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Rowing",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Speed Ladder",
+    "description": [
+      {
+        "Step 1": "Choose 10 of the following ladder sequences. If you choose one that is single legged, complete both legs to count as a completed set."
+      },
+      {
+        "Step 2": "One foot in. Two feet in. Two feet in side jumps. Straight through in, in, out, out. Sideways two feet in, outs. Straight through two in, two out. Scissor in and out with twist. Straight through two foot jumps. Plank walk with push up. Push up jumps. One leg hops (saem foot whole way). Sideways on leg hops.  "
+      },
+      {
+        "Step 3": "Go through all 10, then repeat the chosen circuit of 8, 6 more times."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Speed Ladder",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Track Sprints",
+    "description": [
+      {
+        "Step 1": "Here are a couple different intervals to try once you are warmed up."
+      },
+      {
+        "Step 2": "On a 400m track, sprint for 100m then jog for 300m. Next lap around sprint for 200m and jog for 200m. Next lap sprint 300m jog for 100m, and the final lap sprint for 400m followed by a 400m jog/walk. You could also do this sequence in reverse."
+      },
+      {
+        "Step 3": "Or, on a 400m track sprint all out for 400m followed up by a 400m jog. Complete this 3 more times."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Track Sprints",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Stair Sprints",
+    "description": [
+      {
+        "Step 1": "Find 15-30 stairs."
+      },
+      {
+        "Step 2": "Sprint up, jog down. Skip a step, jog down. Go up sideways crossing over, opposite side back down. One foot hops, jog down (do both leg). Backwards up, jog back down. Wide steps up, job back down. Two foot touches up, jog down."
+      },
+      {
+        "Step 3": " If you are doing under 20 stairs do each exercise 3 times. If you have above 20 stairs do each exercise twice."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Stair Sprints",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Step Ups",
+    "description": [
+      {
+        "Step 1": "Find a box or bench that allows for your leg to have a 90 degree bend when your foot is on it. Step up with your left foot being in initial contact."
+      },
+      {
+        "Step 2": "Bring your right foot up to touch the box. And step back down, leading with your left leg. Switch and start with your right foot. Repeat continuously switching feet that you start with."
+      },
+      {
+        "Step 3": "Make sure to keep a continuous pace, stepping up and back down. Make sure to breath. Add weight if desired (dumbbells)."
+      }
+    ],
+        "descripImgs": {
+          "Step 1": "main/res/drawable/push_up_fig_1.png",
+          "Step 3": "main/res/drawable/push_up_fig_1.png"
+        },
+        "tagLine": "Step Ups",
+        "reps": 0,
+        "sets": 0,
+        "coverImg": "main/res/drawable/push_up_fig_1.png"
+      },
+  {
+    "name": "Walk/Run",
+    "description": [
+      {
+        "Step 1": "Try to increase your pace and/or incline every 5 minutes"
+      },
+      {
+        "Step 2": ""
+      },
+      {
+        "Step 3": ""
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Walk/Run",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Hill Repeats",
+    "description": [
+      {
+        "Step 1": "Run up the hill, and walk back down it as many times over the course of a song."
+      },
+      {
+        "Step 2": ""
+      },
+      {
+        "Step 3": ""
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Hill Repeats",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Negative Split",
+    "description": [
+      {
+        "Step 1": "At the halfway point of your run, look at your time."
+      },
+      {
+        "Step 2": "Try to make the second half of your run faster than the first."
+      },
+      {
+        "Step 3": ""
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Negative Split",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "30/60 Sprint",
+    "description": [
+      {
+        "Step 1": "On a treadmill or open area. Sprint for 30 seconds, followed by jogging for 60 seconds."
+      },
+      {
+        "Step 2": "For the first 3 intervals take a 1 minute break, after the first 3 intervals decreasing the break time to 30 seconds and do for 3 more intervals. For the final 3 intervals try going straight from the 30 second spring to the 60 second job, no breaks."
+      },
+      {
+        "Step 3": ""
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Negative Split",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Lines",
+    "description": [
+      {
+        "Step 1": "Set up a marker at a starting point. Walk about 6m out and place another marker. Another 6m out place another marker, and 6m for another marker."
+      },
+      {
+        "Step 2": "Start at the starting ling go to the first marker back to the beginning, second marker back to the beginning, and third marker back to the beginning. Try to make each interval faster then the other and decrease rest time in between."
+      },
+      {
+        "Step 3": "Try doing it backwards, sideways, at each marker drop and do a push up."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Lines",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Pyramid Drop",
+    "description": [
+      {
+        "Step 1": "Set up 1 cone at the top, 2 on the below further out, and 2 more below those further out. It should resemble a pyramid structure."
+      },
+      {
+        "Step 2": "Start in the middle. Run up to the top, go back to the starting spot and shuffle to the right to the cone. Shuffle to the left all the way over on the same level, touch that cone. Shuffle back to the middle go down to the right and touch the next cone."
+      },
+      {
+        "Step 3": "Shuffle all the way to the left to the final cone that has not been touched. Race up to the top cone. Complete this take a 1 minute break and try again. Try to decrease your time. Try taking shorter breaks."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "Pyramid Drop",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  }
+]

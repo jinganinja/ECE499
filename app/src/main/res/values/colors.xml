@@ -6,6 +6,7 @@
     <color name="colorPrimaryLight">#70ffff</color>
     <color name="colorPrimaryDark">#00cba6</color>
     <color name="primaryTextColor">#000000</color>
+    <color name="secondaryTextColor">#666666</color>
     <color name="white">#ffffff</color>
 
 

@@ -2,11 +2,14 @@
 
 package com.example.micaela.fwd;
 
+import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -51,5 +54,29 @@ public class ExerciseTutorial extends AppCompatActivity {
                 ExerciseTutorial.this, R.layout.tutorial_list_item, exercise.getDescription(), exercise.getDescripImgs());
         tutorialSteps.setAdapter(tutorialListAdapter);
 
+    }
+
+    //Add the menu to the top of the screen
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu, menu);
+        return true;
+    }
+
+    //Add functionality when button item selected
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case R.id.menuNewWrkout:
+                //Restart the main activity fresh
+                Intent startNewWorkout = new Intent(this, MainActivity.class);
+                startNewWorkout.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                startNewWorkout.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(startNewWorkout);
+                return true;
+            //Could add other options here
+            default:
+                return super.onOptionsItemSelected(item);
+        }
     }
 }

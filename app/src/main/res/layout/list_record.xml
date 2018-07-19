@@ -14,7 +14,7 @@
         android:layout_marginTop="16dp"
         android:text="TextView"
         android:textSize="20sp"
-        android:textStyle="bold"
+        android:textColor="@color/primaryTextColor"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/exerciseCoverPhoto"
         app:layout_constraintTop_toTopOf="parent" />
@@ -30,7 +30,6 @@
         android:text="TextView"
         android:textAlignment="viewStart"
         android:textSize="18sp"
-        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"

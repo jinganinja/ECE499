@@ -2,7 +2,7 @@
 
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/background_image"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="0dp">
@@ -24,6 +24,7 @@
         android:spinnerMode="dropdown"
         android:textAlignment="center"
         style="@style/AppTheme"
+        android:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,6 +42,7 @@
         android:gravity="center_horizontal"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
+        android:elevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerEquipment" />
@@ -56,6 +58,7 @@
         android:gravity="center_horizontal"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
+        android:elevation="6dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/spinnerTimeDuration" />
@@ -69,6 +72,7 @@
         android:layout_marginTop="84dp"
         android:background="@drawable/spinner_background"
         android:gravity="center_horizontal"
+        android:elevation="6dp"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
         app:layout_constraintEnd_toEndOf="parent"
@@ -101,10 +105,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:paddingRight="0dp"
+        android:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerCardioVsStrength"
         app:layout_constraintEnd_toEndOf="@+id/spinnerCardioVsStrength"
         app:layout_constraintTop_toTopOf="@+id/spinnerCardioVsStrength"
-        app:srcCompat="@drawable/ic_down" />
+        app:srcCompat="@drawable/ic_down_black" />
 
     <ImageView
         android:id="@+id/iconMuscleDropDown"
@@ -112,10 +117,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:paddingRight="0dp"
+        android:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerTargetedMuscles"
         app:layout_constraintEnd_toEndOf="@+id/spinnerTargetedMuscles"
         app:layout_constraintTop_toTopOf="@+id/spinnerTargetedMuscles"
-        app:srcCompat="@drawable/ic_down" />
+        app:srcCompat="@drawable/ic_down_black" />
 
     <ImageView
         android:id="@+id/iconTimeDropDown"
@@ -123,10 +129,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:paddingRight="0dp"
+        android:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerTimeDuration"
         app:layout_constraintEnd_toEndOf="@+id/spinnerTimeDuration"
         app:layout_constraintTop_toTopOf="@+id/spinnerTimeDuration"
-        app:srcCompat="@drawable/ic_down" />
+        app:srcCompat="@drawable/ic_down_black" />
 
     <ImageView
         android:id="@+id/iconEquipDropDown"
@@ -134,12 +141,11 @@
         android:layout_height="wrap_content"
         android:layout_marginEnd="30dp"
         android:paddingRight="0dp"
+        android:elevation="6dp"
         app:layout_constraintBottom_toBottomOf="@+id/spinnerEquipment"
         app:layout_constraintEnd_toEndOf="@+id/spinnerEquipment"
         app:layout_constraintTop_toTopOf="@+id/spinnerEquipment"
-        app:srcCompat="@drawable/ic_down" /><![CDATA[
+        app:srcCompat="@drawable/ic_down_black" />
 
-    />
 
-]]>
 </android.support.constraint.ConstraintLayout>

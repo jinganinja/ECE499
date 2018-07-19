@@ -3,6 +3,7 @@ package com.example.micaela.fwd;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -55,6 +56,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //Set up Custom Toolbar
         Toolbar toolbar = (Toolbar) findViewById(R.id.tool_bar);
         setSupportActionBar(toolbar);
+
         if (getSupportActionBar() != null) {
             getSupportActionBar().setDisplayShowTitleEnabled(false);
         } else {
@@ -62,6 +64,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
         pageTitle.setText(getString(R.string.mainActivityWorkoutPageTitle));
+        pageTitle.setTextColor(Color.parseColor("#000000"));
+
+
 
         mGenerateWorkout = (Button) findViewById(R.id.generateWorkoutButton);
 
@@ -147,20 +152,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         };
         //Set the on-click listener for the generator workout button
         mGenerateWorkout.setOnClickListener(listener);
-    }
-
-    //Add the menu to the top of the screen
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.menu, menu);
-        return true;
-    }
-
-    //Add functionality when button item selected
-    @Override
-    public boolean onOptionsItemSelected(MenuItem item) {
-        int id = item.getItemId();
-        return super.onOptionsItemSelected(item);
     }
 
     //Function to Create an array adapter and set adapter
@@ -301,7 +292,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
     }
 
-
     //Function to check that the user has selected input for all fields
     private boolean confirmAllOptionsSelected() {
         String message = "Enter your";
@@ -374,7 +364,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             }
         });
     }
-
 
     //**************************Back-end******************************************************
     public JSONArray createWorkout(int duration, boolean equipment, String muscleGroup, String type) {

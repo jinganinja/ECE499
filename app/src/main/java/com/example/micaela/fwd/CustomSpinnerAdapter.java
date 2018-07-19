@@ -49,6 +49,7 @@ public class CustomSpinnerAdapter extends BaseAdapter implements SpinnerAdapter 
         txt.setTextSize(18);
         txt.setGravity(Gravity.CENTER_HORIZONTAL);
         txt.setText(dropDownItems.get(position));
+        txt.setBackgroundColor(Color.parseColor("#FFFFFF"));
         txt.setTextColor(Color.parseColor("#000000"));
         view = txt;
 
@@ -68,11 +69,11 @@ public class CustomSpinnerAdapter extends BaseAdapter implements SpinnerAdapter 
         txt.setPadding(16, 16, 16, 16);
         txt.setTextSize(18);
         txt.setText(dropDownItems.get(i));
-        txt.setTextColor(Color.parseColor("#FFFFFF"));
+        txt.setTextColor(Color.parseColor("#000000"));
         if (i!=0) {
-            viewgroup.setBackground(context.getDrawable(R.drawable.spinner_background_dark));
+            viewgroup.setBackground(context.getDrawable(R.drawable.spinner_background_selected)); //slightly more opaque
         } else {
-            viewgroup.setBackground(context.getDrawable(R.drawable.spinner_background));
+            viewgroup.setBackground(context.getDrawable(R.drawable.spinner_background)); //reg background
         }
             return txt;
     }

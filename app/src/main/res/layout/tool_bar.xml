@@ -14,6 +14,8 @@
         android:layout_height="match_parent"
         android:textSize="21sp"
         android:layout_gravity = "center"
+        android:fontFamily="@font/pt_sans"
+        android:textColor="@color/primaryTextColor"
         style="@style/TextAppearance.AppCompat.Widget.ActionBar.Title"
         android:id="@+id/toolbar_title" />
 

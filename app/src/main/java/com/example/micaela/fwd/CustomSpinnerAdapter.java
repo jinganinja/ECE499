@@ -4,6 +4,7 @@ package com.example.micaela.fwd;
 
 import android.content.Context;
 import android.graphics.Color;
+import android.graphics.Typeface;
 import android.view.Gravity;
 import android.view.View;
 import android.view.ViewGroup;
@@ -59,6 +60,10 @@ public class CustomSpinnerAdapter extends BaseAdapter implements SpinnerAdapter 
     //This is the default view
     public View getView(int i, View view, ViewGroup viewgroup) {
         TextView txt = new TextView(context);
+        //Want to change the font here to match the rest of the app!
+        //Typeface tf = Typeface.createFromAsset(context.getAssets(), "fonts/asap_condensed_italic.ttf");
+        //txt.setTypeface(tf);
+
         txt.setGravity(Gravity.CENTER);
         txt.setPadding(16, 16, 16, 16);
         txt.setTextSize(18);

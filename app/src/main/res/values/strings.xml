@@ -2,6 +2,7 @@
     <string name="app_name">FWD</string>
     <string name="regenerate_button">Regenerate</string>
     <string name="generate_workout_button">Generate Workout</string>
+    <string name="app_name_long">Fast Workout Designer</string>
 
     <!--Titles for Each Activity-->
     <string name ="customWorkoutPageTitle">Your Custom Workout</string>

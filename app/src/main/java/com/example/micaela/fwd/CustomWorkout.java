@@ -87,8 +87,7 @@ public class CustomWorkout extends AppCompatActivity {
         listExercises.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                Toast.makeText(CustomWorkout.this, exercises.get(position).getName().toString(), Toast.LENGTH_SHORT).show();
-
+                Toast.makeText(CustomWorkout.this, exercises.get(position).getName(), Toast.LENGTH_SHORT).show();
                 //set to context to go in the intent call
                 Context context = CustomWorkout.this;
                 // Store the destination activity in a class to go in the intent call
@@ -100,7 +99,6 @@ public class CustomWorkout extends AppCompatActivity {
                 extras.putString("workout", jsonArrayWorkout);
                 extras.putInt("index", position);
                 startExerciseTutorialIntent.putExtras(extras);
-
                 Log.d(TAG, "onClick: Starting Exercise Tutorial Activity....");
                 startActivity(startExerciseTutorialIntent);
             }

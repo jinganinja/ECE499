@@ -3,6 +3,7 @@ package com.example.micaela.fwd;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -62,6 +63,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
         pageTitle.setText(getString(R.string.mainActivityWorkoutPageTitle));
+        pageTitle.setTextColor(Color.parseColor("#000000"));
+
+
 
         mGenerateWorkout = (Button) findViewById(R.id.generateWorkoutButton);
 

@@ -6,11 +6,9 @@
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
         <item name="android:windowBackground">@color/white</item>
-        <item name="android:textColor">@color/secondaryTextColor</item>
     </style>
 
     <style name="Content" parent="Theme.AppCompat.NoActionBar">
-        <item name="android:fontFamily">@font/pt_sans</item>
         <item name="android:textColor">@color/primaryTextColor</item>
     </style>
 

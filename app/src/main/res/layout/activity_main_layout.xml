@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<!-- add back this line below once i have an image: android:background="@drawable/background_image"-->
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_marginStart="0dp">
+    android:layout_marginStart="0dp"
+    android:background="@drawable/background_image">
 
     <include
         android:id="@+id/tool_bar"

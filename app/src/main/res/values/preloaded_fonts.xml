@@ -2,15 +2,7 @@
 <resources>
     <array name="preloaded_fonts" translatable="false">
         <item>@font/allerta</item>
-        <item>@font/asap</item>
-        <item>@font/asap_bold_italic</item>
-        <item>@font/asap_italic</item>
-        <item>@font/asap_medium</item>
-        <item>@font/convergence</item>
-        <item>@font/nunito_extralight</item>
-        <item>@font/nunito_semibold</item>
         <item>@font/open_sans</item>
-        <item>@font/open_sans_light</item>
         <item>@font/pt_sans</item>
         <item>@font/ubuntu</item>
     </array>

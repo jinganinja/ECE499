@@ -10,15 +10,22 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
 
-        <activity android:name=".MainActivity"/>
-        <activity android:name=".CustomWorkout" />
-        <activity android:name=".SplashActivity" android:theme="@style/SplashTheme">
-            <!-- Wherever this intent goes is what activity starts on launch! HE -->
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        <activity android:name=".MainActivity">
+        <intent-filter>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent-filter>
         </activity>
+        <activity android:name=".CustomWorkout" />
+
+        <!--<activity android:name=".SplashActivity" android:theme="@style/SplashTheme">-->
+            <!--&lt;!&ndash; Wherever this intent goes is what activity starts on launch! HE &ndash;&gt;-->
+            <!--<intent-filter>-->
+                <!--<action android:name="android.intent.action.MAIN" />-->
+                <!--<category android:name="android.intent.category.LAUNCHER" />-->
+            <!--</intent-filter>-->
+        <!--</activity>-->
+
         <activity android:name=".ExerciseTutorial"></activity>
 
         <meta-data

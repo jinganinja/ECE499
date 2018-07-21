@@ -8,6 +8,7 @@ import android.os.Handler;
 public class SplashScreenActivity extends AppCompatActivity {
 
     // Splash screen timer
+    //ToDo: Set this timer to zero when testing to save time!
     private static int SPLASH_TIME_OUT = 2000;
 
     @Override

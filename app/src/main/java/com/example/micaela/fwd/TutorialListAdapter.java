@@ -59,13 +59,12 @@ public class TutorialListAdapter extends ArrayAdapter {
 
         //Load the image if it is there
         if (descripImgs.get(position) != null) {
-            //todo: change this so that it is actually reading file path!
             //If there is an image, I want to add padding to it
             float scale = getContext().getResources().getDisplayMetrics().density;
             int dpPad = (int) (12*scale + 0.5f);
             viewHolder.stepFigure.setPadding(dpPad,0,dpPad,dpPad);
+            //todo: change this so that it is actually reading file path!
             viewHolder.stepFigure.setImageResource(R.drawable.push_up_fig_1);
-
         }
         return convertView;
     }

@@ -67,21 +67,17 @@ public class CustomWorkout extends AppCompatActivity {
                  * the workout and the leftover exercises need to be added to the bundle. There is an example of two things
                  * being added to the bundle below in this code when someone clicks a list item. Commented code and "To - dos" below aims to
                  * outline procedure */
-                //ToDo: Add workorkout results (in form of JSON array) to the bundle and the leftover exercises (whatever format you want) to the bundle to be passed to this activity when it relaunches. See numbered steps below.
-                //CAUTION: dummy variable names used in below commented code -- these variable names might be already used in this page
-                //Step 1) Create new intent fro which to re-launch this activity
-                //Intent shuffleWorkoutIntent = new Intent(CustomWorkout.this, CustomWorkout.class); //This is correct
-                //Step 2) Create new bundle to hold two pieces of info (workout generated, and leftover exercises)
-                // Bundle shuffleExtras = new Bundle(); //This is correct
-                //Step 3) Add two things to the bundle. Make sure they are converted to native data types (string etc)
-                //shuffleExtras.putString("workout", workoutResults.toString()); //This is the exercise the backend generated
-                //shuffleExtras.putInt("leftover_exercises", leftoverExercises.toString()); //These are the leftover exercises
-                //Step 4) Add these to the intent
-                //shuffleWorkoutIntent.putExtras(shuffleExtras); //This is correct
-                //Step 5) Launch new page
-                //startActivity(shuffleWorkoutIntent);
-
-                //Note: this procedure is also done in main activity, and below when user clicks on list item if more examples needed
+                //ToDo: Backend code passes a JSON array that contains workout and leftover exercises in JSON array. Array is parsed
+                //todo:...and separated afterwards when this page launches.
+                //todo:...so, just need to create intent here and pass in it the JSON array like we did in main activity!
+                //todo:...assume that output of backend returns JSON array called 'workoutResults'
+                //Create new intent fro which to re-launch this activity
+                //Intent relaunchCustomWorkoutIntent = new Intent(CustomWorkout.this, CustomWorkout.class);
+                //Put the data to be passed into the bundle...
+                //relaunchCustomWorkoutIntent.putExtra("workout", workoutResults.toString());
+                //Launch new page
+                //startActivity(relaunchCustomWorkoutIntent);
+                //BAM!
             }
         });
 

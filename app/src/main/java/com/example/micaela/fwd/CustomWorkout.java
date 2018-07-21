@@ -18,6 +18,9 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.util.List;
 
 public class CustomWorkout extends AppCompatActivity {
@@ -26,7 +29,9 @@ public class CustomWorkout extends AppCompatActivity {
     private static final String TAG = "Custom Workout";
     private Button shuffleFab;
     private List<ExerciseListObject> exercises;
-    String jsonArrayWorkout;
+    String jsonObjectAllAndWorkout;
+    String workoutGenerated;
+    JSONObject allExercisesDescriptions = new JSONObject();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -67,11 +72,19 @@ public class CustomWorkout extends AppCompatActivity {
         Log.d(TAG, "onCreate: Retrieving the custom workout info from Bundle");
         //Get the information passed in the bundle as a String (originally a JSONArray in prev Activity)
         Intent intent = getIntent();
-        jsonArrayWorkout = intent.getStringExtra("workout");
+        jsonObjectAllAndWorkout = intent.getStringExtra("workout");
+        try {
+            JSONObject allDescriptionsAndWorkout = new JSONObject(jsonObjectAllAndWorkout);
+            workoutGenerated = allDescriptionsAndWorkout.get("workoutDescriptions").toString();
+            allExercisesDescriptions = allDescriptionsAndWorkout.getJSONObject("allWorkoutDescriptions");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
 
         Log.d(TAG, "onCreate: parsing the JSON for UI");
         //Parse JSON to feed into list and call the custom array adapter for listview to inflate and populate Layout
-        ParseJSONForUI parseJSONForUI = new ParseJSONForUI(jsonArrayWorkout);
+        Log.i(TAG, "The generated workout: "+workoutGenerated);
+        ParseJSONForUI parseJSONForUI = new ParseJSONForUI(workoutGenerated);
 
         Log.d(TAG, "onCreate: Calling the custom Workout Adapter");
         exercises = parseJSONForUI.getExercises();
@@ -92,7 +105,7 @@ public class CustomWorkout extends AppCompatActivity {
                 Intent startExerciseTutorialIntent = new Intent(context, destinationActivity);
                 //Add the exercise of interest to the Bundle to pass on to the next activity -- pass in the form of string that we got
                 Bundle extras = new Bundle();
-                extras.putString("workout", jsonArrayWorkout);
+                extras.putString("workout", workoutGenerated);
                 extras.putInt("index", position);
                 startExerciseTutorialIntent.putExtras(extras);
 

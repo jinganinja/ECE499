@@ -26,12 +26,9 @@
         android:id="@+id/imageView"
         android:layout_width="187dp"
         android:layout_height="53dp"
-        android:cropToPadding="true"
-        android:maxHeight="67dp"
-        android:maxWidth="223dp"
         app:layout_constraintBottom_toTopOf="@+id/textViewLongName"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.50"
         app:layout_constraintStart_toStartOf="parent"
-        app:srcCompat="@drawable/logo_black" />
+        app:srcCompat="@drawable/long_logo" />
 </android.support.constraint.ConstraintLayout>

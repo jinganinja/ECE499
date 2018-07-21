@@ -5,8 +5,8 @@
     <string name="app_name_long">Fast Workout Designer</string>
 
     <!--Titles for Each Activity-->
-    <string name ="customWorkoutPageTitle">Your Custom Workout</string>
-    <string name ="mainActivityWorkoutPageTitle">Fast Workout Designer</string>
+    <string name="customWorkoutPageTitle">Your Custom Workout</string>
+    <string name="mainActivityWorkoutPageTitle">Fast Workout Designer</string>
 
     <!-- Inputs for Workout Generator-->
     <string-array name="duration_of_workout">
@@ -42,5 +42,9 @@
     </string-array>
 
     <string name="title_activity_custom_workout_list">CustomWorkoutList</string>
+
+    <string name="title_activity_splash_screen">SplashScreenActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
 
 </resources>

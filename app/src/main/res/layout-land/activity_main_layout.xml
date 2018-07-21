@@ -2,10 +2,11 @@
 
 <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_marginStart="0dp"
-    android:background="@drawable/background_image">
+    android:background="@drawable/background_image_land">
 
     <include
         android:id="@+id/tool_bar"
@@ -13,69 +14,64 @@
 
     <Spinner
         android:id="@+id/spinnerTargetedMuscles"
+        style="@style/AppTheme"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginBottom="30dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/spinner_background"
+        android:elevation="6dp"
         android:gravity="center_horizontal"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
-        style="@style/AppTheme"
-        android:elevation="6dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerCardioVsStrength"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerCardioVsStrength"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/spinnerCardioVsStrength"
+        app:layout_constraintTop_toBottomOf="@+id/spinnerCardioVsStrength" />
 
     <Spinner
         android:id="@+id/spinnerCardioVsStrength"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="8dp"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/spinner_background"
+        android:elevation="6dp"
         android:gravity="center_horizontal"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
-        android:elevation="6dp"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/spinnerEquipment" />
+        app:layout_constraintTop_toBottomOf="@+id/spinnerTimeDuration" />
 
     <Spinner
         android:id="@+id/spinnerEquipment"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="24dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginStart="32dp"
         android:background="@drawable/spinner_background"
+        android:elevation="6dp"
         android:gravity="center_horizontal"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
-        android:elevation="6dp"
+        app:layout_constraintBottom_toTopOf="@+id/spinnerTimeDuration"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/spinnerTimeDuration"
         app:layout_constraintTop_toBottomOf="@+id/spinnerTimeDuration" />
 
     <Spinner
         android:id="@+id/spinnerTimeDuration"
         android:layout_width="300dp"
         android:layout_height="60dp"
-        android:layout_marginEnd="64dp"
-        android:layout_marginStart="64dp"
-        android:layout_marginTop="84dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
         android:background="@drawable/spinner_background"
-        android:gravity="center_horizontal"
         android:elevation="6dp"
+        android:gravity="center_horizontal"
         android:spinnerMode="dropdown"
         android:textAlignment="center"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/tool_bar" />
 
@@ -88,9 +84,11 @@
         android:layout_marginTop="8dp"
         android:background="@drawable/btn_rectangle"
         android:drawablePadding="0dp"
+        android:lineSpacingExtra="8sp"
         android:paddingLeft="26dp"
         android:paddingRight="26dp"
         android:text="Generate Workout"
+        android:textAlignment="center"
         android:textColor="#FFFFFF"
         android:textSize="19sp"
         app:layout_constraintBottom_toBottomOf="parent"

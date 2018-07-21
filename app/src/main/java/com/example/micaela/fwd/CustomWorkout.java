@@ -50,22 +50,33 @@ public class CustomWorkout extends AppCompatActivity {
         TextView pageTitle = (TextView) findViewById(R.id.toolbar_title);
         pageTitle.setText("Your Custom Workout");
 
-        //Todo: Try both overScroll class and also padding in listview to add blank space at bottom
-        //listExercises.setOverScrollMode(ListView.OVER_SCROLL_IF_CONTENT_SCROLLS);
-
         //Create floating action button to 'shuffle' workout results
-        //Todo: Ensure that floating action button doesnt block the last workout on the scrollable list -- may need to modify design
         shuffleFab = (Button) findViewById(R.id.shuffle_fab);
         shuffleFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Toast.makeText(CustomWorkout.this, "You clicked Regenerate!", Toast.LENGTH_SHORT).show();
-                //ToDO: if button clicked, then need to call shuffle function
-                //Need to ensure that shuffle function retrieves new workout and new 'leftover' exercises arrays
-                //Need to add both of these items to the bundle, and modify the bundle before calling this activity to restart
-                //Intent shuffleWorkoutIntent = new Intent(CustomWorkout.this, CustomWorkout.class);
-                //shuffleWorkoutIntent.putExtra(....);
+                //ToDO: if button clicked, then need to call shuffle function. This is where you call backend.
+                /*Call the shuffle button. Shuffle button is going to return new workout and leftover exercises (in case some
+                 * one pushes shuffle a second time to be cruel.) Then, this page needs to be relaunched. Before being relaunched
+                 * the workout and the leftover exercises need to be added to the bundle. There is an example of two things
+                 * being added to the bundle below in this code when someone clicks a list item. Commented code and "To - dos" below aims to
+                 * outline procedure */
+                //ToDo: Add workorkout results (in form of JSON array) to the bundle and the leftover exercises (whatever format you want) to the bundle to be passed to this activity when it relaunches. See numbered steps below.
+                //CAUTION: dummy variable names used in below commented code -- these variable names might be already used in this page
+                //Step 1) Create new intent fro which to re-launch this activity
+                //Intent shuffleWorkoutIntent = new Intent(CustomWorkout.this, CustomWorkout.class); //This is correct
+                //Step 2) Create new bundle to hold two pieces of info (workout generated, and leftover exercises)
+                // Bundle shuffleExtras = new Bundle(); //This is correct
+                //Step 3) Add two things to the bundle. Make sure they are converted to native data types (string etc)
+                //shuffleExtras.putString("workout", workoutResults.toString()); //This is the exercise the backend generated
+                //shuffleExtras.putInt("leftover_exercises", leftoverExercises.toString()); //These are the leftover exercises
+                //Step 4) Add these to the intent
+                //shuffleWorkoutIntent.putExtras(shuffleExtras); //This is correct
+                //Step 5) Launch new page
                 //startActivity(shuffleWorkoutIntent);
+
+                //Note: this procedure is also done in main activity, and below when user clicks on list item if more examples needed
             }
         });
 

@@ -129,7 +129,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //                            e.printStackTrace();
 //                        }
 
-
                         //set to context to go in the intent call
                         Context context = MainActivity.this;
                         // Store the destination activity in a class to go in the intent call
@@ -146,7 +145,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         // Start the CustomWorkout activity
                         startActivity(startCustomWorkoutActivityIntent);
                     }
-
                 }
             }
         };
@@ -277,7 +275,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     public void onNothingSelected(AdapterView<?> arg0) {
-        // TODO Deal with this
+        //Mandatory function, no idea of its purpose but I get errors when I delete it
     }
 
     public void showTargetedMuscles(boolean show){

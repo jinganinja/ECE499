@@ -350,11 +350,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             } else { //Need to loop through the items
 
                 int i; //Declare counter of items
-                for (i = 0; i < missingItems.size() - 1; i++) { //subtract 1 to deal with last item separately
+                for (i = 0; i < missingItems.size() - 2; i++) { //subtract 1 to deal with last 2 items separately
                     message = message + " " + missingItems.get(i) + ",";
                 }
                 //Add the last item to the message
-                message = message + " and " + missingItems.get(i) + ".";
+                message = message + " " + missingItems.get(i) + " and " + missingItems.get(i+1) + ".";
             }
             showAlertDialogButtonClicked(message);
             return false;

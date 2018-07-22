@@ -1,0 +1,1463 @@
+[
+  {
+    "name":"Dumbbell Curls",
+    "description":[
+      {
+        "Step 1":"Stand legs shoulder width apart, and arms to your side. Simultaneously, slowly lift both arms with the weights bending at the elbows, at the top of the movement hands should be facing shoulders."
+      },
+      {
+        "Step 2":"Hold at the top of the movement, then slowly return to the starting position."
+      },
+      {
+        "Step 3":"Remember to keep elbows tight into your sides and pointing at the floor. Exhale on the way up, Inhale on the way down. Look forward, and engage the core."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Dumbbell Curls",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Pull Ups (Assisted)",
+    "description":[
+      {
+        "Step 1":"Have the band hanging from a bar up above. Put your knee through the loop and let your body hang. Your grip should be slightly wider than shoulder width."
+      },
+      {
+        "Step 2":"Pull your body up, trying to get your chip up and over the bar. Pause at the stop for a moment. Slowly return back to the starting position."
+      },
+      {
+        "Step 3":"Try to keep your lower body quiet, and avoid swinging or jerking movements. Reduce the overall resistance in the band, trying to get to no band at all. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Pull Ups",
+    "reps":3,
+    "sets":5,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Tricep Extensions",
+    "description":[
+      {
+        "Step 1":"Start by laying down on a bench, with your hands upwards above your chest. Have palms facing inward to eachother."
+      },
+      {
+        "Step 2":"Bend at your elbows, lowering the weights towards your head. Go until the weights are beside your head or you feel the stretch in your triceps."
+      },
+      {
+        "Step 3":"Slowly return to the start position. Repeat. Make sure to keep your elbows points the ceiling at all times. Inhale down, exhale back to the beginning."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"",
+    "reps":3,
+    "sets":8,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Barbell Curls",
+    "description":[
+      {
+        "Step 1":"Stand legs shoulder width apart, and arms to your side. Simultaneously, slowly lift both arms with the weights bending at the elbows, at the top of the movement hands should be facing shoulders."
+      },
+      {
+        "Step 2":"Hold at the top, then slowly return to the starting position."
+      },
+      {
+        "Step 3":"Remember to keep elbows tight into your sides and pointing at the floor. Exhale on the way up, Inhale on the way down. Look forward, and engage the core."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Barbell Curls",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Bench Press (Chest, Arms)",
+    "description":[
+      {
+        "Step 1":"Start by laying on your back with your chest just under the bar. Grasp the bar with a comfortable width but tightly."
+      },
+      {
+        "Step 2":"Unrack the bar and lower to your chest. Make sure to arch your back and drive the bar upwards until elbows are almost fully extended. Slowly return back to the chest. Repeat."
+      },
+      {
+        "Step 3":"Make sure when extending upwards you are driving your feet into the ground, a tightening your glutes. Exhale on the push up, inhale on the way back to your chest."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Bench Press (Barbell)",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Dumbbell Thrusters",
+    "description":[
+      {
+        "Step 1":"Stand with your feet shoulder width apart holding the weights at your shoudlers. Squat down until your thighs are parallel to the ground."
+      },
+      {
+        "Step 2":"Stand back up, while doing so extend your arms up and over your head, bring your arms back down, to the starting position. Repeat."
+      },
+      {
+        "Step 3":"Make sure to keep your chest up and core engaged. Inhale on the way down, and exhale as your push your arm up."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Dumbbell Thrusters",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Hammer Curl to Press",
+    "description":[
+      {
+        "Step 1":"Stand shoulder width apart with your arms down at your side, palms facing in. Starting the movement with bending at the elbow and bringing hands up to your shoulders."
+      },
+      {
+        "Step 2":"Once they are at your shoulders, push the dumbbells above your head until your arms are straight. Reverse the sequence to return to the start."
+      },
+      {
+        "Step 3":"Make sure to keep elbows tight in to the body. Exhale when bringing the weights up, and inhale on the way back to the starting position."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Hammer Curl to Press",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Dumbbell Overhead Press",
+    "description":[
+      {
+        "Step 1":"Start with your feet shoulder width apart, knees slightly bent. Hold the weights at your shoulders, arms bent. Palms should be facing in."
+      },
+      {
+        "Step 2":"Simultaneously press both weights up above your head until your arms are straight. Pause for 2 seconds then return back slowly to the stating position. Repeat."
+      },
+      {
+        "Step 3":"Squeeze your shoudler blades together. Keep your elbows tucked close to you. Exhale on the push up and inhale on the way back down. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Dumbbell Overhead Press",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Overhead Tricep Extension",
+    "description":[
+      {
+        "Step 1":"Standing up have the weight being held by both hands, held above your head. Arms should be completely extended."
+      },
+      {
+        "Step 2":"Slowly bend at the elbows, lowering the weight until your forearm and bicep meet. Hold for a second and then raise back to the top. Repeat. "
+      },
+      {
+        "Step 3":"Make sure to inhale on the way down, and exhale on the way back to the top. Stare straight ahead. Only your upper arm should be moving."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Overhead Tricep Extensions",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"21's",
+    "description":[
+      {
+        "Step 1":"Stand with your feet shoulder width apart. Arms at your sides holding a barbell. Perform a two arm curl, until your arms reach 90 degrees."
+      },
+      {
+        "Step 2":"Return back to the bottom, do this 7 times in total. On the 7th time stay at 90 degrees and raise your arms up to your chest. Return to 90 degress. Complete 7 times."
+      },
+      {
+        "Step 3":"Go back down to the bottom, and complete the full range of motion, from the bottom up to your chest. Exhale on the way up, inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"21's",
+    "reps":21,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Tricep Kickbacks",
+    "description":[
+      {
+        "Step 1":"Kneel on a bench, hinging forward at the hips. Start with elbow at a 90 degree angle. Extend your forearm back until it is parallel to the floor."
+      },
+      {
+        "Step 2":"Hold your arm there for a second, then return back to the starting position. Do 8 reps on each arm to complete 1 set."
+      },
+      {
+        "Step 3":"Focus on exhaling while pushing the weight backwards, and inhale on the way to returning to starting position."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Tricep Kickbacks",
+    "reps":16,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Triceps Pull Down",
+    "description":[
+      {
+        "Step 1":"Stand about 4 ft away from the machine. Start with your arms straight out infront of you holding the handles of the machine. Elbows tucked closely into your sides."
+      },
+      {
+        "Step 2":"Keep your upper arms still, elbows tucked in and pull the handles down until they touche your body, slowly return up to the top. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the pull down, inhale when returning to the starting position. Keep upper arms still, and elbows close to body."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Tricep Pull Down",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Bicep Pull Ups",
+    "description":[
+      {
+        "Step 1":"Stand about 4 ft away from the machine. Start with your hands gripping the handles and resting extended down."
+      },
+      {
+        "Step 2":"Keeping your elbows tucked into your side, keep your upper arms still and curl up towards your shoulders. Pause at the top, return to the start. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the pull up, inhale when returning to the starting position. Keep upper arms still, and elbows close to body."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Bicep Pull Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Chicken Wings",
+    "description":[
+      {
+        "Step 1":"Standing straight up have your arms at your side. Bend at the elbow to make a 90 degree angle, hands should be in front of you. "
+      },
+      {
+        "Step 2":"Keep your hands in front of you and bring your elbows up, so your upper arm is parallel with the floor, hold for 3 seconds then return to the start. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the way up and inhale on the way back down. This should be most felt in the shoudlers. Start with a light weight."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Chicken Wings",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+
+  {
+    "name":"Inch Worm",
+    "description":[
+      {
+        "Step 1":"Stand tall, and bend at the hips so your hands are touching the ground. Walk your hands forwards, keeping your legs as straight as possible. "
+      },
+      {
+        "Step 2":"Go until you end up in a push up position. Then reverse walk back up to the starting position. That counts as 1 rep. Repeat."
+      },
+      {
+        "Step 3":"Make sure to engage your abs and keep your back as straight as possible."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Inch Worm",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Plank Taps",
+    "description":[
+      {
+        "Step 1":"Hold yourself in a plank position. Bring one arm up and touch it to the opposing shoulder. Bring back to the ground and repeat with the other arm. Repeat."
+      },
+      {
+        "Step 2":"Make sure to breath. Exhale on the way to touch your shoulder, inhale back down. Touching each shoulder once, is 1 rep. "
+      },
+      {
+        "Step 3":"Keep at a pace where you can keep your breathing pattern. Keep your core engaged and make sure to keep your back as flat as possible."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Plank Taps",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Plank Walks (Lateral)",
+    "description":[
+      {
+        "Step 1":"Hold yourself in a plank position. In this position move to one side (about 5 meters). Then go the other way back to the starting spot."
+      },
+      {
+        "Step 2":"Repeat this, walking from one side to the other on your hands, holding that plank position. Going from one side and returning to the start is 1 rep."
+      },
+      {
+        "Step 3":"Make sure to go at a pace to keep your breathing steady. Keep your core engaged and your back as flat as possible."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Lateral Plank Walks",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Plank Jacks",
+    "description":[
+      {
+        "Step 1":"Hold yourself in a plank position, either on your hands or your forearms. Move your legs out and back, as if you were doing a jumping jack."
+      },
+      {
+        "Step 2":"Repeat. Try to exhale when pushing your legs out, and inhale on the way back to the starting plank position."
+      },
+      {
+        "Step 3":"Keep your back as flat as possible, and keep your upper body quiet."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Plank Jacks",
+    "reps":3,
+    "sets":8,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Burpees",
+    "description":[
+      {
+        "Step 1":"Starting standing up. Squat down and place your hands on the ground in front of you. Push both feet back to be in the plank position."
+      },
+      {
+        "Step 2":"Perform a pushup, as far down as you can. Return back to the plank. Jump your feet back towards your hands. Explode upwards reaching as high as you can, with your arms up"
+      },
+      {
+        "Step 3":"Repeat the sequence. If you cannot perform a full push-up just push up, exploding upwards with arms reach upwaards."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Burpees",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Plank to Push Up",
+    "description":[
+      {
+        "Step 1":"Start in the plank position and perform a push up. On the way back down drop one arm so you are resting on it's forearm, then follow with the next arm."
+      },
+      {
+        "Step 2":"You should be resting on both of your forearms, hold for a 2 count. Push yourself back up onto your hands and repeat."
+      },
+      {
+        "Step 3":"Exhale on the push-up, and inhale on the plank down. Focus on keeping your body as flat as possible."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Plank to Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Push Ups",
+    "description":[
+      {
+        "Step 1":"Start with your stomach facing the ground, hands place shoulder width apart. Push yourself up in one seamless movement, until your arms are straight."
+      },
+      {
+        "Step 2":"Hold at the top for a second then slowly return back down until your chest touches the ground. Repeat movement."
+      },
+      {
+        "Step 3":"Make sure to keep your body in a straight line. Exhale on the way up, and inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+
+
+
+  {
+    "name":"Bench Press (Chest, Arms)",
+    "description":[
+      {
+        "Step 1":"Start by laying on your back with a dumbbell in each hand resting at your chest. At the same time push the dumbbell upwards above your head."
+      },
+      {
+        "Step 2":"Make sure to arch your back and drive the bar upwards until elbows are almost fully extended. Slowly return back to the chest. Repeat."
+      },
+      {
+        "Step 3":"Make sure when extending upwards you are driving your feet into the ground, a tightening your glutes. Exhale on the push up, inhale on the way back to your chest."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Bench Press (Dumbbells)",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Cable Cross Over With Band",
+    "description":[
+      {
+        "Step 1":"Stand with your legs staggared, and slightly bent. Have bands for each hand stabilized by a railing or machine. Start with arms outstretched to the sides, holdng the bands."
+      },
+      {
+        "Step 2":"Simultaneously reach in front of your and make your hands cross in front. Pause for 3 seconds then slowly return to the outstretched position. Repeat."
+      },
+      {
+        "Step 3":"Exhale when bringing your arms across, and inhale on the way back to the starting position. Make sure to look straight ahead."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Cable Cross Over (Bands)",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Barbell Incline Bench Press",
+    "description":[
+      {
+        "Step 1":"Set a bench up to be at about a 45 degree angle. Start by laying on your back with your chest just under the bar. Grasp the bar with a comfortable width but tightly."
+      },
+      {
+        "Step 2":"Unrack the bar and lower to your chest. Make sure to arch your back and drive the bar upwards until elbows are almost fully extended. Slowly return back to the chest. Repeat."
+      },
+      {
+        "Step 3":"Make sure when extending upwards you are driving your feet into the ground, a tightening your glutes. Exhale on the push up, inhale on the way back to your chest."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Barbell Inclined Bench Press",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Dumbbell Inclined Bench Press",
+    "description":[
+      {
+        "Step 1":"Set a bench up to be at about a 45 degree angle. Start by laying on your back with a dumbbell in each hand resting at your chest. At the same time push the dumbbell upwards above your head."
+      },
+      {
+        "Step 2":"Make sure to arch your back and drive the bar upwards until elbows are almost fully extended. Slowly return back to the chest. Repeat."
+      },
+      {
+        "Step 3":"Make sure when extending upwards you are driving your feet into the ground, a tightening your glutes. Exhale on the push up, inhale on the way back to your chest."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Dumbbell Inclined Bench Press",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Dumbbell Flies",
+    "description":[
+      {
+        "Step 1":"Lay on a flat bench on your back. Hold your arms directly above your face. Weights should be touching."
+      },
+      {
+        "Step 2":"Keeping your arms straight, slowly let your arms down, opening up your chest. Stop when they are parallel to the floor. "
+      },
+      {
+        "Step 3":"Pause at the bottom then return to the starting position. Repeat. Inhale on the way down, exhale going back up."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Dumbbell Flies",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Inclined Dumbbell Flies",
+    "description":[
+      {
+        "Step 1":"Set a bench to be at a 45 degree angle. Laying on your back hold your arms directly above your face. Weights should be touching."
+      },
+      {
+        "Step 2":"Keeping your arms straight, slowly let your arms down, opening up your chest. Stop when they are parallel to the floor. "
+      },
+      {
+        "Step 3":"Pause at the bottom then return to the starting position. Repeat. Inhale on the way down, exhale going back up."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Inclined Dumbbell Flies",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Peck Deck",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your arms are straight out at your sides in a comfortable position. Simultaneously bring both arms in towards your midline."
+      },
+      {
+        "Step 2":"Pause at the middle. Then slowly go back to the start position Exhale on the way to the middle, and inhale on the way back to the start."
+      },
+      {
+        "Step 3":""
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Peck Dec",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Dumbbell Squeeze Press",
+    "description":[
+      {
+        "Step 1":"Lay down on a bench on your back. Start with the weights in your hands resting on your chest. Make sure the weights are touching."
+      },
+      {
+        "Step 2":"Push the weights up towards the ceiling, making sure to keep the weights touching. Go until your arms are extended completely, and pause at the top."
+      },
+      {
+        "Step 3":"Slowly go back to the starting position. Repeat. Make sure when pushing up you are pressing the weights together."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Dumbbell Squeeze Press",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Weighted Push Ups",
+    "description":[
+      {
+        "Step 1":"Start with your stomach facing the ground, hands place shoulder width apart. Choose a weighted plate and rest it on your lower-mid back. Push yourself up in one seamless movement, until your arms are straight."
+      },
+      {
+        "Step 2":"Hold at the top for a second then slowly return back down until your chest touches the ground. Repeat movement."
+      },
+      {
+        "Step 3":"Make sure to keep your body in a straight line. Exhale on the way up, and inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Weighted Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Cable Flies",
+    "description":[
+      {
+        "Step 1":"Stand with your legs staggared, and slightly bent. Start with arms outstretched to the sides."
+      },
+      {
+        "Step 2":"Simultaneously reach in front of your and make your hands meet in the middle. Pause for 3 seconds then slowly return to the outstretched position. Repeat."
+      },
+      {
+        "Step 3":"Exhale when bringing your arms to the middle, and inhale on the way back to the starting position. Make sure to look straight ahead."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Cable Flies",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Cable Cross Overs",
+    "description":[
+      {
+        "Step 1":"Stand with your legs staggared, and slightly bent. Start with arms outstretched to the sides."
+      },
+      {
+        "Step 2":"Simultaneously reach in front of your and make your hands cross in front. Pause for 3 seconds then slowly return to the outstretched position. Repeat."
+      },
+      {
+        "Step 3":"Exhale when bringing your arms across, and inhale on the way back to the starting position. Make sure to look straight ahead."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Cable Cross Overs",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Barbell Declined Bench Press",
+    "description":[
+      {
+        "Step 1":"Secure your legs at the top of a declined bench. Start with the bar directly above your chest, making your arms perpendicular to the ground. Your arms should be locked."
+      },
+      {
+        "Step 2":"Slowly bring the bar down touching your chest, pause. Then push it back up to the starting position. Repeat. "
+      },
+      {
+        "Step 3":"Going down should take double the amount as going up. Inhale on the way down and exhale while pushing back up to the starting position. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Declined Barbell Press",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Dumbbell Declined Bench Press",
+    "description":[
+      {
+        "Step 1":"Secure your legs at the top of a declined bench. Start with the dumbbells in both hands directly above your chest, making your arms perpendicular to the ground. Your arms should be locked."
+      },
+      {
+        "Step 2":"Slowly bring the dumbbells down, they should touch your chest, then pause. Push them back up to the starting position. Repeat. "
+      },
+      {
+        "Step 3":"Going down should take double the amount as going up. Inhale on the way down and exhale while pushing back up to the starting position. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Declined Dumbbell Press",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Declined Dumbbell Flies",
+    "description":[
+      {
+        "Step 1":"Secure your legs at the top of a declined bench. Hold your arms directly above your face. Weights should be touching."
+      },
+      {
+        "Step 2":"Keeping your arms straight, slowly let your arms down, opening up your chest. Stop when they are parallel to the floor. "
+      },
+      {
+        "Step 3":"Pause at the bottom then return to the starting position. Repeat. Inhale on the way down, exhale going back up."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Declined Dumbbell Flies",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Around The World",
+    "description":[
+      {
+        "Step 1":"Laying down flat on a bench start with weights at your side around your thighs. Bring your arms away from your body starting to swing your arms towards your head."
+      },
+      {
+        "Step 2":"At about the half-way point start bending your elbows slightly. Go above your head until the weights touch, then beginning going back to the beginning. Repeat."
+      },
+      {
+        "Step 3":"Make sure you inhale on the way to the top, and exhale on the way back down. Keep a slight bend in your elbows."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Around The World",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Medicine Ball Push Ups",
+    "description":[
+      {
+        "Step 1":"Start with your stomach facing the ground, hands place on a medicine ball under your chest. Push yourself up in one seamless movement, until your arms are straight."
+      },
+      {
+        "Step 2":"Hold at the top for a second then slowly return back down until your chest touches the ball. Repeat movement."
+      },
+      {
+        "Step 3":"Make sure to keep your body in a straight line. Exhale on the way up, and inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Medicine Ball Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Lat Pull Downs",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your legs are comfortably under the pad and you can reach the pully. "
+      },
+      {
+        "Step 2":"Hold the bar at a comfortable grip. Palms facing away from you. Pull down until the bar is at your chest, and return to the top right before your elbows are straight."
+      },
+      {
+        "Step 3":"Both movements should be done slowly. Exhale when pulling down and inhale when returning to the top."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Lat Pull Downs",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Deadlifts",
+    "description":[
+      {
+        "Step 1":"Start by hinging your hips, or sitting back. Your legs should we shoulder width apart and your grip on the bar should be slightly wider than your legs."
+      },
+      {
+        "Step 2":"Keep your spine neutral and flat throughout the whole movement. The bar should be right against your shins and as you lift should continue to graze your legs."
+      },
+      {
+        "Step 3":"Moving both your hips and knees at the same time, lift the weight off the ground until you are standing up, pause at the top and slowly return to the beginning position. Repeat. Exhale on the lift, inhale on the return."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Deadlifts",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Chest Press (Machine)",
+    "description":[
+      {
+        "Step 1":"Make the seat comfortable. Push the lever to bring the bars closer to you. Lift your elbows so that your upper arms are parallel to the floor to the sides of your torso."
+      },
+      {
+        "Step 2":"Push the handles away from you, as you are breathing out. Hold. Then return to the beginning position."
+      },
+      {
+        "Step 3":"Make sure to hold at the top, exhale on the push out and inhale on the return."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Chest Press (Machine)",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Floor Press",
+    "description":[
+      {
+        "Step 1":"Laying on the ground stretched out, have your arms up towards the ceiling with your palms pointed towards your feet. Bring your hips to your shoulder blades making an arch in your back."
+      },
+      {
+        "Step 2":"Bring your heels to your butt. Grab the bar at about a shoulder width grip. Bring the bar down until it is at your sternum, your upper arms should be on the ground."
+      },
+      {
+        "Step 3":"Explode up, bring it back down slow. Exhale on the push up, inhale on the way to the floor. Do not bounce your arms off the ground."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Floor Press",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Lat Pullovers",
+    "description":[
+      {
+        "Step 1":"Laying down on the ground, stretched out have your arms stretched above your face towards the ceiling. Holding a dumbbell."
+      },
+      {
+        "Step 2":"Start bringing the dumbbell towards the ground behind your head, having a slight bend in the elbows. Once hits the ground, bring it back up above your chest."
+      },
+      {
+        "Step 3":"Inhale on the way down to the ground, and exhale when bringing it back above your chest."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Lat Pullovers (Floor)",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+
+  {
+    "name":"Push Ups",
+    "description":[
+      {
+        "Step 1":"Start with your stomach facing the ground, hands place shoulder width apart. Push yourself up in one seamless movement, until your arms are straight."
+      },
+      {
+        "Step 2":"Hold at the top for a second then slowly return back down until your chest touches the ground. Repeat movement."
+      },
+      {
+        "Step 3":"Make sure to keep your body in a straight line. Exhale on the way up, and inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Push Upds",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Wide Grip Push Ups",
+    "description":[
+      {
+        "Step 1":"Start with your stomach facing the ground, hands place wider than shoulder width apart. Push yourself up in one seamless movement, until your arms are straight."
+      },
+      {
+        "Step 2":"Hold at the top for a second then slowly return back down until your chest touches the ground. Repeat movement."
+      },
+      {
+        "Step 3":"Make sure to keep your body in a straight line. Exhale on the way up, and inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Wide Grip Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Diamond Push Ups",
+    "description":[
+      {
+        "Step 1":"Start with your stomach facing the ground, hands together so your pointer finger and thumbs are touching the opposing hands. Push yourself up in one seamless movement, until your arms are straight."
+      },
+      {
+        "Step 2":"Hold at the top for a second then slowly return back down until your chest touches the ground. Repeat movement."
+      },
+      {
+        "Step 3":"Make sure to keep your body in a straight line. Exhale on the way up, and inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Diamond Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+
+
+
+  {
+    "name":"Reverse Grip Lat Pull Downs",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your legs are comfortably under the pad and you can reach the pully. "
+      },
+      {
+        "Step 2":"Hold the bar at a comfortable grip. Palms should be facing towards you. Pull down until the bar is at your chest, and return to the top right before your elbows are straight."
+      },
+      {
+        "Step 3":"Both movements should be done slowly. Exhale when pulling down and inhale when returning to the top."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Reverse Grip Lat Pull Down",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Wide Grip Lat Pull Down",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your legs are comfortably under the pad and you can reach the pully. "
+      },
+      {
+        "Step 2":"Hold the bar at a comfortable grip. Palms should be facing away from you. Hands should be at the very edge of the bar. Pull down until the bar is at your chest, and return to the top right before your elbows are straight."
+      },
+      {
+        "Step 3":"Both movements should be done slowly. Exhale when pulling down and inhale when returning to the top."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Wide Grip Lat Pull Down",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Narrow Grip Lat Pull Down",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your legs are comfortably under the pad and you can reach the pully. "
+      },
+      {
+        "Step 2":"Hold the bar at a comfortable grip. Palms should be facing away from you. Hands should be at inside of shoulder width on the bar. Pull down until the bar is at your chest, and return to the top right before your elbows are straight."
+      },
+      {
+        "Step 3":"Both movements should be done slowly. Exhale when pulling down and inhale when returning to the top."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Narrow Grip Lat Pull Down",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Bent Barbell Deadlifts",
+    "description":[
+      {
+        "Step 1":"Start by standing with knees slightly bent and torso forward, do this by bending at the hips. Keep your back straight and parallel to the floor."
+      },
+      {
+        "Step 2":"Lift the barbell to your abdomen area. At the top pause for a moment. Return back to the starting position. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the way up and inhale on the back down. Keep your torso stationary, and elbow in tight to your body."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Bent Over Barbell Rows",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Wide Grip Pull Ups",
+    "description":[
+      {
+        "Step 1":"Your grip should be a lot wider than shoulder width."
+      },
+      {
+        "Step 2":"Pull your body up, trying to get your chip up and over the bar. Pause at the stop for a moment. Slowly return back to the starting position."
+      },
+      {
+        "Step 3":"Try to keep your lower body quiet, and avoid swinging or jerking movements. If needing a hand, use a resistance band."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Wide Grip Pull Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Seated Cable Rows",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your are stretched out with your knees slightly bent. Keeping your torso stationary, pull backwards with your arms."
+      },
+      {
+        "Step 2":"Once you have pull back, pause for a 5 count. Make sure to squeeze your back muscles. Return back slowly to the start. Repeat."
+      },
+      {
+        "Step 3":"Exhale while pulling backwards and inhale when reutrning to the start. Keep your chest up and out. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Seated Cable Rows",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Wide Grip Seated Rows",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your are stretched out with your knees slightly bent. Use a long bar to make your grip wide. Keeping your torso stationary, pull backwards with your arms."
+      },
+      {
+        "Step 2":"Once you have pull back, pause for a second. Make sure to squeeze your back muscles. Return back slowly to the start. Repeat."
+      },
+      {
+        "Step 3":"Exhale while pulling backwards and inhale when reutrning to the start. Keep your chest up and out. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Wide Grip Seated Rows",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Seated Cable Rows",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your are stretched out with your knees slightly bent. Keeping your torso stationary, pull backwards with your arms."
+      },
+      {
+        "Step 2":"Once you have pull back, pause for a a second. Make sure to squeeze your back muscles. Return back slowly to the start. Repeat."
+      },
+      {
+        "Step 3":"Exhale while pulling backwards and inhale when reutrning to the start. Keep your chest up and out. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Seated Cable Rows",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Closed Grip Lat Pull Down",
+    "description":[
+      {
+        "Step 1":"Adjust the machine so your legs are comfortably under the pad and you can reach the pully. "
+      },
+      {
+        "Step 2":"Switch from a straight bar to a 'V' bar. Palms facing towards eachother. Pull down until the bar is at your chest, and return to the top right before your elbows are straight."
+      },
+      {
+        "Step 3":"Both movements should be done slowly. Exhale when pulling down and inhale when returning to the top."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Closed Grip Lat Pull Down",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Dumbbell Rows",
+    "description":[
+      {
+        "Step 1":"Start with one leg knelt on the bench and the other one the ground. Your arm should be almost fully stretched dangling towards the ground."
+      },
+      {
+        "Step 2":"Keeping your body still, excluding the arm that has the weight, pull up along your side until your arm makes a 90 degree angle. Return to the start position. Repeat."
+      },
+      {
+        "Step 3":"Exhale while pulling up and inhale on the way back down. Pause at the top for a second."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Dumbbell Rows",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Declined Bench Dumbbell Drop",
+    "description":[
+      {
+        "Step 1":"Laying down flat on a bench start with weight above your head. Slowly drop the weight back on an arc, behind your head. Pause. "
+      },
+      {
+        "Step 2":"Slowly bring the weight back up to the starting position. Repeat."
+      },
+      {
+        "Step 3":"Make sure to inhale on the way down and exhale on the way back up."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Declined Bench Dumbbell Drop",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Inclined Dumbbell Row",
+    "description":[
+      {
+        "Step 1":"Laying chest down on a bench at a 45 degree angle, have your arms in front of you. Simultaneously bring both arms up to a 90 degree angle. Pause."
+      },
+      {
+        "Step 2":"Slowly bring back down to the starting position. Make sure to squeeze your shoulder blades together when holding the pause."
+      },
+      {
+        "Step 3":"Exhale on the way up, inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Inclined Dumbbell Rows",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Front Squat",
+    "description":[
+      {
+        "Step 1":"Rest teh bar across your upper chest and resting across your shoulders. Cross your arms in front, Your legs should be about shoulder distance apart. "
+      },
+      {
+        "Step 2":"Slowly bend down, until your upper leg and lower legs make about a 90 degree angle. Push back up to the starting position. Repeat."
+      },
+      {
+        "Step 3":"Make sure to look forward at all times. Do not let your knees pass over your toes. Keep your back straight. INhale on the way down, exhale on the way back up."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Front Squats",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Alternating Dumbbell Rows",
+    "description":[
+      {
+        "Step 1":"Bend over make your body about a 45 degree angle. Have your arms dangling in front of you."
+      },
+      {
+        "Step 2":"Bring one arm up, making a 90 degree angle, then return back to the starting position. As soon as you return to the bottom, your poopsite arm goes up and does the same. Repeat."
+      },
+      {
+        "Step 3":"Inhale on the way down and exhale on the way back up. Doing both arms counts as 1 rep. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Alternating dumbbell rows",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Inverted Lateral Raises",
+    "description":[
+      {
+        "Step 1":"Lay stomach down on a 45 degree inclined bench. Hands should be dangling in front of you. Palms facing each other."
+      },
+      {
+        "Step 2":"Raise your arms out to the side until they are parallel with the ground. Hold for a second, then return to the starting position. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the way up and inhale on the way back down. "
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Inclined Lat Raises",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Inverted Row",
+    "description":[
+      {
+        "Step 1":"Using either a bar in a rack, or TRX bands. Start with your arms fully extended. Your grip should be a bit wider than shoulder distance."
+      },
+      {
+        "Step 2":"Pull yourself up to the bar, pause, then return back to the starting position. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the way up and inhale on the way back down. Make sure to pull your shoulder blades at the top."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Inverted Row Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Kettle Bell Swings",
+    "description":[
+      {
+        "Step 1":"Start standing straight up feet shoulder width apart, with your arms in front of you holding the kettlebell. Squat down, slightly at the knees but mainly at the hips."
+      },
+      {
+        "Step 2":"The kettlebell should be swinging between your legs behind you. Drive your hips forward and straighten your back. Your arms and kettlebell should be swinging forward. "
+      },
+      {
+        "Step 3":"Bring the kettlebell back to the starting position. Repeat. Make sure to only slightly bend in your knees."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Kettle Bell Swings",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+
+  {
+    "name":"Superhero's",
+    "description":[
+      {
+        "Step 1":"Start by laying on the ground on your stomach with your arms stretched above your head."
+      },
+      {
+        "Step 2":"Simultaneously lift your arms and legs 4-5cm off the ground. Hold for 3 seconds, then return to the ground. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the way up and inhale on the way back down. Keep your neck in a neutral position, with your face facing the gorund."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Superhero's",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Aqua Swimmer ",
+    "description":[
+      {
+        "Step 1":"Start by laying on the ground on your stomach with your arms stretch up above your head."
+      },
+      {
+        "Step 2":"Simultaneously lift your left arm and your right leg up 4-5cm above the ground, hold for 3 seconds then return. Now do the same with your right arm and left leg. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the way up and during the hold, and inhale on the way back down. Completion of a full rep is when all 4 limbs are lifted."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Aqua Swimmer",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Wide Grip Push Ups",
+    "description":[
+      {
+        "Step 1":"Start with your stomach facing the ground, hands place wider than shoulder width apart. Push yourself up in one seamless movement, until your arms are straight."
+      },
+      {
+        "Step 2":"Hold at the top for a second then slowly return back down until your chest touches the ground. Repeat movement."
+      },
+      {
+        "Step 3":"Make sure to keep your body in a straight line. Exhale on the way up, and inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Wide Grip Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Diamond Push Ups",
+    "description":[
+      {
+        "Step 1":"Start with your stomach facing the ground, hands together so your pointer finger and thumbs are touching the opposing hands. Push yourself up in one seamless movement, until your arms are straight."
+      },
+      {
+        "Step 2":"Hold at the top for a second then slowly return back down until your chest touches the ground. Repeat movement."
+      },
+      {
+        "Step 3":"Make sure to keep your body in a straight line. Exhale on the way up, and inhale on the way back down."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"Diamond Push Ups",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  }
+]

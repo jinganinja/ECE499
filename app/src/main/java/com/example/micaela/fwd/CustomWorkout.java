@@ -20,6 +20,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
@@ -33,7 +34,7 @@ public class CustomWorkout extends AppCompatActivity {
     private List<ExerciseListObject> exercises;
     String jsonObjectAllAndWorkout;
     String workoutGenerated;
-    JSONObject allExercisesDescriptions = new JSONObject();
+    JSONArray allExercisesDescriptions = new JSONArray();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -85,10 +86,11 @@ public class CustomWorkout extends AppCompatActivity {
         //Get the information passed in the bundle as a String (originally a JSONArray in prev Activity)
         Intent intent = getIntent();
         jsonObjectAllAndWorkout = intent.getStringExtra("workout");
+        Log.i(TAG, "The output sent to the workout page: " + jsonObjectAllAndWorkout);
         try {
             JSONObject allDescriptionsAndWorkout = new JSONObject(jsonObjectAllAndWorkout);
             workoutGenerated = allDescriptionsAndWorkout.get("workoutDescriptions").toString();
-            allExercisesDescriptions = allDescriptionsAndWorkout.getJSONObject("allWorkoutDescriptions");
+            allExercisesDescriptions = allDescriptionsAndWorkout.getJSONArray("allWorkoutDescriptions");
         } catch (JSONException e) {
             e.printStackTrace();
         }

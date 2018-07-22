@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Color;
+import android.content.res.AssetManager;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -21,8 +22,13 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.io.IOException;
+import java.io.File;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.file.Path;
 import java.io.FileReader;
 import java.io.FileNotFoundException;
+import java.nio.file.Paths;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
@@ -96,6 +102,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) { //All widgets are "Views" so they can always be passed as an instance of their base-class "View"
+                Context context = MainActivity.this;
                 Button b = (Button) v;
                 System.out.println("the on click listener is working");
 
@@ -125,10 +132,10 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                                 equipment = false;
                             String muscleGroup = "";
                             if (userInput.has("targetedMuscles"))
-                                muscleGroup = userInput.getString("targetedMuscles");
+                                muscleGroup = userInput.getString("targetedMuscles").toLowerCase();
                             String type = userInput.getString("cardioVsStrength");
                             Log.i(TAG, "The duration: " + Integer.toString(duration) + " equipment: " + Boolean.toString(equipment) + " muscleGroup: " + muscleGroup + " type: " + type);
-                            workoutResults = createWorkout(duration, equipment, muscleGroup, type);
+                            workoutResults = createWorkout(context, duration, equipment, muscleGroup, type);
                         } catch (JSONException e) {
                             e.printStackTrace();
                         }
@@ -139,7 +146,6 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 //                        }
 
                         //set to context to go in the intent call
-                        Context context = MainActivity.this;
                         // Store the destination activity in a class to go in the intent call
                         Class destinationActivity = CustomWorkout.class;
                         // Create the intent that will be used to start the CustomWorkout Activity -- intent
@@ -373,7 +379,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     }
 
     //**************************Back-end******************************************************
-    public JSONObject createWorkout(int duration, boolean equipment, String muscleGroup, String type) {
+    public JSONObject createWorkout(Context context, int duration, boolean equipment, String muscleGroup, String type) {
         // This function takes all of the potential workout exercises and iterates through them and
         // adds the applicable ones to the current workout potential exercises list. From that list
         // there will be a random number generator that picks the number of exercises that will be
@@ -381,11 +387,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         Log.i(TAG, "The duration: " + Integer.toString(duration) + " equipment: " + Boolean.toString(equipment) + " muscleGroup: " + muscleGroup + " type: " + type);
 
         if (type.equals("Cardio")) {
-            return createCardioWorkout(duration, equipment);
+            return createCardioWorkout(context, duration, equipment);
         } else if (type.equals("Strength")) {
-            return createStrengthWorkout(duration, equipment, muscleGroup);
+            return createStrengthWorkout(context, duration, equipment, muscleGroup);
         } else if (type.equals("HIIT")) {
-            return createHIITWorkout(duration, equipment);
+            return createHIITWorkout(context, duration, equipment);
         } else {
             Log.d(TAG, "Returning null in createWorkout: " + type);
             return null;
@@ -397,11 +403,14 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return rand.nextInt(range);
     }
 
-    public JSONObject createCardioWorkout(int duration, boolean equipment) {
+    public JSONObject createCardioWorkout(Context context, int duration, boolean equipment) {
         JSONParser parser = new JSONParser();
         try {
-            JSONArray allExercises = (JSONArray) parser.parse(new FileReader("/main/json/cardioExercises.json"));
-            JSONArray iterationExercises = (JSONArray) parser.parse(new FileReader("/main/json/cardioExercises.json"));
+            AssetManager assetManager = getAssets();
+            InputStream is = assetManager.open("json/cardioExercises.json");
+
+            JSONArray allExercises = new JSONArray(parser.parse(new InputStreamReader(is, "UTF-8")).toString());
+            JSONArray iterationExercises = allExercises;
             if (!equipment)
                 allExercises = removeEquipmentRequired(iterationExercises, allExercises);
             int exerciseCount = cardioNumExercisesForDuration(duration);
@@ -417,19 +426,30 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
         Log.d(TAG, "Returning null in createCardioWorkout");
         return null;
     }
 
-    public JSONObject createStrengthWorkout(int duration, boolean equipment, String muscleGroup) {
+    public JSONObject createStrengthWorkout(Context context, int duration, boolean equipment, String muscleGroup) {
         JSONParser parser = new JSONParser();
         try {
-            JSONArray allExercises = (JSONArray) parser.parse(new FileReader("/main/json/strengthExercises.json"));
-            JSONArray iterationExercises = (JSONArray) parser.parse(new FileReader("/main/json/strengthExercises.json"));
+            AssetManager assetManager = getAssets();
+            InputStream is = assetManager.open("json/strengthExercises.json");
+
+            JSONArray allExercises = new JSONArray(parser.parse(new InputStreamReader(is, "UTF-8")).toString());
+            JSONArray iterationExercises = allExercises;
             if (!equipment)
                 allExercises = removeEquipmentRequired(iterationExercises, allExercises);
             allExercises = removeUnapplicableMuscleExercises(iterationExercises, allExercises, muscleGroup);
+            final int allExercisesLength = allExercises.length();
+            for (int i = 0; i < allExercisesLength; i ++) {
+                String exercise = allExercises.getJSONObject(i).getString("name");
+                Log.i(TAG, "Exercise name kept: " + exercise);
+            }
+
             int exerciseCount = strengthNumExercisesForDuration(duration);
             if (exerciseCount < allExercises.length()){
                 return generateWorkoutFromExercises(exerciseCount, allExercises, "strength");
@@ -443,16 +463,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
         Log.d(TAG, "Returning null in createStrengthWorkout");
         return null;
     }
 
-    public JSONObject createHIITWorkout(int duration, boolean equipment) {
+    public JSONObject createHIITWorkout(Context context, int duration, boolean equipment) {
         JSONParser parser = new JSONParser();
         try {
-            JSONArray allExercises = (JSONArray) parser.parse(new FileReader("/main/json/HIITExercises.json"));
-            JSONArray iterationExercises = (JSONArray) parser.parse(new FileReader("/main/json/HIITExercises.json"));
+            AssetManager assetManager = getAssets();
+            InputStream is = assetManager.open("json/HIITExercises.json");
+
+            JSONArray allExercises = new JSONArray(parser.parse(new InputStreamReader(is, "UTF-8")).toString());
+            JSONArray iterationExercises = allExercises;
             if (!equipment)
                 allExercises = removeEquipmentRequired(iterationExercises, allExercises);
             int exerciseCount = HIITNumExercisesForDuration(duration);
@@ -460,12 +485,18 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 return generateWorkoutFromExercises(exerciseCount, allExercises, "HIIT");
             } else {
                 Log.d(TAG, "Returning null in createHIITWorkout: " + Integer.toString(exerciseCount));
+                for (int i = 0; i < allExercises.length(); i++) {
+                    String name = allExercises.getJSONObject(i).getString("name");
+                    Log.i(TAG, "Exercise number " + Integer.toString(i) + " is: " + name);
+                }
                 return null;
             }        } catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
+            e.printStackTrace();
+        } catch (JSONException e) {
             e.printStackTrace();
         }
         Log.d(TAG, "Returning null in createHIITWorkout");
@@ -477,8 +508,9 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         for (int i = 0; i < iterationExercises.length(); i++) {
             // remove all the exercises that require equipment
             try {
-                JSONObject exercise = (JSONObject) iterationExercises.get(i);
+                JSONObject exercise = (JSONObject) iterationExercises.getJSONObject(i);
                 if (exercise.getBoolean("equipment"))
+                    Log.i(TAG, "Removing exercise b/c no equipment available: " + exercise.getString("name"));
                     allExercises.remove(i);
             } catch (JSONException e) {
                 e.printStackTrace();
@@ -562,6 +594,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                 // remove exercises that are not for that muscle group
                 JSONObject exercise = (JSONObject) iterationExercises.get(i);
                 if (!exercise.getString("muscle group").equals(muscleGroup))
+                    Log.i(TAG, "Removing exercise b/c of muscle group: " + exercise.getString("name"));
                     allExercises.remove(i);
             }
         } catch (JSONException e) {
@@ -579,22 +612,34 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         JSONObject allData = new JSONObject();
         JSONArray exerciseOutput = new JSONArray();
         try {
-            if (typeOfWorkout.equals("strength"))
-                exerciseOutput = (JSONArray) parser.parse(new FileReader("\\ECE499\\app\\src\\main\\json\\strengthOutputExercises.json"));
-            else if (typeOfWorkout.equals("cardio"))
-                exerciseOutput = (JSONArray) parser.parse(new FileReader("\\ECE499\\app\\src\\main\\json\\cardioOutputExercises.json"));
-            else if (typeOfWorkout.equals("HIIT"))
-                exerciseOutput = (JSONArray) parser.parse(new FileReader("\\ECE499\\app\\src\\main\\json\\HIITOutputExercises.json"));
+            AssetManager assetManager = getAssets();
+            if (typeOfWorkout.equals("strength")){
+                InputStream is = assetManager.open("json/strengthOutputExercises.json");
+                exerciseOutput = new JSONArray(parser.parse(new InputStreamReader(is, "UTF-8")).toString());
+            }
+            else if (typeOfWorkout.equals("cardio")){
+                InputStream is = assetManager.open("json/cardioOutputExercises.json");
+                exerciseOutput = new JSONArray(parser.parse(new InputStreamReader(is, "UTF-8")).toString());
+            }
+
+            else if (typeOfWorkout.equals("HIIT")) {
+                InputStream is = assetManager.open("json/HIITOutputExercises.json");
+                exerciseOutput = new JSONArray(parser.parse(new InputStreamReader(is, "UTF-8")).toString());
+            }
         }catch (FileNotFoundException e) {
             e.printStackTrace();
         } catch (IOException e) {
             e.printStackTrace();
         } catch (ParseException e) {
             e.printStackTrace();
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
         try {
-            for (int i = 0; i < allExercises.length(); i++) {
-                for (int j = 0; j < exerciseOutput.length(); j++) {
+            final int allExercisesLength = allExercises.length();
+            final int exerciseOutputLength = exerciseOutput.length();
+            for (int i = 0; i < allExercisesLength; i++) {
+                for (int j = 0; j < exerciseOutputLength; j++) {
                     if (exerciseOutput.getJSONObject(j).getString("name").equals(allExercises.getJSONObject(i).getString("name")))
                         allWorkoutDescriptions.put(exerciseOutput.getJSONObject(i));
                 }

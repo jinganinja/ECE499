@@ -341,14 +341,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             return false;
         }
 
+
         if (!allOptionsSelected){
             //Add all the missing items to the message to be displayed
-            int i; //Declare counter of items
-            for (i= 0; i < missingItems.size()-1; i++){ //subtract 1 to deal with last item separately
-                message = message+" "+missingItems.get(i)+",";
+            //If there is only 1 item, then message is simple
+            if (missingItems.size() == 1){
+                message = message + " " + missingItems.get(0) + ".";
+            } else { //Need to loop through the items
+
+                int i; //Declare counter of items
+                for (i = 0; i < missingItems.size() - 1; i++) { //subtract 1 to deal with last item separately
+                    message = message + " " + missingItems.get(i) + ",";
+                }
+                //Add the last item to the message
+                message = message + " and " + missingItems.get(i) + ".";
             }
-            //Add the last item to the message
-            message = message + " and "+ missingItems.get(i)+".";
             showAlertDialogButtonClicked(message);
             return false;
         }

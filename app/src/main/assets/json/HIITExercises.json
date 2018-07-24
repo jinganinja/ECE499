@@ -284,12 +284,5 @@
     "cardio": {
       "duration": 1
     }
-  },
-  {"name": "Ladder Circuit",
-    "equipment": true,
-    "HIIT": true,
-    "cardio": {
-      "duration": 0
-    }
   }
 ]

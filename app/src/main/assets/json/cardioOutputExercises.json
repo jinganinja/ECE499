@@ -66,28 +66,6 @@
     "coverImg": "main/res/drawable/push_up_fig_1.png"
   },
   {
-    "name": "Speed Ladder",
-    "description": [
-      {
-        "Step 1": "Choose 10 of the following ladder sequences. If you choose one that is single legged, complete both legs to count as a completed set."
-      },
-      {
-        "Step 2": "One foot in. Two feet in. Two feet in side jumps. Straight through in, in, out, out. Sideways two feet in, outs. Straight through two in, two out. Scissor in and out with twist. Straight through two foot jumps. Plank walk with push up. Push up jumps. One leg hops (saem foot whole way). Sideways on leg hops.  "
-      },
-      {
-        "Step 3": "Go through all 10, then repeat the chosen circuit of 8, 6 more times."
-      }
-    ],
-    "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
-    },
-    "tagLine": "Speed Ladder",
-    "reps": 0,
-    "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
-  },
-  {
     "name": "Track Sprints",
     "description": [
       {

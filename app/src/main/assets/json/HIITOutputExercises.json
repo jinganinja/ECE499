@@ -3,23 +3,22 @@
     "name": "Skip Rope",
     "description": [
       {
-        "Step 1": "Start skipping at a moderate pace for the first 2 minutes. Making sure to focus on landing on the balls of your feet. You should only be 3-5 cm off the ground."
+        "Step 1": "Start skipping at a moderate pace for 2 minutes. Making sure to focus on landing on the balls of your feet. You should only be 3-5 cm off the ground."
       },
       {
-        "Step 2": "Then for 30 seconds switch to double jumps. After completing 30 seconds take a 30 second break back to moderate single jumps. Repeat this sequence 2 more times"
+        "Step 2": "Then for 30 seconds switch to double jumps, rope should go under you twice per jump. After completing 30 seconds take a 30 second break back to moderate two foot jumps. Repeat this sequence 2 more times"
       },
       {
-        "Step 3": "Complete one-foot jumps for 15 seconds a leg, with a 15 second two foot break in between, complete this on each leg twice. Complete 1 more minute of moderate two foot jumps."
+        "Step 3": "Complete one-foot jumps for 15 seconds a leg, taking a 15 second two foot break between switching legs, complete this on each leg twice. Complete 1 more minute of moderate two foot jumps."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/SkippingRope.JPG"
     },
-    "tagLine": "Skip Rope",
+    "tagLine": "8 minutes total skipping, take 60 second break before next exercise.",
     "reps": 8,
     "sets": 60,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/SkippingRope.JPG"
   },
   {
     "name": "Jumping Jacks",
@@ -35,13 +34,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/JumpingJacks1.JPG",
+      "Step 2": "img/JumpingJacks2.JPG"
     },
-    "tagLine": "Jumping Jacks",
+    "tagLine": "1 minute of jumping jacks, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/JumpingJacks2.JPG"
   },
   {
     "name": "High Knees",
@@ -57,13 +56,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/HighKnees1.JPG",
+      "Step 2": "img/HighKnees2.JPG"
     },
-    "tagLine": "High Knees",
+    "tagLine": "2 minutes of high knees, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/HighKnees2.JPG"
   },
   {
     "name": "Burpees",
@@ -79,13 +78,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Burpees1.JPG",
+      "Step 2": "img/Burpees2.JPG",
+      "Step 3": "img/Burpees3.JPG"
     },
-    "tagLine": "Burpees",
+    "tagLine": "1 minute of burpees, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Burpees3.JPG"
   },
   {
     "name": "Butt Kicks",
@@ -101,16 +101,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/ButtKicks.JPG"
+
     },
-    "tagLine": "Butt Kicks",
+    "tagLine": "2 minutes of butt kicks, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/ButtKicks.JPG"
   },
-
-
   {
     "name": "Bicep Curls",
     "description": [
@@ -125,13 +123,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/BicepCurls1.JPG",
+      "Step 2": "img/BicepCurls2.JPG"
     },
-    "tagLine": "Bicep Curls",
+    "tagLine": "1 minute of bicep curls, 30 second break before next exercise",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/BicepCurls2.JPG"
   },
   {
     "name": "Triceps Kickbacks",
@@ -140,20 +138,20 @@
         "Step 1": "Kneel on a bench, hinging forward at the hips. Start with elbow at a 90 degree angle. Extend your forearm back until it is parallel to the floor."
       },
       {
-        "Step 2": "Hold at parallel to the ground for a second, then return back to the starting position. Focus on exhaling while pushing the weight backwards, and inhale on the way to returning to starting position."
+        "Step 2": "Hold parallel to the ground for a second, then return back to the starting position. Focus on exhaling while pushing the weight backwards, and inhale on the way to returning to starting position."
       },
       {
-        "Step 3": "Complete 1 minute on right side, then switch and 1 minute on left side."
+        "Step 3": "Complete 1 minute on right arm, then switch and 1 minute on left arm."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/TricepKickbacks1,JPG",
+      "Step 2": "img/TricepKickbacks2.JPG"
     },
-    "tagLine": "Triceps Kickbacks",
+    "tagLine": "1 minute each arm totalling 2 minutes, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/TricepKickbacks2.JPG"
   },
   {
     "name": "Dumbbell Thrusters",
@@ -162,42 +160,44 @@
         "Step 1": "Stand with your feet shoulder width apart holding the weights at your shoulders. Squat down until your thighs are parallel to the ground."
       },
       {
-        "Step 2": "Stand back up, while doing so extend your arms up and over your head, bring your arms back down, to the starting position. Repeat."
+        "Step 2": "Stand back up. While doing so extend your arms up above your head, then bring your arms back down to the starting position. Repeat."
       },
       {
-        "Step 3": "Make sure to keep your chest up and core engaged. Inhale on the way down, and exhale as your push your arm up."
+        "Step 3": "Make sure to keep your chest up and core engaged. Inhale on the way down, and exhale as you push your arm up."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/DumbbellThrusters1.JPG",
+      "Step 2": "img/DumbbellThrusters2.JPG",
+      "Step 3": "img/DumbbellThrusters3.JPG"
     },
-    "tagLine": "Dumbbell Thrusters",
+    "tagLine": "1 minute of dumbbell thrusters, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/DumbbellThrusters2.JPG"
   },
   {
     "name": "Hammer Curl to Press",
     "description": [
       {
-        "Step 1": "Stand shoulder width apart with your arms down at your side, palms facing in. Starting the movement with bending at the elbow and bringing hands up to your shoulders."
+        "Step 1": "Stand with your legs shoulder width apart and your arms down at your sides, palms facing in. Starting the movement with bending at the elbow and bringing hands up to your shoulders, as this happens your arms should twist and palms should be facing you."
       },
       {
-        "Step 2": "Once they are at your shoulders, push the dumbbells above your head until your arms are straight. Reverse the sequence to return to the start."
+        "Step 2": "Once they are at your shoulders, push the dumbbells above your head until your arms are straight, palms should be facing in front of you. Reverse the sequence to return to the start."
       },
       {
         "Step 3": "Make sure to keep elbows tight in to the body. Exhale when bringing the weights up, and inhale on the way back to the starting position."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/HammerToCurlPress1.JPG",
+      "Step 2": "img/HammerToCurlPress2.JPG",
+      "Step 3": "img/HammerToCurlPress3.JPG"
     },
-    "tagLine": "Hammer to Curl Press",
+    "tagLine": "1 minute of hammer curl to press, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/HammerToCurlPress3.JPG"
   },
   {
     "name": "Push Ups",
@@ -213,41 +213,42 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/PushUp1.JPG",
+      "Step 2": "img/AllPlanks.JPG"
     },
-    "tagLine": "Push Ups",
+    "tagLine": "1 minute of push ups, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/AllPlanks.JPG"
   },
   {
     "name": "Plank to Push Up",
     "description": [
       {
-        "Step 1": "Start in the plank position and perform a push up. On the way back down drop one arm so you are resting on it's forearm, then follow with the next arm."
+        "Step 1": "Start in the plank position on your forearms. One hand at a time, put yourself in a push up position. On the way back down drop one arm so you are resting on it's forearm, then follow with the next arm."
       },
       {
-        "Step 2": "You should be resting on both of your forearms, hold for a 2 count. Push yourself back up onto your hands and repeat."
+        "Step 2": "You should be resting on both of your forearms, hold for a 2 count. Repeat."
       },
       {
         "Step 3": "Exhale on the push-up, and inhale on the plank down. Focus on keeping your body as flat as possible."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/PlankToPushups1.JPG",
+      "Step 2": "img/PlankToPushUps2.JPG",
+      "Step 3": "img/PlankToPushUps3.JPG"
     },
-    "tagLine": "Plank to Push Up",
+    "tagLine": "1 minute of plank to push ups, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/PlankToPushUps2.JPG"
   },
   {
     "name": "Inch Worm",
     "description": [
       {
-        "Step 1": "Stand tall, and bend at the hips so your hands are touching the ground. Walk your hands forwards, keeping your legs as straight as possible."
+        "Step 1": "Stand tall, and bend at the hips so your hands are touching or close to the ground. Walk your hands forwards, keeping your legs as straight as possible."
       },
       {
         "Step 2": "Go until you end up in a push up position. Then reverse walk back up to the starting position. Repeat."
@@ -257,13 +258,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/InchWorm1.JPG",
+      "Step 2": "img/InchWorm2.JPG"
     },
-    "tagLine": "Ich Worm",
+    "tagLine": "2 minutes of inch worm, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/InchWorm1.JPG"
   },
   {
     "name": "Plank Taps",
@@ -272,20 +273,21 @@
         "Step 1": "Hold yourself in a plank position. Bring one arm up and touch it to the opposing shoulder. Bring back to the ground and repeat with the other arm. Repeat."
       },
       {
-        "Step 2": "Make sure to breath. Exhale on the way to touch your shoulder, inhale back down. Keep at a pace where you can keep your breathing pattern."
+        "Step 2": "Make sure to breath. Exhale on the way to touch your shoulder, inhale back down. Keep at a pace where you can keep your breathing steady."
       },
       {
         "Step 3": "Keep your core engaged and make sure to keep your back as flat as possible."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/PlankTaps1.JPG",
+      "Step 2": "img/PlankTaps2.JPG",
+      "Step 3": "img/PlankTaps3.JPG"
     },
-    "tagLine": "Plank Taps",
+    "tagLine": "1 minute of plank taps, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/PlankTaps3.JPG"
   },
   {
     "name": "Plank Walks (Lateral)",
@@ -301,13 +303,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/PlankWalks1.JPG",
+      "Step 2": "img/PlankWalks2.JPG"
     },
-    "tagLine": "Plank Walks (Lateral)",
+    "tagLine": "1 minute of plank walks, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/PlankWalks2.JPG"
   },
   {
     "name": "Plank Jacks",
@@ -323,16 +325,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/PlankJacks1.JPG",
+      "Step 2": "img/PlankJacks2.JPG"
     },
-    "tagLine": "Plank Jacks",
+    "tagLine": "1 minute of plank jacks, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/PlankJacks2.JPG"
   },
-
-
   {
     "name": "Squat Jumps",
     "description": [
@@ -340,20 +340,20 @@
         "Step 1": "Start standing straight up, with your arms to your side. Squat down, until your legs are parallel with the ground. Bring your arms backward behind you."
       },
       {
-        "Step 2": "Swing your arms forward and explode up into the air. Land softly slowly coiling back down into a squat. Repeat the process."
+        "Step 2": "Swing your arms forward and explode up into the air. Land softly, slowly coiling back down into a squat. Repeat the process."
       },
       {
         "Step 3": "Make sure to exhale on the jump up, and inhale down into the squat. Keep your chest up. Make sure to swing your arms."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/SquatJumps1.JPG",
+      "Step 2": "img/SquatJumps2.JPG"
     },
-    "tagLine": "Squat Jumps",
+    "tagLine": "2 minute of squat jumps, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/SquatJumps1.JPG"
   },
   {
     "name": "Jumping Lunges",
@@ -365,17 +365,18 @@
         "Step 2": "Land in a basic lunge (both legs are bent at about 90 degrees, your front knee should be directly ABOVE your foot. No Further). Repeat the jump process, continuously switching front legs."
       },
       {
-        "Step 3": "Make sure there is no rest in between jumps, make sure it is continuous."
+        "Step 3": "Make sure there is no rest in between jumps, it should be continuous."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/JumpingLunges1.JPG",
+      "Step 2": "img/JumpingLunges2.JPG",
+      "Step 3": "img/JumpingLunges3.JPG"
     },
-    "tagLine": "Jumping Lunges",
+    "tagLine": "1 minute of jumping lunges, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/JumpingLunges1.JPG"
   },
   {
     "name": "Lateral Jumps (Two Feet)",
@@ -387,39 +388,39 @@
         "Step 2": "Explode upwards and to either the left or the right (could be over an object). Cushion your landing. Reset and repeat going back to where you started."
       },
       {
-        "Step 3": "Inhale down into the squat and exhale as you are exploding up into the jump. Make sure to cushion your landing using your knees."
+        "Step 3": "Inhale down into the squat and exhale as you are exploding up into the jump. Make sure to cushion your landing using your knees. Use your arms to help propel you."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/2FootLateralJumps1.JPG",
+      "Step 3": "img/2FootLateralJumps2.JPG"
     },
-    "tagLine": "Lateral Jumps (Two Foot)",
+    "tagLine": "1 minute of 2 foot lateral jumps, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/2FootLateralJumps1.JPG"
   },
   {
     "name": "Lateral Jumps (One Foot)",
     "description": [
       {
-        "Step 1": "Stand up right with your feet together. Your arms should be hanging at your sides. Bring one leg up off of the ground. Drop down into a slight squat, pause briefly at the bottom."
+        "Step 1": "Stand up right with your feet together. Your arms should be hanging at your sides. Bring your inside leg up off of the ground. Drop down into a slight squat, pause briefly at the bottom."
       },
       {
-        "Step 2": "Explode upwards and to whichever side is not touching the ground (could be over an object). Cushion your landing with the opposite leg you jumped off of. Reset and repeat going back to where you started."
+        "Step 2": "Explode upwards and to whichever side is not touching the ground (could be over an object). Land on your outside foot, cushion your landing. Reset and repeat going back to where you started."
       },
       {
         "Step 3": "Inhale down into the squat and exhale as you are exploding up into the jump. Make sure to cushion your landing using your knees."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/1FootLateralJumps1.JPG",
+      "Step 3": "img/1FootLateralJumps2.JPG"
     },
-    "tagLine": "Lateral Jumps (One Foot)",
+    "tagLine": "1 minute of 1 foot lateral jumps, 30 second break before next exercise",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/1FootLateralJumps2.JPG"
   },
   {
     "name": "Side Lunges",
@@ -428,20 +429,21 @@
         "Step 1": "Start standing tall, with legs slightly wider than shoulder width apart. Toes pointed forward. Shift your weight to one side of your body and take a step that way."
       },
       {
-        "Step 2": "After taking a step, land and that leg should bend down to a 90 degree angle. Make sure your knee is above your foot, NOT past it."
+        "Step 2": "After taking a step land and that leg should bend down to a 90 degree angle. Make sure your knee is above your foot, NOT past it."
       },
       {
         "Step 3": "Return to starting stance, and step to the opposite side. Repeat. Make sure to exhale on the bend down into lunge and inhale on the way back to starting position."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/SideLunges1.JPG",
+      "Step 2": "img/SideLunges2.JPG",
+      "Step 3": "img/SideLunges3.JPG"
     },
-    "tagLine": "Side Lunge",
+    "tagLine": "1 minute of side lunges, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/SideLunges2.JPG"
   },
   {
     "name": "Walking Lunges",
@@ -457,13 +459,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/WalkingLunges.JPG"
     },
-    "tagLine": "Walking Lunges",
+    "tagLine": "2 minutes of walking lunges, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/WalkingLunges.JPG"
   },
   {
     "name": "Bulgarian Split Squat",
@@ -479,19 +480,19 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/BulgarianSplitSquat1.JPG",
+      "Step 2": "img/BulgarianSplitSquat2.JPG"
     },
-    "tagLine": "Bulgarian Split Squat",
+    "tagLine": "1 minute on each leg, totalling 2 minutes, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/BulgarianSplitSquat2.JPG"
   },
   {
     "name": "Step Ups",
     "description": [
       {
-        "Step 1": "Find a box or bench that allows for your leg to have a 90 degree bend when your foot is on it. Step up with your left foot being in initial contact."
+        "Step 1": "Find a box or bench that allows for your leg to have a 90 degree bend when your foot is on it. Step up with your left foot beingg the initial contact."
       },
       {
         "Step 2": "Bring your right foot up to touch the box. And step back down, leading with your left leg. Switch and start with your right foot. Repeat continuously switching feet that you start with."
@@ -501,16 +502,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/push_up_fig_1.png",
+      "Step 3": "img/push_up_fig_1.png"
     },
-    "tagLine": "Step Ups",
+    "tagLine": "2 minutes of step ups, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/push_up_fig_1.png"
   },
-
-
   {
     "name": "Kettle Bell Swings",
     "description": [
@@ -525,13 +524,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/push_up_fig_1.png",
+      "Step 3": "img/push_up_fig_1.png"
     },
-    "tagLine": "Kettle Bell Swings",
+    "tagLine": "1 minute of kettle bell swings, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/push_up_fig_1.png"
   },
   {
     "name": "Pull Ups (assisted)",
@@ -547,13 +546,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/push_up_fig_1.png",
+      "Step 3": "img/push_up_fig_1.png"
     },
-    "tagLine": "Pull Ups (assisted)",
+    "tagLine": "1 minute of pull ups, 60 second break between exercises.",
     "reps": 1,
     "sets": 60,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/push_up_fig_1.png"
   },
   {
     "name": "Front Plank",
@@ -562,20 +561,20 @@
         "Step 1": "Be resting on either your hands or forearms in the upward part of a push up. Contract your whole body, while having minimal movement."
       },
       {
-        "Step 2": "Hold in the upward position, keep your back flat as possible, and keeping as still as possible.."
+        "Step 2": "Hold in the upward position, keep your back flat as possible, and keeping as still as possible."
       },
       {
         "Step 3": ""
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/FrontPlank1.JPG",
+      "Step 2": "img/FrontPlank2.JPG"
     },
-    "tagLine": "Front Plank",
+    "tagLine": "1 minute of front plank, 60 second break before next exercise.",
     "reps": 1,
     "sets": 60,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/FrontPlank2.JPG"
   },
   {
     "name": "Side Plank",
@@ -591,13 +590,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/SidePlank.JPG"
     },
-    "tagLine": "Side Plank",
+    "tagLine": "1 minute of side plank, 30 second break before next exercise,",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/SidePlank.JPG"
   },
   {
     "name": "Calf Raises",
@@ -613,13 +611,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/CalfRaises1.JPG",
+      "Step 2": "img/CalfRaises2.JPG"
     },
-    "tagLine": "Calf Raises",
+    "tagLine": "2 minutes of calf raises, 15 second break before next exercise.",
     "reps": 2,
     "sets": 15,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/CalfRaises1.JPG"
   },
   {
     "name": "Bicycle Crunches",
@@ -635,13 +633,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/BicycleCrunches1.JPG",
+      "Step 2": "img/BicycleCrunches2.JPG"
     },
-    "tagLine": "Bicycle Crunches",
+    "tagLine": "1 minute of bicycle crunches, 15 second break before next exercise.",
     "reps": 1,
     "sets": 15,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/BicycleCrunches2.JPG"
   },
   {
     "name": "Flutter Kicks",
@@ -657,13 +655,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/FlutterKicks1.JPG",
+      "Step 2": "img/FlutterKicks2.JPG"
     },
-    "tagLine": "Flutter Kicks",
+    "tagLine": "1 minute of flutter kicks, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/FlutterKicks1.JPG"
   },
   {
     "name": "Sit Ups",
@@ -679,13 +677,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/SitUps1.JPG",
+      "Step 2": "img/SitUps2.JPG"
     },
-    "tagLine": "Sit-ups",
+    "tagLine": "1 minute of sit-ups, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/SitUps2.JPG"
   },
   {
     "name": "Heel Taps",
@@ -701,13 +699,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/HeelTouches1.JPG",
+      "Step 2": "img/HeelTouches2.JPG"
     },
-    "tagLine": "Heel Taps",
+    "tagLine": "1 minute of heel taps, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/HeelTouches2.JPG"
   },
   {
     "name": "Leg Raises",
@@ -723,13 +721,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/LegRaises1.JPG",
+      "Step 2": "img/LegRaises2.JPG",
+      "Step 3": "img/LegRaises3.JPG"
     },
-    "tagLine": "Leg Raises",
+    "tagLine": "2 minutes of leg raises, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/LegRaises2.JPG"
   },
   {
     "name": "Toe Touches",
@@ -738,26 +737,26 @@
         "Step 1": "Lay on your back, fully stretched out. Have your arms beside you, lift your legs up to make a 90 degree angle with your upper body."
       },
       {
-        "Step 2": "Taking your shoulders and higher off the ground reach up and touch your left toe with your right hand. Follow with right toe left foot. Stay off the ground until 15 seconds is up."
+        "Step 2": "Taking your shoulders and higher off the ground reach up and touch your left toe with your right hand. Then touch your right toe with left hand. Repeat."
       },
       {
-        "Step 3": "Repeat for 15 second, take a 10 second. Repeat 7 more times."
+        "Step 3": "Complete 30 seconds, take a 15 second. Repeat 4 more times."
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/ToeTouches.JPG"
+
     },
-    "tagLine": "Toe Touches",
-    "reps": 2,
+    "tagLine": "3 total minutes of toe touches, 30 second break before next exercise",
+    "reps": 3,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/ToeTouches.JPG"
   },
   {
     "name": "V Ups",
     "description": [
       {
-        "Step 1": "Lay on your back, fully stretched out. Have your arms up above you stretched out, lift your legs to make a 90 degree angle with your upper body."
+        "Step 1": "Lay on your back, fully stretched out. Have your arms up above your head, lift your legs to make a 90 degree angle with your upper body."
       },
       {
         "Step 2": "Reach as close to your feet as your can with your hands. At the top or contact, pause for 2 seconds. You should be making a 'V' shape return to starting position."
@@ -767,13 +766,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/VUps1.JPG",
+      "Step 2": "img/VUps2.JPG",
+      "Step 3": "img/VUps3.JPG"
     },
-    "tagLine": "V Ups",
+    "tagLine": "1 minute of V Ups, 30 second break before next exercise.",
     "reps": 1,
-    "sets": 3,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "sets": 30,
+    "coverImg": "img/VUps2.JPG"
   },
   {
     "name": "Ab Wheel Roll-Outs",
@@ -789,13 +789,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/push_up_fig_1.png",
+      "Step 3": "img/push_up_fig_1.png"
     },
-    "tagLine": "Ab Wheel Roll-Outs",
+    "tagLine": "1 minute of roll outs, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/push_up_fig_1.png"
   },
   {
     "name": "Russian Twists",
@@ -811,13 +811,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/RussianTwists1.JPG",
+      "Step 2": "img/RussianTwists2.JPG"
     },
-    "tagLine": "Russian Twists",
+    "tagLine": "2 minutes of russian twists, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/RussianTwists2.JPG"
   },
   {
     "name": "Pike to Superman (exercise ball)",
@@ -833,13 +833,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/PikeToSuperman1.JPG",
+      "Step 2": "img/PikeToSuperman2.JPG"
     },
-    "tagLine": "Pike to Superman (exercise ball)",
+    "tagLine": "2 minutes of pike to superman, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/PikeToSuperman2.JPG"
   },
   {
     "name": "Mountain Climbers",
@@ -855,34 +855,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/MountainClimbers1.JPG",
+      "Step 2": "img/MountainClimbers2.JPG"
     },
-    "tagLine": "Mountain Climbers",
-    "reps": 11,
-    "sets": 3,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
-  },
-  {
-    "name": "Ladder Circuit",
-    "description": [
-      {
-        "Step 1": "Choose 8 of the following ladder sequences. If you choose one that is single legged, complete both legs to count as a completed set."
-      },
-      {
-        "Step 2": "One foot in. Two feet in. Two feet in side jumps. Straight through in, in, out, out. Sideways two feet in, outs. Straight through two in, two out. Scissor in and out with twist. Straight through two foot jumps. Plank walk with push up. Push up jumps. One leg hops (same foot whole way). Sideways on leg hops."
-      },
-      {
-        "Step 3": "Go through all 8, then repeat the chosen circuit of 8, 5 more times."
-      }
-    ],
-    "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
-    },
-    "tagLine": "Ladder Circuit",
-    "reps": 11,
-    "sets": 3,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "tagLine": "2 minutes of mountain climbers, 30 second break between exercises.",
+    "reps": 2,
+    "sets": 30,
+    "coverImg": "img/MountainClimbers2.JPG"
   }
 ]

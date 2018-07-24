@@ -5,6 +5,7 @@ list of exercises. It takes the xml and turns it into actual objects.
 package com.example.micaela.fwd;
 
 import android.content.Context;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -54,6 +55,8 @@ public class CustomWorkoutListAdapter extends ArrayAdapter {
         viewHolder.exerciseName.setText(currentExercise.getName());
         viewHolder.exerciseTagLine.setText(currentExercise.getTagLine());
         //ToDo Change this so that the image isn't static
+        String imgFilePath = currentExercise.getImg();
+        Log.d(TAG, "getView: " + imgFilePath);
         viewHolder.exerciseCoverPhoto.setImageResource(R.drawable.push_up_fig_1);
         return convertView;
     }

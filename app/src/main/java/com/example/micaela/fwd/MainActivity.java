@@ -589,22 +589,22 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
     public int HIITNumExercisesForDuration(int duration) { // duration can only equal one of: [10, 15, 20, 30, 45, 60]
         switch(duration) {
             case 10:
-                return 7;
+                return 5;
 
             case 15:
-                return 10;
+                return 7;
 
             case 20:
-                return 14;
+                return 10;
 
             case 30:
-                return 15;
+                return 14;
 
             case 45:
-                return 18;
+                return 24;
 
             case 60:
-                return 20;
+                return 27;
         }
         return 0;
     }

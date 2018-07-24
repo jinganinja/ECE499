@@ -658,16 +658,21 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         }
         try {
             int allExercisesLength = allExercises.length();
-            int exerciseOutputLength = exerciseOutput.length();
-            Log.i(TAG, "The number of all exercises: " + Integer.toString(allExercisesLength) + ", the number of exercise outputs: " + Integer.toString(exerciseOutputLength));
             for (int i = 0; i < allExercisesLength; i++) {
+                int exerciseOutputLength = exerciseOutput.length();
                 for (int j = 0; j < exerciseOutputLength; j++) {
-                    if (exerciseOutput.getJSONObject(j).getString("name").equals(allExercises.getJSONObject(i).getString("name"))) {
-                        Log.i(TAG, "The output: " + exerciseOutput.getJSONObject(i));
-                        allWorkoutDescriptions.put(exerciseOutput.getJSONObject(i));
-                        break;
+                    if (exerciseOutput.getJSONObject(j) != null && allExercises.getJSONObject(i) != null) {
+                        if(exerciseOutput.getJSONObject(j).getString("name") != null && allExercises.getJSONObject(i).getString("name") != null) {
+                            if (exerciseOutput.getJSONObject(j).getString("name").equals(allExercises.getJSONObject(i).getString("name"))) {
+                                allWorkoutDescriptions.put(exerciseOutput.getJSONObject(j));
+                                break;
+                            }
+                        } else {
+                            Log.i(TAG, "Something doesn't have a name.......");
+                        }
+                    } else {
+                        Log.i(TAG, "Something is null: " + exerciseOutput.getJSONObject(j).toString() + ", " + allExercises.getJSONObject(i).toString());
                     }
-
                 }
             }
             allData.put("allWorkoutDescriptions", allWorkoutDescriptions);

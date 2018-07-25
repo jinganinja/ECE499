@@ -8,6 +8,7 @@ import android.content.Context;
 import android.content.res.AssetManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
+import android.graphics.Matrix;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -70,6 +71,7 @@ public class CustomWorkoutListAdapter extends ArrayAdapter {
             AssetManager assetManager = getContext().getAssets();
             InputStream is = assetManager.open(imgFilePath);
             Bitmap image = BitmapFactory.decodeStream(is);
+            image = RotateBitmap(image, 90);
             viewHolder.exerciseCoverPhoto.setImageBitmap(image);
         } catch (IOException e) {
             Log.e(TAG, "getView: Error reading image filepath!!!!!");
@@ -91,4 +93,13 @@ public class CustomWorkoutListAdapter extends ArrayAdapter {
             this.exerciseTagLine = v.findViewById(R.id.exerciseTagLine);
         }
     }
+
+    public static Bitmap RotateBitmap(Bitmap source, float angle)
+    {
+        Matrix matrix = new Matrix();
+        matrix.postRotate(angle);
+        return Bitmap.createBitmap(source, 0, 0, source.getWidth(), source.getHeight(), matrix, true);
+    }
+
+
 }

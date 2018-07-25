@@ -96,10 +96,6 @@ public class TutorialListAdapter extends ArrayAdapter {
             this.stepInstruct = v.findViewById(R.id.stepInstructions);
         }
     }
-
-
-
-
 }
 
 

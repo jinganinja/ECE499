@@ -5,6 +5,9 @@ list of exercises. It takes the xml and turns it into actual objects.
 package com.example.micaela.fwd;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -13,6 +16,12 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import org.json.JSONArray;
+import org.json.JSONException;
+
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 import java.util.List;
 
 public class CustomWorkoutListAdapter extends ArrayAdapter {
@@ -55,9 +64,18 @@ public class CustomWorkoutListAdapter extends ArrayAdapter {
         viewHolder.exerciseName.setText(currentExercise.getName());
         viewHolder.exerciseTagLine.setText(currentExercise.getTagLine());
         //ToDo Change this so that the image isn't static
-        String imgFilePath = currentExercise.getImg();
+        String imgFilePath = currentExercise.getImg();//img/name.jpg
         Log.d(TAG, "getView: " + imgFilePath);
-        viewHolder.exerciseCoverPhoto.setImageResource(R.drawable.push_up_fig_1);
+        try {
+            AssetManager assetManager = getContext().getAssets();
+            InputStream is = assetManager.open(imgFilePath);
+            Bitmap image = BitmapFactory.decodeStream(is);
+            viewHolder.exerciseCoverPhoto.setImageBitmap(image);
+        } catch (IOException e) {
+            Log.e(TAG, "getView: Error reading image filepath!!!!!");
+        }
+        //setImageBitmap
+        //viewHolder.exerciseCoverPhoto.setImageResource(R.drawable.push_up_fig_1);
         return convertView;
     }
 

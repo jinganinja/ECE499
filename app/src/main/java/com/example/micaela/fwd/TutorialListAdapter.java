@@ -1,6 +1,9 @@
 package com.example.micaela.fwd;
 
 import android.content.Context;
+import android.content.res.AssetManager;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,6 +12,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.io.IOException;
+import java.io.InputStream;
 import java.util.List;
 
 public class TutorialListAdapter extends ArrayAdapter {
@@ -63,8 +68,18 @@ public class TutorialListAdapter extends ArrayAdapter {
             float scale = getContext().getResources().getDisplayMetrics().density;
             int dpPad = (int) (12*scale + 0.5f);
             viewHolder.stepFigure.setPadding(dpPad,0,dpPad,dpPad);
-            //todo: change this so that it is actually reading file path!
-            viewHolder.stepFigure.setImageResource(R.drawable.push_up_fig_1);
+            String stepImagePath = descripImgs.get(position);
+
+            //Changed this so that is actually reading the path
+            try {
+                AssetManager assetManager = getContext().getAssets();
+                InputStream is = assetManager.open(stepImagePath);
+                Bitmap image = BitmapFactory.decodeStream(is);
+                image = CustomWorkoutListAdapter.RotateBitmap(image, 90);
+                viewHolder.stepFigure.setImageBitmap(image);
+            } catch (IOException e) {
+                Log.e(TAG, "getView: Error reading image filepath!!!!!");
+            }
         }
         return convertView;
     }
@@ -81,7 +96,6 @@ public class TutorialListAdapter extends ArrayAdapter {
             this.stepInstruct = v.findViewById(R.id.stepInstructions);
         }
     }
-
 }
 
 

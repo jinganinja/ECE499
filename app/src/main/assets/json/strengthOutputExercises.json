@@ -312,6 +312,29 @@
   },
 
   {
+    "name":"Plank to Push Up",
+    "description":[
+      {
+        "Step 1": "Start in the plank position on your forearms. One hand at a time, put yourself in a push up position. On the way back down drop one arm so you are resting on it's forearm, then follow with the next arm."
+      },
+      {
+        "Step 2": "You should be resting on both of your forearms, hold for a 2 count. Repeat."
+      },
+      {
+        "Step 3": "Exhale on the push-up, and inhale on the plank down. Focus on keeping your body as flat as possible."
+      }
+    ],
+    "descripImgs":{
+      "Step 1": "main/res/drawable/PlankToPushups1.JPG",
+      "Step 2": "main/res/drawable/PlankToPushUps2.JPG",
+      "Step 3": "main/res/drawable/PlankToPushUps3.JPG"
+    },
+    "tagLine":"3 sets of 8 reps. Increase weight if desired.",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/PlankToPushUps2.JPG"
+  },
+  {
     "name":"Inch Worm",
     "description":[
       {
@@ -424,29 +447,6 @@
     "coverImg":"main/res/drawable/Burpees2.JPG"
   },
   {
-    "name":"Plank to Push Up",
-    "description":[
-      {
-        "Step 1": "Start in the plank position on your forearms. One hand at a time, put yourself in a push up position. On the way back down drop one arm so you are resting on it's forearm, then follow with the next arm."
-      },
-      {
-        "Step 2": "You should be resting on both of your forearms, hold for a 2 count. Repeat."
-      },
-      {
-        "Step 3": "Exhale on the push-up, and inhale on the plank down. Focus on keeping your body as flat as possible."
-      }
-    ],
-    "descripImgs":{
-      "Step 1": "main/res/drawable/PlankToPushups1.JPG",
-      "Step 2": "main/res/drawable/PlankToPushUps2.JPG",
-      "Step 3": "main/res/drawable/PlankToPushUps3.JPG"
-    },
-    "tagLine":"3 sets of 8 reps. Increase weight if desired.",
-    "reps":8,
-    "sets":3,
-    "coverImg":"main/res/drawable/PlankToPushUps2.JPG"
-  },
-  {
     "name":"Push Ups",
     "description":[
       {
@@ -468,6 +468,383 @@
     "sets":3,
     "coverImg":"main/res/drawable/AllPlanks.JPG"
   },
+
+  {
+    "name":"Superhero's",
+    "description":[
+      {
+        "Step 1":"Start by laying on the ground on your stomach with your arms stretched above your head."
+      },
+      {
+        "Step 2":"Simultaneously lift your arms and legs 4-5cm off the ground. Hold for 3 seconds, then return to the ground. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the way up and inhale on the way back down. Keep your neck in a neutral position, with your face facing the gorund."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 2":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"3 sets of 8 reps.",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Aqua Swimmer",
+    "description":[
+      {
+        "Step 1":"Start by laying on the ground on your stomach with your arms stretch up above your head."
+      },
+      {
+        "Step 2":"Simultaneously lift your left arm and your right leg up 4-5cm above the ground, hold for 3 seconds then return. Now do the same with your right arm and left leg. Repeat."
+      },
+      {
+        "Step 3":"Exhale on the way up and during the hold, and inhale on the way back down. Completion of a full rep is when all 4 limbs are lifted."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 2":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"3 sets of 8 reps.",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Plank Jacks",
+    "description":[
+      {
+        "Step 1":"Hold yourself in a plank position, either on your hands or your forearms. Move your legs out and back, as if you were doing a jumping jack."
+      },
+      {
+        "Step 2":"Repeat. Try to exhale when pushing your legs out, and inhale on the way back to the starting plank position."
+      },
+      {
+        "Step 3":"Keep your back as flat as possible, and keep your upper body quiet."
+      }
+    ],
+    "descripImgs":{
+      "Step 1": "main/res/drawable/PlankJacks1.JPG",
+      "Step 2": "main/res/drawable/PlankJacks2.JPG"
+    },
+    "tagLine":"3 sets of 8 reps.",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/PlankJacks2.JPG"
+  },
+  {
+    "name": "Kettle Bell Swings",
+    "description": [
+      {
+        "Step 1": "Start standing straight up feet shoulder width apart, with your arms in front of you holding the kettlebell. Squat down, slightly at the knees but mainly at the hips."
+      },
+      {
+        "Step 2": "The kettle bell should be swinging between your legs behind you. Drive your hips forward and straighten your back. Your arms and kettle bell should be swinging forward."
+      },
+      {
+        "Step 3": "Bring the kettle bell back to the starting position. Repeat. Make sure to only slightly bend in your knees."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "3 sets of 8 reps. Increase weight if desired.",
+    "reps": 8,
+    "sets": 3,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Front Plank",
+    "description": [
+      {
+        "Step 1": "Be resting on either your hands or forearms in the upward part of a push up. Contract your whole body, while having minimal movement."
+      },
+      {
+        "Step 2": "Hold in the upward position, keep your back flat as possible, and keeping as still as possible."
+      },
+      {
+        "Step 3": ""
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/FrontPlank1.JPG",
+      "Step 2": "main/res/drawable/FrontPlank2.JPG"
+    },
+    "tagLine": "3 sets of 3 reps hold for 1 minute",
+    "reps": 3,
+    "sets": 3,
+    "coverImg": "main/res/drawable/FrontPlank2.JPG"
+  },
+  {
+    "name": "Side Plank",
+    "description": [
+      {
+        "Step 1": "Rest on your side either on your elbow or hand. Take hips up off the ground and hold position."
+      },
+      {
+        "Step 2": "Hold on one side for 30 seconds, then switch to the other side.."
+      },
+      {
+        "Step 3": ""
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/SidePlank.JPG"
+    },
+    "tagLine": "3 sets of 3 reps hold for 1 minute",
+    "reps": 3,
+    "sets": 3,
+    "coverImg": "main/res/drawable/SidePlank.JPG"
+  },
+  {
+    "name": "Bicycle Crunches",
+    "description": [
+      {
+        "Step 1": "Lay on your back on the ground. Put your hands behind your heads and elbows out to the side. Bend your legs to a 90 degree angle."
+      },
+      {
+        "Step 2": "Bring 1 knee towards your head and cross over with the opposite arm. Making your elbow touch your knee. Switch legs and arms and repeat."
+      },
+      {
+        "Step 3": "Make sure to keep the grip loose on your neck. Make sure to keep breathing."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/BicycleCrunches1.JPG",
+      "Step 2": "main/res/drawable/BicycleCrunches2.JPG"
+    },
+    "tagLine": "3 sets of 10 reps (5 each side).",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/BicycleCrunches2.JPG"
+  },
+  {
+    "name": "Flutter Kicks",
+    "description": [
+      {
+        "Step 1": "Lay on your back, fully stretched out. Have your arms beside you, lift your legs 8-10 cm off the ground."
+      },
+      {
+        "Step 2": "Keep your legs as straight as possible, raise one up then swap, and raise the opposing leg up. Repeat continuously keeping legs going up and down."
+      },
+      {
+        "Step 3": "Make sure to keep rhythmic breathing during exercise."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/FlutterKicks1.JPG",
+      "Step 2": "main/res/drawable/FlutterKicks2.JPG"
+    },
+    "tagLine": "3 sets of 20 reps (10 each leg)",
+    "reps": 20,
+    "sets": 3,
+    "coverImg": "main/res/drawable/FlutterKicks1.JPG"
+  },
+  {
+    "name": "Sit Ups",
+    "description": [
+      {
+        "Step 1": "Lie on your back, with your legs bent and planted on the floor. Legs should be about shoulder distance apart. Put your hands on the back of your neck, elbows pointing out."
+      },
+      {
+        "Step 2": "Pulling your belly button in, towards your spine. Simultaneously pulling your torso, bending at the hips. Raise torso until you are about an inch from thighs."
+      },
+      {
+        "Step 3": "Exhale while raising your torso and inhale while returning to the start position. Keep your eyes focus up above."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/SitUps1.JPG",
+      "Step 2": "main/res/drawable/SitUps2.JPG"
+    },
+    "tagLine": "3 sets of 8 reps.",
+    "reps": 8,
+    "sets": 3,
+    "coverImg": "main/res/drawable/SitUps2.JPG"
+  },
+  {
+    "name": "Heel Taps",
+    "description": [
+      {
+        "Step 1": "Lie on your back, with your legs bent and planted on the floor. Legs should be about shoulder distance apart. Arms start at your side."
+      },
+      {
+        "Step 2": "Slide towards your right heel, with your right hand. Once you make contact go back to the starting position and do your left heel and left hand."
+      },
+      {
+        "Step 3": "Repeat. Make sure you get into a rhythm with your breathing."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/HeelTouches1.JPG",
+      "Step 2": "main/res/drawable/HeelTouches2.JPG"
+    },
+    "tagLine": "3 sets of 20 reps (10 each leg)",
+    "reps": 20,
+    "sets": 3,
+    "coverImg": "main/res/drawable/HeelTouches2.JPG"
+  },
+  {
+    "name": "Leg Raises",
+    "description": [
+      {
+        "Step 1": "Lay on your back, fully stretched out. Have your arms beside you, lift your legs at a medium pace up to make a 90 degree angle with your upper body."
+      },
+      {
+        "Step 2": "Pause at the top, and slowly bring your legs back down to about 2cm from the ground, then bring your legs back up to the top. Repeat."
+      },
+      {
+        "Step 3": "Exhale while bringing your legs up to the top. Inhale on the way back down. Make sure to stare straight up."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/LegRaises1.JPG",
+      "Step 2": "main/res/drawable/LegRaises2.JPG",
+      "Step 3": "main/res/drawable/LegRaises3.JPG"
+    },
+    "tagLine": "3 sets of 8",
+    "reps": 8,
+    "sets": 3,
+    "coverImg": "main/res/drawable/LegRaises2.JPG"
+  },
+  {
+    "name": "Toe Touches",
+    "description": [
+      {
+        "Step 1": "Lay on your back, fully stretched out. Have your arms beside you, lift your legs up to make a 90 degree angle with your upper body."
+      },
+      {
+        "Step 2": "Taking your shoulders and higher off the ground reach up and touch your left toe with your right hand. Then touch your right toe with left hand. Repeat."
+      },
+      {
+        "Step 3": "Complete 30 seconds, take a 15 second. Repeat 4 more times."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/ToeTouches.JPG"
+
+    },
+    "tagLine": "3 sets of 10 reps (5 per leg).",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/ToeTouches.JPG"
+  },
+  {
+    "name": "V Ups",
+    "description": [
+      {
+        "Step 1": "Lay on your back, fully stretched out. Have your arms up above your head, lift your legs to make a 90 degree angle with your upper body."
+      },
+      {
+        "Step 2": "Reach as close to your feet as your can with your hands. At the top or contact, pause for 2 seconds. You should be making a 'V' shape return to starting position."
+      },
+      {
+        "Step 3": "Exhale on the up, and inhale on they way back down. Make sure to look ahead."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/VUps1.JPG",
+      "Step 2": "main/res/drawable/VUps2.JPG",
+      "Step 3": "main/res/drawable/VUps3.JPG"
+    },
+    "tagLine": "3 sets of 8 reps.",
+    "reps": 8,
+    "sets": 3,
+    "coverImg": "main/res/drawable/VUps2.JPG"
+  },
+  {
+    "name": "Ab Wheel Roll-Outs",
+    "description": [
+      {
+        "Step 1": "Kneel on a gym mat, and have your body bent over. Hold onto the Ab wheel with both hands."
+      },
+      {
+        "Step 2": "Extend out forward as far as you can, pause for a second and then return back to the beginning slow. Move to both the right and left side. Repeat."
+      },
+      {
+        "Step 3": "Exhale on the roll out, and inhale when you roll back in. Go as far as you can before you feel like you cannot pull yourself back in."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "3 sets of 12 reps (4 times in each direction for 1 rep).",
+    "reps": 12,
+    "sets": 3,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name": "Russian Twists",
+    "description": [
+      {
+        "Step 1": "Lay on your back on the ground. Put your hands at your side. Bend your legs so they are planted and at a comfortable distance."
+      },
+      {
+        "Step 2": "Bend at the hips, bringing your torso closer to your legs. Stop at about a 45 degree angle. Hold medicine ball over your stomach. Twist to the right until ball touches ground, then go all the way over to the left."
+      },
+      {
+        "Step 3": "Repeat this process of going back and forth between the left and right. Make sure to find rhythm in your breath."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/RussianTwists1.JPG",
+      "Step 2": "main/res/drawable/RussianTwists2.JPG"
+    },
+    "tagLine": "3 sets of 12 reps (6 each side). Increase weight if desired.",
+    "reps": 12,
+    "sets": 3,
+    "coverImg": "main/res/drawable/RussianTwists2.JPG"
+  },
+  {
+    "name": "Pike to Superman (exercise ball)",
+    "description": [
+      {
+        "Step 1": "Start in a plank position, with your feet on an exercise ball. Use a wall for stability if needed."
+      },
+      {
+        "Step 2": "Using your legs, roll the ball inward towards your hands going up into a pike-like position. Slowly return back to the starting position. Repeat."
+      },
+      {
+        "Step 3": "Make sure you exhale as you bring the ball closer to you, and inhale as you return to the starting position."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/PikeToSuperman1.JPG",
+      "Step 2": "main/res/drawable/PikeToSuperman2.JPG"
+    },
+    "tagLine": "3 sets of 8 reps.",
+    "reps": 8,
+    "sets": 3,
+    "coverImg": "main/res/drawable/PikeToSuperman2.JPG"
+  },
+  {
+    "name": "Mountain Climbers",
+    "description": [
+      {
+        "Step 1": "Start in a push up position. Drive your right leg up tp where your right hand is planted. Bring it back down and do the same with your left side."
+      },
+      {
+        "Step 2": "Repeat this process at a vigorous pace."
+      },
+      {
+        "Step 3": "Make sure to keep a steady rhythm of breathing."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/MountainClimbers1.JPG",
+      "Step 2": "main/res/drawable/MountainClimbers2.JPG"
+    },
+    "tagLine": "3 sets of 20 reps (10 each leg).",
+    "reps": 20,
+    "sets": 3,
+    "coverImg": "main/res/drawable/MountainClimbers2.JPG"
+  },
+
   {
     "name":"Bench Press (with dumbbells)",
     "description":[
@@ -601,7 +978,7 @@
     "coverImg":"main/res/drawable/push_up_fig_1.png"
   },
   {
-    "name":"Pec Deck",
+    "name":"Peck Deck",
     "description":[
       {
         "Step 1":"Adjust the machine so your arms are straight out at your sides in a comfortable position. Simultaneously bring both arms in towards your midline."
@@ -844,7 +1221,7 @@
     "coverImg":"main/res/drawable/push_up_fig_1.png"
   },
   {
-    "name":"Deadlifts",
+    "name":"Dead Lifts",
     "description":[
       {
         "Step 1":"Start by hinging your hips, or sitting back. Your legs should we shoulder width apart and your grip on the bar should be slightly wider than your legs."
@@ -888,51 +1265,7 @@
     "sets":3,
     "coverImg":"main/res/drawable/push_up_fig_1.png"
   },
-  {
-    "name":"Floor Press",
-    "description":[
-      {
-        "Step 1":"Laying on the ground stretched out, have your arms up towards the ceiling with your palms pointed towards your feet. Bring your hips to your shoulder blades making an arch in your back."
-      },
-      {
-        "Step 2":"Bring your heels to your butt. Grab the bar at about a shoulder width grip. Bring the bar down until it is at your sternum, your upper arms should be on the ground."
-      },
-      {
-        "Step 3":"Explode up, bring it back down slow. Exhale on the push up, inhale on the way to the floor. Do not bounce your arms off the ground."
-      }
-    ],
-    "descripImgs":{
-      "Step 1":"main/res/drawable/push_up_fig_1.png",
-      "Step 2":"main/res/drawable/.JPG",
-      "Step 3":"main/res/drawable/push_up_fig_1.png"
-    },
-    "tagLine":"3 sets of 8 reps. Increase weight if desired.",
-    "reps":8,
-    "sets":3,
-    "coverImg":"main/res/drawable/push_up_fig_1.png"
-  },
-  {
-    "name":"Lat Pullovers",
-    "description":[
-      {
-        "Step 1":"Laying down on the ground, stretched out have your arms stretched above your face towards the ceiling. Holding a dumbbell."
-      },
-      {
-        "Step 2":"Start bringing the dumbbell towards the ground behind your head, having a slight bend in the elbows. Once hits the ground, bring it back up above your chest."
-      },
-      {
-        "Step 3":"Inhale on the way down to the ground, and exhale when bringing it back above your chest."
-      }
-    ],
-    "descripImgs":{
-      "Step 1":"main/res/drawable/push_up_fig_1.png",
-      "Step 2":"main/res/drawable/push_up_fig_1.png"
-    },
-    "tagLine":"3 sets of 8 reps. Increase weight if desired.",
-    "reps":8,
-    "sets":3,
-    "coverImg":"main/res/drawable/push_up_fig_1.png"
-  },
+
   {
     "name":"Push Ups",
     "description":[
@@ -999,6 +1332,8 @@
     "sets":3,
     "coverImg":"main/res/drawable/push_up_fig_1.png"
   },
+
+
   {
     "name":"Reverse Grip Lat Pull Downs",
     "description":[
@@ -1066,27 +1401,27 @@
     "coverImg":"main/res/drawable/push_up_fig_1.png"
   },
   {
-    "name":"Bent Barbell Deadlifts",
-    "description":[
+    "name": "Deadlifts",
+    "description": [
       {
-        "Step 1":"Start by standing with knees slightly bent and torso forward, do this by bending at the hips. Keep your back straight and parallel to the floor."
+        "Step 1": "Start by hinging your hips, or sitting back. Your legs should we shoulder width apart and your grip on the bar should be slightly wider than your legs."
       },
       {
-        "Step 2":"Lift the barbell to your abdomen area. At the top pause for a moment. Return back to the starting position. Repeat."
+        "Step 2": "Keep your spine neutral and flat throughout the whole movement. The bar should be right against your shins and as you lift should continue to graze your legs."
       },
       {
-        "Step 3":"Exhale on the way up and inhale on the back down. Keep your torso stationary, and elbow in tight to your body."
+        "Step 3": "Moving both your hips and knees at the same time, lift the weight off the ground until you are standing up, pause at the top and slowly return to the beginning position. Repeat. Exhale on the lift, inhale on the return."
+
       }
     ],
-    "descripImgs":{
-      "Step 1":"main/res/drawable/push_up_fig_1.png",
-      "Step 2":"main/res/drawable/.JPG",
-      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
     },
-    "tagLine":"3 sets of 8 reps. Increase weight if desired.",
-    "reps":8,
-    "sets":3,
-    "coverImg":"main/res/drawable/push_up_fig_1.png"
+    "tagLine": "Deadlifts",
+    "reps": 8,
+    "sets": 3,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
   },
   {
     "name":"Wide Grip Pull Ups",
@@ -1111,7 +1446,7 @@
     "coverImg":"main/res/drawable/push_up_fig_1.png"
   },
   {
-    "name":"Seated Cable Rows",
+    "name":"Seated Cable Rows (with pause)",
     "description":[
       {
         "Step 1":"Adjust the machine so your are stretched out with your knees slightly bent. Keeping your torso stationary, pull backwards with your arms."
@@ -1133,7 +1468,7 @@
     "coverImg":"main/res/drawable/push_up_fig_1.png"
   },
   {
-    "name":"Wide Grip Seated Rows",
+    "name":"Seated Cable Rows (wide grip)",
     "description":[
       {
         "Step 1":"Adjust the machine so your are stretched out with your knees slightly bent. Use a long bar to make your grip wide. Keeping your torso stationary, pull backwards with your arms."
@@ -1377,6 +1712,7 @@
     "sets":3,
     "coverImg":"main/res/drawable/push_up_fig_1.png"
   },
+
   {
     "name":"Superhero's",
     "description":[
@@ -1464,5 +1800,232 @@
     "reps":8,
     "sets":3,
     "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+
+
+
+  {
+    "name": "Squat Jumps",
+    "description": [
+      {
+        "Step 1": "Start standing straight up, with your arms to your side. Squat down, until your legs are parallel with the ground. Bring your arms backward behind you."
+      },
+      {
+        "Step 2": "Swing your arms forward and explode up into the air. Land softly, slowly coiling back down into a squat. Repeat the process."
+      },
+      {
+        "Step 3": "Make sure to exhale on the jump up, and inhale down into the squat. Keep your chest up. Make sure to swing your arms."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/SquatJumps1.JPG",
+      "Step 2": "main/res/drawable/SquatJumps2.JPG"
+    },
+    "tagLine": "3 sets of 8 reps. Add weight (dumbbells) if desired",
+    "reps": 8,
+    "sets": 3,
+    "coverImg": "main/res/drawable/SquatJumps1.JPG"
+  },
+  {
+    "name": "Jumping Lunges",
+    "description": [
+      {
+        "Step 1": "Start standing tall, with one foot slightly in front of the other. Have a slight bend in your knees. Push up, into the air switching legs mid air."
+      },
+      {
+        "Step 2": "Land in a basic lunge (both legs are bent at about 90 degrees, your front knee should be directly ABOVE your foot. No Further). Repeat the jump process, continuously switching front legs."
+      },
+      {
+        "Step 3": "Make sure there is no rest in between jumps, it should be continuous."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/JumpingLunges1.JPG",
+      "Step 2": "main/res/drawable/JumpingLunges2.JPG",
+      "Step 3": "main/res/drawable/JumpingLunges3.JPG"
+    },
+    "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/JumpingLunges1.JPG"
+  },
+  {
+    "name": "Lateral Jumps (Two Feet)",
+    "description": [
+      {
+        "Step 1": "Stand up right with your feet together. Your arms should be hanging at your sides. Drop down into a slight squat, pause briefly at the bottom."
+      },
+      {
+        "Step 2": "Explode upwards and to either the left or the right (could be over an object). Cushion your landing. Reset and repeat going back to where you started."
+      },
+      {
+        "Step 3": "Inhale down into the squat and exhale as you are exploding up into the jump. Make sure to cushion your landing using your knees. Use your arms to help propel you."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/2FootLateralJumps1.JPG",
+      "Step 3": "main/res/drawable/2FootLateralJumps2.JPG"
+    },
+    "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/2FootLateralJumps1.JPG"
+  },
+  {
+    "name": "Lateral Jumps (One Foot)",
+    "description": [
+      {
+        "Step 1": "Stand up right with your feet together. Your arms should be hanging at your sides. Bring your inside leg up off of the ground. Drop down into a slight squat, pause briefly at the bottom."
+      },
+      {
+        "Step 2": "Explode upwards and to whichever side is not touching the ground (could be over an object). Land on your outside foot, cushion your landing. Reset and repeat going back to where you started."
+      },
+      {
+        "Step 3": "Inhale down into the squat and exhale as you are exploding up into the jump. Make sure to cushion your landing using your knees."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/1FootLateralJumps1.JPG",
+      "Step 3": "main/res/drawable/1FootLateralJumps2.JPG"
+    },
+    "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/1FootLateralJumps2.JPG"
+  },
+  {
+    "name": "Side Lunges",
+    "description": [
+      {
+        "Step 1": "Start standing tall, with legs slightly wider than shoulder width apart. Toes pointed forward. Shift your weight to one side of your body and take a step that way."
+      },
+      {
+        "Step 2": "After taking a step land and that leg should bend down to a 90 degree angle. Make sure your knee is above your foot, NOT past it."
+      },
+      {
+        "Step 3": "Return to starting stance, and step to the opposite side. Repeat. Make sure to exhale on the bend down into lunge and inhale on the way back to starting position."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/SideLunges1.JPG",
+      "Step 2": "main/res/drawable/SideLunges2.JPG",
+      "Step 3": "main/res/drawable/SideLunges3.JPG"
+    },
+    "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/SideLunges2.JPG"
+  },
+
+  {
+    "name": "Walking Lunges",
+    "description": [
+      {
+        "Step 1": "Start standing tall, with your feet together. Take a step forward, land, and bend down so both legs are at a 90 degree bend. Make sure your front knee is above your foot."
+      },
+      {
+        "Step 2": "Bring your feet back together and repeat, with the opposing leg. Go in a straight line for about 5 on each side. Turn around and repeat back to the starting spot."
+      },
+      {
+        "Step 3": "Make sure to exhale on the step forward into lunge and inhale as you bring your feet back together."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/WalkingLunges.JPG"
+    },
+    "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/WalkingLunges.JPG"
+  },
+  {
+    "name": "Bulgarian Split Squat",
+    "description": [
+      {
+        "Step 1": "Start with one foot on the ground and the other rested up on a bench, like a lunge stance. Bend down until your forward thigh is parallel with the ground."
+      },
+      {
+        "Step 2": "Retrieve back to the starting position. And repeat on the same leg. Do 1 minute on the right, switch and do 1 minute of the left."
+      },
+      {
+        "Step 3": "Make sure to face straight ahead, and chest up. When going back to the beginning position, drive forward knee up. Inhale on the way down, exhale on the way up."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/BulgarianSplitSquat1.JPG",
+      "Step 2": "main/res/drawable/BulgarianSplitSquat2.JPG"
+    },
+    "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/BulgarianSplitSquat2.JPG"
+  },
+  {
+    "name": "Step Ups",
+    "description": [
+      {
+        "Step 1": "Find a box or bench that allows for your leg to have a 90 degree bend when your foot is on it. Step up with your left foot beingg the initial contact."
+      },
+      {
+        "Step 2": "Bring your right foot up to touch the box. And step back down, leading with your left leg. Switch and start with your right foot. Repeat continuously switching feet that you start with."
+      },
+      {
+        "Step 3": "Make sure to keep a continuous pace, stepping up and back down. Make sure to breath. Add weight if desired (dumbbells)."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/push_up_fig_1.png",
+      "Step 3": "main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
+    "reps": 10,
+    "sets": 3,
+    "coverImg": "main/res/drawable/push_up_fig_1.png"
+  },
+  {
+    "name":"Front Squat",
+    "description":[
+      {
+        "Step 1":"Rest teh bar across your upper chest and resting across your shoulders. Cross your arms in front, Your legs should be about shoulder distance apart. "
+      },
+      {
+        "Step 2":"Slowly bend down, until your upper leg and lower legs make about a 90 degree angle. Push back up to the starting position. Repeat."
+      },
+      {
+        "Step 3":"Make sure to look forward at all times. Do not let your knees pass over your toes. Keep your back straight. INhale on the way down, exhale on the way back up."
+      }
+    ],
+    "descripImgs":{
+      "Step 1":"main/res/drawable/push_up_fig_1.png",
+      "Step 2":"main/res/drawable/.JPG",
+      "Step 3":"main/res/drawable/push_up_fig_1.png"
+    },
+    "tagLine":"3 sets of 8 reps. Increase weight if desired.",
+    "reps":8,
+    "sets":3,
+    "coverImg":"main/res/drawable/push_up_fig_1.png"
+  },
+
+  {
+    "name": "Calf Raises",
+    "description": [
+      {
+        "Step 1": "Stand shoulder width apart with your arms to your side (you can hold weights for more difficulty)."
+      },
+      {
+        "Step 2": "Simply lift up onto the balls of your feet, raises your heels off the ground. Hold for a count of 3, then return down to the ground."
+      },
+      {
+        "Step 3": "Make sure to exhale when pushing up and inhale on the way back down. Keep your back straight and look straight ahead."
+      }
+    ],
+    "descripImgs": {
+      "Step 1": "main/res/drawable/CalfRaises1.JPG",
+      "Step 2": "main/res/drawable/CalfRaises2.JPG"
+    },
+    "tagLine": "3 sets of 8 reps. Add weight as desired.",
+    "reps": 8,
+    "sets": 3,
+    "coverImg": "main/res/drawable/CalfRaises1.JPG"
   }
 ]

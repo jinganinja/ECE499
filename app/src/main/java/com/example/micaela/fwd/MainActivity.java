@@ -431,9 +431,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if (exerciseCount < allExercises.length()){
                 return generateWorkoutFromExercises(exerciseCount, allExercises, "cardio");
             } else {
-                Log.d(TAG, "Returning null in createCardioWorkout: " + Integer.toString(exerciseCount));
-                JSONObject returnEmpty = new JSONObject();
-                return returnEmpty;
+                return generateWorkoutFromExercises(allExercises.length(), allExercises, "cardio");
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -470,9 +468,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if (exerciseCount < allExercises.length()){
                 return generateWorkoutFromExercises(exerciseCount, allExercises, "strength");
             } else {
-                Log.d(TAG, "Returning null in createStrengthWorkout: " + Integer.toString(exerciseCount));
-                JSONObject returnEmpty = new JSONObject();
-                return returnEmpty;
+                return generateWorkoutFromExercises(allExercises.length(), allExercises, "strength");
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -502,13 +498,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             if (exerciseCount < allExercises.length()){
                 return generateWorkoutFromExercises(exerciseCount, allExercises, "HIIT");
             } else {
-                Log.d(TAG, "Returning null in createHIITWorkout: " + Integer.toString(exerciseCount));
-                for (int i = 0; i < allExercises.length(); i++) {
-                    String name = allExercises.getJSONObject(i).getString("name");
-                    Log.i(TAG, "Exercise number " + Integer.toString(i) + " is: " + name);
-                }
-                JSONObject returnEmpty = new JSONObject();
-                return returnEmpty;
+                return generateWorkoutFromExercises(allExercises.length(), allExercises, "HIIT");
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -524,18 +514,27 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return returnEmpty;
     }
 
-    public JSONArray removeEquipmentRequired(JSONArray iterationExercises, JSONArray
-            allExercises) {
-        for (int i = 0; i < iterationExercises.length(); i++) {
-            // remove all the exercises that require equipment
-            try {
-                JSONObject exercise = (JSONObject) iterationExercises.getJSONObject(i);
-                if (exercise.getBoolean("equipment"))
-                    Log.i(TAG, "Removing exercise b/c no equipment available: " + exercise.getString("name"));
-                    allExercises.remove(i);
-            } catch (JSONException e) {
-                e.printStackTrace();
+    public JSONArray removeEquipmentRequired(JSONArray iterationExercises, JSONArray allExercises) {
+        // remove all the exercises that require equipment
+        try {
+            int i = 0;
+            while(true) {
+                if (!allExercises.getJSONObject(i).equals(null)) {
+                    JSONObject exercise = (JSONObject) iterationExercises.getJSONObject(i);
+                    if (exercise.getBoolean("equipment")) {
+                        Log.i(TAG, "Removing exercise b/c no equipment available: " + exercise.getString("name"));
+                        allExercises.remove(i);
+                    } else {
+                        Log.i(TAG, "Kept this exercise: " + exercise.getString("name"));
+                        i++;
+                    }
+
+                } else {
+                    break;
+                }
             }
+        } catch (JSONException e) {
+            e.printStackTrace();
         }
         return allExercises;
     }
@@ -611,12 +610,26 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
 
     public JSONArray removeUnapplicableMuscleExercises(JSONArray iterationExercises, JSONArray allExercises, String muscleGroup) {
         try {
-            for (int i = 0; i < iterationExercises.length(); i++) {
-                // remove exercises that are not for that muscle group
-                JSONObject exercise = (JSONObject) iterationExercises.get(i);
-                if (!exercise.getString("muscle group").equals(muscleGroup))
-                    Log.i(TAG, "Removing exercise b/c of muscle group: " + exercise.getString("name"));
-                    allExercises.remove(i);
+            int i = 0;
+            while(true) {
+                if (!allExercises.getJSONObject(i).equals(null)) {
+                    // remove exercises that are not for that muscle group
+                    JSONObject exercise = (JSONObject) iterationExercises.get(i);
+                    Log.i(TAG, "Exercise muscle group: " + exercise.getString("muscle group") + ", Required muscle group: " + muscleGroup);
+                    if (!exercise.getString("muscle group").equals(muscleGroup)){
+                        Log.i(TAG, "Removing exercise b/c of muscle group: " + exercise.getString("name"));
+                        Log.i(TAG, "The old number of values in the array: " + Integer.toString(allExercises.length()));
+                        allExercises.remove(i);
+                        Log.i(TAG, "The new number of values in the array: " + Integer.toString(allExercises.length()));
+                    } else {
+                        Log.i(TAG, "Keeping exercise: " + exercise.getString("name"));
+                        Log.i(TAG, "Exercise muscle group: " + exercise.getString("muscle group") + ", Required muscle group: " + muscleGroup);
+                        i++;
+                    }
+                } else {
+                    break;
+                }
+
             }
         } catch (JSONException e) {
             e.printStackTrace();
@@ -678,12 +691,16 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             allData.put("allWorkoutDescriptions", allWorkoutDescriptions);
             JSONArray workoutGenerated = new JSONArray();
             Log.i(TAG, "The number of needed exercises: " + Integer.toString(numExercisesNeeded) + ", The number of exercises available: " + Integer.toString(allWorkoutDescriptions.length()));
-            for (int i = 0; i < numExercisesNeeded; i++) {
-                int randomNumber = generateRandomNumber(allWorkoutDescriptions.length());
-                workoutGenerated.put(allWorkoutDescriptions.get(randomNumber));
-                allWorkoutDescriptions.remove(randomNumber);
+            if (numExercisesNeeded == allWorkoutDescriptions.length() || numExercisesNeeded > allWorkoutDescriptions.length()) {
+                allData.put("workoutDescriptions", allWorkoutDescriptions);
+            } else {
+                for (int i = 0; i < numExercisesNeeded; i++) {
+                    int randomNumber = generateRandomNumber(allWorkoutDescriptions.length());
+                    workoutGenerated.put(allWorkoutDescriptions.get(randomNumber));
+                    allWorkoutDescriptions.remove(randomNumber);
+                }
+                allData.put("workoutDescriptions", workoutGenerated);
             }
-            allData.put("workoutDescriptions", workoutGenerated);
         } catch (JSONException e) {
             e.printStackTrace();
         }

@@ -532,7 +532,7 @@
     "tagLine": "1 minute of kettle bell swings, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/kettlebellswings.jpg"
+    "coverImg": "img/kettlebellswings1.jpg"
   },
   {
     "name": "Pull Ups (assisted)",
@@ -836,8 +836,8 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PikeToSuperman1.JPG",
-      "Step 2": "img/PikeToSuperman2.JPG"
+      "Step 1": "img/PiketoSuperman1.JPG",
+      "Step 2": "img/PiketoSuperman2.JPG"
     },
     "tagLine": "2 minutes of pike to superman, 30 second break before next exercise.",
     "reps": 2,

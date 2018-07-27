@@ -25,6 +25,7 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.util.List;
+import java.util.Random;
 
 public class CustomWorkout extends AppCompatActivity {
 
@@ -62,23 +63,29 @@ public class CustomWorkout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(CustomWorkout.this, "You clicked Regenerate!", Toast.LENGTH_SHORT).show();
-                //ToDO: if button clicked, then need to call shuffle function. This is where you call backend.
-                /*Call the shuffle button. Shuffle button is going to return new workout and leftover exercises (in case some
-                 * one pushes shuffle a second time to be cruel.) Then, this page needs to be relaunched. Before being relaunched
-                 * the workout and the leftover exercises need to be added to the bundle. There is an example of two things
-                 * being added to the bundle below in this code when someone clicks a list item. Commented code and "To - dos" below aims to
-                 * outline procedure */
-                //ToDo: Backend code passes a JSON array that contains workout and leftover exercises in JSON array. Array is parsed
-                //todo:...and separated afterwards when this page launches.
-                //todo:...so, just need to create intent here and pass in it the JSON array like we did in main activity!
-                //todo:...assume that output of backend returns JSON array called 'workoutResults'
+                JSONArray iterationExercises = allExercisesDescriptions;
+                JSONObject workoutResults = new JSONObject();
+                JSONArray workoutObject = new JSONArray();
+                try {
+                    int randomNum = 0;
+                    for(int i = 0; i < exercises.size(); i++) {
+                        randomNum = generateRandomNumber(iterationExercises.length());
+                        workoutObject.put(allExercisesDescriptions.getJSONObject(randomNum));
+                        iterationExercises.remove(randomNum);
+                    }
+                    workoutResults.put("workoutDescriptions", workoutObject);
+                    workoutResults.put("allWorkoutDescriptions", allExercisesDescriptions);
+                } catch (JSONException e) {
+                    e.printStackTrace();
+                }
                 //Create new intent fro which to re-launch this activity
-                //Intent relaunchCustomWorkoutIntent = new Intent(CustomWorkout.this, CustomWorkout.class);
+                Intent relaunchCustomWorkoutIntent = new Intent(CustomWorkout.this, CustomWorkout.class);
                 //Put the data to be passed into the bundle...
-                //relaunchCustomWorkoutIntent.putExtra("workout", workoutResults.toString());
+                relaunchCustomWorkoutIntent.putExtra("workout", workoutResults.toString());
                 //Launch new page
-                //startActivity(relaunchCustomWorkoutIntent);
+                startActivity(relaunchCustomWorkoutIntent);
                 //BAM!
+
             }
         });
 
@@ -126,6 +133,14 @@ public class CustomWorkout extends AppCompatActivity {
             }
         });
     }
+
+    public int generateRandomNumber(int range) {
+        Random rand = new Random();
+        int randomNum = rand.nextInt(range);
+        Log.i(TAG, "The random number and range: " + Integer.toString(randomNum) + ", " + Integer.toString(range));
+        return randomNum;
+    }
+
     //Add the menu to the top of the screen
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

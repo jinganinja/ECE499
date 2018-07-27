@@ -80,14 +80,14 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/BarbellCurls1.jpg",
-      "Step 2":"img/BarbellCurls2.jpg",
+      "Step 1":"img/barbellcurls1.jpg",
+      "Step 2":"img/barbellcurls2.jpg",
       "Step 3":""
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/BarbellCurls2.jpg"
+    "coverImg":"img/barbellcurls2.jpg"
   },
   {
     "name":"Bench Press (with bar)",
@@ -103,14 +103,14 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/BenchPress1.jpg",
-      "Step 2":"img/BenchPress2.jpg",
-      "Step 3":"img/BenchPress3.jpg"
+      "Step 1":"img/benchpress1.jpg",
+      "Step 2":"img/benchpress2.jpg",
+      "Step 3":"img/benchpress3.jpg"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/BenchPress1.jpg"
+    "coverImg":"img/benchpress1.jpg"
   },
   {
     "name":"Dumbbell Thrusters",
@@ -126,14 +126,14 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/DumbbellThrusters1.jpg",
-      "Step 2":"img/DumbbellThrusters2.jpg",
-      "Step 3":"img/DumbbellThrusters3.jpg"
+      "Step 1":"img/DumbbellThrusters1.JPG",
+      "Step 2":"img/DumbbellThrusters2.JPG",
+      "Step 3":"img/DumbbellThrusters3.JPG"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/DumbbellThrusters2.jpg"
+    "coverImg":"img/DumbbellThrusters2.JPG"
   },
   {
     "name":"Hammer Curl to Press",
@@ -149,14 +149,14 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/HammerToCurlPress1.jpg",
-      "Step 2":"img/HammerToCurlPress2.jpg",
-      "Step 3":"img/HammerToCurlPress3.jpg"
+      "Step 1":"img/HammerToCurlPress1.JPG",
+      "Step 2":"img/HammerToCurlPress2.JPG",
+      "Step 3":"img/HammerToCurlPress3.JPG"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/HammerToCurlPress3.jpg"
+    "coverImg":"img/HammerToCurlPress3.JPG"
   },
   {
     "name":"Dumbbell Overhead Press",
@@ -172,13 +172,13 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/DumbbellOverheadPress1.JPG",
-      "Step 2":"img/DumbbellOverheadPress2.JPG"
+      "Step 1":"img/dumbbelloverheadpress1.JPG",
+      "Step 2":"img/dumbbelloverheadpress2.JPG"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/DumbbellOverheadPress2.JPG"
+    "coverImg":"img/dumbbelloverheadpress2.JPG"
   },
   {
     "name":"Overhead Tricep Extension",
@@ -194,14 +194,13 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/OverheadTricep1.jpg",
-      "Step 2":"img/OverheadTricep2.jpg",
-      "Step 3":"img/OverheadTricep3.jpg"
+      "Step 1":"img/overheadtricep1.jpg",
+      "Step 2":"img/overheadtricep2.jpg"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/OverheadTricep1"
+    "coverImg":"img/overheadtricep1.jpg"
   },
   {
     "name":"21's",
@@ -262,13 +261,13 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/TricepPullDown1.jpg",
-      "Step 2":"img/TricepPullDown2.jpg"
+      "Step 1":"img/triceppulldown1.jpg",
+      "Step 2":"img/triceppulldown2.jpg"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/TricepPullDown2.jpg"
+    "coverImg":"img/triceppulldown2.jpg"
   },
   {
     "name":"Bicep Pull Ups",
@@ -284,13 +283,13 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/BicepPullUps1.jpg",
-      "Step 2":"img/BicepPullUps2.jpg"
+      "Step 1":"img/biceppullups1.jpg",
+      "Step 2":"img/biceppullups2.jpg"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/BicepPullUps2.jpg"
+    "coverImg":"img/biceppullups2.jpg"
   },
   {
     "name":"Chicken Wings",
@@ -306,13 +305,13 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/ChickenWings1.jpg",
-      "Step 2":"img/ChickenWings2.jpg"
+      "Step 1":"img/chickenwing1.jpg",
+      "Step 2":"img/chickenwing2.jpg"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/ChickenWings2.jpg"
+    "coverImg":"img/chickenwing2.jpg"
   },
 
   {
@@ -329,8 +328,8 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/InchWorm1.jpg",
-      "Step 2":"img/InchWorm2.jpg"
+      "Step 1":"img/InchWorm1.JPG",
+      "Step 2":"img/InchWorm2.JPG"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
@@ -351,14 +350,14 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/PlankTaps1.jpg",
-      "Step 2":"img/PlankTaps2.jpg",
-      "Step 3":"img/PlankTaps3.jpg"
+      "Step 1":"img/PlankTaps1.JPG",
+      "Step 2":"img/PlankTaps2.JPG",
+      "Step 3":"img/PlankTaps3.JPG"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/PlankTaps3.jpg"
+    "coverImg":"img/PlankTaps3.JPG"
   },
   {
     "name":"Plank Walks (Lateral)",
@@ -374,13 +373,13 @@
       }
     ],
     "descripImgs":{
-      "Step 1": "img/PlankWalks1.jpg",
-      "Step 2": "img/PlankWalks2.jpg"
+      "Step 1": "img/PlankWalks1.JPG",
+      "Step 2": "img/PlankWalks2.JPG"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/PlankWalks2.jpg"
+    "coverImg":"img/PlankWalks2.JPG"
   },
   {
     "name":"Plank Jacks",
@@ -396,13 +395,13 @@
       }
     ],
     "descripImgs":{
-      "Step 1": "img/PlankJacks1.jpg",
-      "Step 2": "img/PlankJacks2.jpg"
+      "Step 1": "img/PlankJacks1.JPG",
+      "Step 2": "img/PlankJacks2.JPG"
     },
     "tagLine":"3 sets of 8 reps.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/PlankJacks2.jpg"
+    "coverImg":"img/PlankJacks2.JPG"
   },
   {
     "name":"Burpees",
@@ -441,14 +440,14 @@
       }
     ],
     "descripImgs":{
-      "Step 1": "img/PlankToPushups1.jpg",
-      "Step 2": "img/PlankToPushUps2.jpg",
-      "Step 3": "img/PlankToPushUps3.jpg"
+      "Step 1": "img/PlankToPushups1.JPG",
+      "Step 2": "img/PlankToPushUps2.JPG",
+      "Step 3": "img/PlankToPushUps3.JPG"
     },
     "tagLine":"3 sets of 8 reps. Increase weight if desired.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/PlankToPushUps2.jpg"
+    "coverImg":"img/PlankToPushUps2.JPG"
   },
   {
     "name":"Push Ups",
@@ -1370,13 +1369,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/SquatJumps1.jpg",
-      "Step 2": "img/SquatJumps2.jpg"
+      "Step 1": "img/SquatJumps1.JPG",
+      "Step 2": "img/SquatJumps2.JPG"
     },
     "tagLine": "3 sets of 8 reps. Add weight (dumbbells) if desired",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/SquatJumps1.jpg"
+    "coverImg": "img/SquatJumps1.JPG"
   },
   {
     "name": "Jumping Lunges",
@@ -1392,14 +1391,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/JumpingLunges1.jpg",
-      "Step 2": "img/JumpingLunges2.jpg",
-      "Step 3": "img/JumpingLunges3.jpg"
+      "Step 1": "img/JumpingLunges1.JPG",
+      "Step 2": "img/JumpingLunges2.JPG",
+      "Step 3": "img/JumpingLunges3.JPG"
     },
     "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
     "reps": 10,
     "sets": 3,
-    "coverImg": "img/JumpingLunges1.jpg"
+    "coverImg": "img/JumpingLunges1.JPG"
   },
   {
     "name": "Lateral Jumps (Two Feet)",
@@ -1415,13 +1414,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/2FootLateralJumps1.jpg",
-      "Step 3": "img/2FootLateralJumps2.jpg"
+      "Step 1": "img/2FootLateralJumps1.JPG",
+      "Step 3": "img/2FootLateralJumps2.JPG"
     },
     "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
     "reps": 10,
     "sets": 3,
-    "coverImg": "img/2FootLateralJumps1.jpg"
+    "coverImg": "img/2FootLateralJumps1.JPG"
   },
   {
     "name": "Lateral Jumps (One Foot)",
@@ -1437,13 +1436,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/1FootLateralJumps1.jpg",
-      "Step 3": "img/1FootLateralJumps2.jpg"
+      "Step 1": "img/1FootLateralJumps1.JPG",
+      "Step 3": "img/1FootLateralJumps2.JPG"
     },
     "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
     "reps": 10,
     "sets": 3,
-    "coverImg": "img/1FootLateralJumps2.jpg"
+    "coverImg": "img/1FootLateralJumps2.JPG"
   },
   {
     "name": "Side Lunges",
@@ -1459,14 +1458,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/SideLunges1.jpg",
-      "Step 2": "img/SideLunges2.jpg",
-      "Step 3": "img/SideLunges3.jpg"
+      "Step 1": "img/SideLunges1.JPG",
+      "Step 2": "img/SideLunges2.JPG",
+      "Step 3": "img/SideLunges3.JPG"
     },
     "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
     "reps": 10,
     "sets": 3,
-    "coverImg": "img/SideLunges2.jpg"
+    "coverImg": "img/SideLunges2.JPG"
   },
   {
     "name": "Walking Lunges",
@@ -1503,13 +1502,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/BulgarianSplitSquat1.jpg",
-      "Step 2": "img/BulgarianSplitSquat2.jpg"
+      "Step 1": "img/BulgarianSplitSquat1.JPG",
+      "Step 2": "img/BulgarianSplitSquat2.JPG"
     },
     "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
     "reps": 10,
     "sets": 3,
-    "coverImg": "img/BulgarianSplitSquat2.jpg"
+    "coverImg": "img/BulgarianSplitSquat2.JPG"
   },
   {
     "name": "Step Ups",
@@ -1525,14 +1524,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/StepUps1.jpg",
-      "Step 2": "img/StepUps2.jpg",
-      "Step 3": "img/StepUps3.jpg"
+      "Step 1": "img/stepups1.jpg",
+      "Step 2": "img/stepups2.jpg",
+      "Step 3": "img/stepups3.jpg"
     },
     "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
     "reps": 10,
     "sets": 3,
-    "coverImg": "img/StepUps2.jpg"
+    "coverImg": "img/stepups2.jpg"
   },
   {
     "name": "Kettle Bell Swings",
@@ -2061,13 +2060,13 @@
     }
   ],
   "descripImgs": {
-    "Step 1": "img/BodyWeight1.jpg",
-    "Step 2": "img/BodyWeight2.jpg"
+    "Step 1": "img/bodyweight1.jpg",
+    "Step 2": "img/bodyweight2.jpg"
   },
   "tagLine": "3 sets of 8 reps.",
   "reps": 8,
   "sets": 3,
-  "coverImg": "img/BodyWeight2.jpg"
+  "coverImg": "img/bodyweight2.jpg"
 },{
   "name": "Curtsy Lunge",
   "description": [
@@ -2082,13 +2081,13 @@
     }
   ],
   "descripImgs": {
-    "Step 1": "img/CurtseyLunge1.jpg",
-    "Step 2": "img/CurtseyLunges2.jpg"
+    "Step 1": "img/curtseylunge1.jpg",
+    "Step 2": "img/curtseylunge2.jpg"
   },
   "tagLine": "3 sets of 8 reps. Increase weight if desired.",
   "reps": 8,
   "sets": 3,
-  "coverImg": "img/CurtseyLunges2.jpg"
+  "coverImg": "img/curtseylunge2.jpg"
 },
   {
     "name": "Squat to Pencil",
@@ -2105,14 +2104,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PencilSquat1.jpg",
-      "Step 2": "img/PencilSquat2.jpg",
-      "Step 3": "img/PencilSquat3.jpg"
+      "Step 1": "img/pencilsquat1.jpg",
+      "Step 2": "img/pencilsquat2.jpg",
+      "Step 3": "img/pencilsquat3.jpg"
     },
     "tagLine": "3 sets of 8 reps.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/PencilSquat2.jpg"
+    "coverImg": "img/pencilsquat2.jpg"
   },{
   "name": "Crab Squats",
   "description": [
@@ -2128,14 +2127,14 @@
     }
   ],
   "descripImgs": {
-    "Step 1": "img/CrabSquat1.jpg",
-    "Step 2": "img/CrabSquat2.jpg",
-    "Step 3": "img/CrabSquat3.jpg"
+    "Step 1": "img/crabsquat1.jpg",
+    "Step 2": "img/crabsquat2.jpg",
+    "Step 3": "img/crabsquat.jpg"
   },
   "tagLine": "3 sets of 10 reps (5 pivots per leg). Increase weight if desired.",
   "reps": 10,
   "sets": 3,
-  "coverImg": "img/CrabSquat1.jpg"
+  "coverImg": "img/crabsquat1.jpg"
 },
   {
     "name": "Back Squats",
@@ -2152,13 +2151,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/BackSquat1.jpg",
-      "Step 2": "img/BackSquat2.jpg"
+      "Step 1": "img/backsquat1.jpg",
+      "Step 2": "img/backsquat2.jpg"
     },
     "tagLine": "3 sets of 8 reps. Increase weight if desired.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/.BackSquat1.jpg"
+    "coverImg": "img/backsquat1.jpg"
   },
   {
     "name": "Leg Press",
@@ -2175,13 +2174,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/LegPress1.jpg",
-      "Step 2": "img/LegPress2.jpg"
+      "Step 1": "img/legpress1.jpg",
+      "Step 2": "img/legpress2.jpg"
     },
     "tagLine": "3 sets of 8 reps. Increase weight if desired.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/LegPress1.jpg"
+    "coverImg": "img/legpress1.jpg"
   },
   {
     "name": "Leg Curls",
@@ -2198,13 +2197,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/LegCurl1.jpg",
-      "Step 2": "img/LegCurl2.jpg"
+      "Step 1": "img/legcurl1.jpg",
+      "Step 2": "img/legcurl2.jpg"
     },
     "tagLine": "3 sets of 8 reps. Increase weight if desired.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/LegCurl2.jpg"
+    "coverImg": "img/legcurl2.jpg"
   },
   {
     "name": "Leg Extensions",
@@ -2244,13 +2243,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/GobletSquat1.jpg",
-      "Step 2": "img/GobletSquat2.jpg"
+      "Step 1": "img/gobletsquat1.jpg",
+      "Step 2": "img/gobletsquat2.jpg"
     },
     "tagLine": "3 sets of 8 reps. Increase weight if desired.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/GobletSquat2.jpg"
+    "coverImg": "img/gobletsquat2.jpg"
   },
   {
     "name": "Box Jumps",
@@ -2267,13 +2266,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/BoxJumps.jpg",
-      "Step 3": ""
+      "Step 1": "img/boxjumps.jpg"
     },
     "tagLine": "3 sets of 8 reps.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/BoxJumps.jpg"
+    "coverImg": "img/boxjumps.jpg"
   },
   {
     "name": "Hip Thrusters",

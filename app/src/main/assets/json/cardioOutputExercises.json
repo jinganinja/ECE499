@@ -13,13 +13,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Biking.jpg",
+      "Step 1": "img/biking.jpg",
       "Step 3": ""
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Biking.jpg"
+    "coverImg": "img/biking.jpg"
   },
   {
     "name": "Elliptical",
@@ -35,13 +35,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Eliptical.jpg",
+      "Step 1": "img/eliptical.jpg",
       "Step 3": ""
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Eliptical.jpg"
+    "coverImg": "img/eliptical.jpg"
   },
   {
     "name": "Rowing",
@@ -57,14 +57,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Rowing1.jpg",
-      "Step 2":"img/Rowing2.jpg",
-      "Step 3": "img/Rowing3.jpg"
+      "Step 1": "img/rowing1.jpg",
+      "Step 2":"img/rowing2.jpg",
+      "Step 3": "img/rowing3.jpg"
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Rowing3.jpg"
+    "coverImg": "img/rowing3.jpg"
   },
   {
     "name": "Track Sprints",
@@ -80,13 +80,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Track1.jpg",
+      "Step 1": "img/track1.jpg",
       "Step 3": ""
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Track1.jpg"
+    "coverImg": "img/track1.jpg"
   },
   {
     "name": "Stair Sprints",
@@ -102,13 +102,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Stairs.jpg",
+      "Step 1": "img/stairs.jpg",
       "Step 3": ""
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Stairs.jpg"
+    "coverImg": "img/stairs.jpg"
   },
   {
     "name": "Step Ups",
@@ -124,14 +124,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/StepUps1.jpg",
-      "Step 2":"img/StepUps2.jpg",
-      "Step 3": "img/StepUps3.jpg"
+      "Step 1": "img/stepups1.jpg",
+      "Step 2":"img/stepups2.jpg",
+      "Step 3": "img/stepups3.jpg"
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/StepUps1.jpg"
+    "coverImg": "img/stepups1.jpg"
   },
   {
     "name": "Walk/Run",
@@ -147,13 +147,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/WalkRun.jpg",
+      "Step 1": "img/walkrun.jpg",
       "Step 3": ""
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/WalkRun.jpg"
+    "coverImg": "img/walkrun.jpg"
   },
   {
     "name": "Hill Repeats",
@@ -169,13 +169,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Hill.jpg",
+      "Step 1": "img/hill.jpg",
       "Step 3": ""
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Hill.jpg"
+    "coverImg": "img/hill.jpg"
   },
   {
     "name": "Negative Split",
@@ -191,13 +191,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Trail.jpg",
-      "Step 3": "img/Track3.jpg"
+      "Step 1": "img/trail.jpg",
+      "Step 3": "img/track3.jpg"
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Trail.jpg"
+    "coverImg": "img/trail.jpg"
   },
   {
     "name": "30/60 Sprint",
@@ -213,13 +213,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Trail.jpg",
-      "Step 3": "img/Track2.jpg"
+      "Step 1": "img/trail.jpg",
+      "Step 3": "img/track2.jpg"
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Trail.jpg"
+    "coverImg": "img/trail.jpg"
   },
   {
     "name": "Lines",
@@ -235,13 +235,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Lines1.jpg",
+      "Step 1": "img/lines1.jpg",
       "Step 3": ""
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/Lines1.jpg"
+    "coverImg": "img/lines1.jpg"
   },
   {
     "name": "Pyramid Drop",
@@ -257,12 +257,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PyramidDrop.jpg",
+      "Step 1": "img/PyramidDrop.JPG",
       "Step 3": ""
     },
     "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "img/PyramidDrop.jpg"
+    "coverImg": "img/pyramiddrop.jpg"
   }
 ]

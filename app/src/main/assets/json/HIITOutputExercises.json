@@ -13,34 +13,34 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/SkippingRope.JPG"
+      "Step 1": "img/SkippingRope.jpg"
     },
     "tagLine": "8 minutes total skipping, take 60 second break before next exercise.",
     "reps": 8,
     "sets": 60,
-    "coverImg": "img/SkippingRope.JPG"
+    "coverImg": "img/SkippingRope.jpg"
   },
   {
     "name": "Jumping Jacks",
-    "description": [
+    "description":[
       {
         "Step 1": "Start standing with a slight bend in your knees, hands resting at your sides."
       },
       {
-        "Step 2": "Jump out to the side with both feet, simultaneously bring your arms up above your head. You should look like a star. Return back to the starting position"
+        "Step 2": "Jump out to the side with both feet, simultaneously bring your arms up above your head. You should look like a star. Return back to the starting position."
       },
       {
         "Step 3": "Repeat these movements at a moderate tempo, make sure to keep looking straight ahead."
       }
     ],
     "descripImgs": {
-      "Step 1": "img/JumpingJacks1.JPG",
-      "Step 2": "img/JumpingJacks2.JPG"
+      "Step 1": "img/JumpingJacks1.jpg",
+      "Step 2": "img/JumpingJacks2.jpg"
     },
     "tagLine": "1 minute of jumping jacks, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/JumpingJacks2.JPG"
+    "coverImg": "img/JumpingJacks2.jpg"
   },
   {
     "name": "High Knees",
@@ -56,13 +56,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/HighKnees1.JPG",
-      "Step 2": "img/HighKnees2.JPG"
+      "Step 1": "img/HighKnees1.jpg",
+      "Step 2": "img/HighKnees2.jpg"
     },
     "tagLine": "2 minutes of high knees, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/HighKnees2.JPG"
+    "coverImg": "img/HighKnees2.jpg"
   },
   {
     "name": "Burpees",
@@ -78,14 +78,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/Burpees1.JPG",
-      "Step 2": "img/Burpees2.JPG",
-      "Step 3": "img/Burpees3.JPG"
+      "Step 1": "img/Burpees1.jpg",
+      "Step 2": "img/Burpees2.jpg",
+      "Step 3": "img/Burpees3.jpg"
     },
     "tagLine": "1 minute of burpees, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/Burpees3.JPG"
+    "coverImg": "img/Burpees3.jpg"
   },
   {
     "name": "Butt Kicks",
@@ -101,13 +101,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/ButtKicks.JPG"
+      "Step 1": "img/ButtKicks.jpg"
 
     },
     "tagLine": "2 minutes of butt kicks, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/ButtKicks.JPG"
+    "coverImg": "img/ButtKicks.jpg"
   },
   {
     "name": "Bicep Curls",
@@ -123,13 +123,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/BicepCurls1.JPG",
-      "Step 2": "img/BicepCurls2.JPG"
+      "Step 1": "img/BicepCurls1.jpg",
+      "Step 2": "img/BicepCurls2.jpg"
     },
     "tagLine": "1 minute of bicep curls, 30 second break before next exercise",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/BicepCurls2.JPG"
+    "coverImg": "img/BicepCurls2.jpg"
   },
   {
     "name": "Triceps Kickbacks",
@@ -145,13 +145,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/TricepKickbacks1,JPG",
-      "Step 2": "img/TricepKickbacks2.JPG"
+      "Step 1": "img/TricepKickbacks1,jpg",
+      "Step 2": "img/TricepKickbacks2.jpg"
     },
     "tagLine": "1 minute each arm totalling 2 minutes, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/TricepKickbacks2.JPG"
+    "coverImg": "img/TricepKickbacks2.jpg"
   },
   {
     "name": "Dumbbell Thrusters",
@@ -167,14 +167,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/DumbbellThrusters1.JPG",
-      "Step 2": "img/DumbbellThrusters2.JPG",
-      "Step 3": "img/DumbbellThrusters3.JPG"
+      "Step 1": "img/DumbbellThrusters1.jpg",
+      "Step 2": "img/DumbbellThrusters2.jpg",
+      "Step 3": "img/DumbbellThrusters3.jpg"
     },
     "tagLine": "1 minute of dumbbell thrusters, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/DumbbellThrusters2.JPG"
+    "coverImg": "img/DumbbellThrusters2.jpg"
   },
   {
     "name": "Hammer Curl to Press",
@@ -190,14 +190,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/HammerToCurlPress1.JPG",
-      "Step 2": "img/HammerToCurlPress2.JPG",
-      "Step 3": "img/HammerToCurlPress3.JPG"
+      "Step 1": "img/HammerToCurlPress1.jpg",
+      "Step 2": "img/HammerToCurlPress2.jpg",
+      "Step 3": "img/HammerToCurlPress3.jpg"
     },
     "tagLine": "1 minute of hammer curl to press, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/HammerToCurlPress3.JPG"
+    "coverImg": "img/HammerToCurlPress3.jpg"
   },
   {
     "name": "Push Ups",
@@ -213,13 +213,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PushUp1.JPG",
-      "Step 2": "img/AllPlanks.JPG"
+      "Step 1": "img/PushUp1.jpg",
+      "Step 2": "img/AllPlanks.jpg"
     },
     "tagLine": "1 minute of push ups, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/AllPlanks.JPG"
+    "coverImg": "img/AllPlanks.jpg"
   },
   {
     "name": "Plank to Push Up",
@@ -235,14 +235,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PlankToPushups1.JPG",
-      "Step 2": "img/PlankToPushUps2.JPG",
-      "Step 3": "img/PlankToPushUps3.JPG"
+      "Step 1": "img/PlankToPushups1.jpg",
+      "Step 2": "img/PlankToPushUps2.jpg",
+      "Step 3": "img/PlankToPushUps3.jpg"
     },
     "tagLine": "1 minute of plank to push ups, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/PlankToPushUps2.JPG"
+    "coverImg": "img/PlankToPushUps2.jpg"
   },
   {
     "name": "Inch Worm",
@@ -258,13 +258,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/InchWorm1.JPG",
-      "Step 2": "img/InchWorm2.JPG"
+      "Step 1": "img/InchWorm1.jpg",
+      "Step 2": "img/InchWorm2.jpg"
     },
     "tagLine": "2 minutes of inch worm, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/InchWorm1.JPG"
+    "coverImg": "img/InchWorm1.jpg"
   },
   {
     "name": "Plank Taps",
@@ -280,14 +280,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PlankTaps1.JPG",
-      "Step 2": "img/PlankTaps2.JPG",
-      "Step 3": "img/PlankTaps3.JPG"
+      "Step 1": "img/PlankTaps1.jpg",
+      "Step 2": "img/PlankTaps2.jpg",
+      "Step 3": "img/PlankTaps3.jpg"
     },
     "tagLine": "1 minute of plank taps, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/PlankTaps3.JPG"
+    "coverImg": "img/PlankTaps3.jpg"
   },
   {
     "name": "Plank Walks (Lateral)",
@@ -303,13 +303,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PlankWalks1.JPG",
-      "Step 2": "img/PlankWalks2.JPG"
+      "Step 1": "img/PlankWalks1.jpg",
+      "Step 2": "img/PlankWalks2.jpg"
     },
     "tagLine": "1 minute of plank walks, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/PlankWalks2.JPG"
+    "coverImg": "img/PlankWalks2.jpg"
   },
   {
     "name": "Plank Jacks",
@@ -325,13 +325,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PlankJacks1.JPG",
-      "Step 2": "img/PlankJacks2.JPG"
+      "Step 1": "img/PlankJacks1.jpg",
+      "Step 2": "img/PlankJacks2.jpg"
     },
     "tagLine": "1 minute of plank jacks, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/PlankJacks2.JPG"
+    "coverImg": "img/PlankJacks2.jpg"
   },
   {
     "name": "Squat Jumps",
@@ -347,13 +347,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/SquatJumps1.JPG",
-      "Step 2": "img/SquatJumps2.JPG"
+      "Step 1": "img/SquatJumps1.jpg",
+      "Step 2": "img/SquatJumps2.jpg"
     },
     "tagLine": "2 minute of squat jumps, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/SquatJumps1.JPG"
+    "coverImg": "img/SquatJumps1.jpg"
   },
   {
     "name": "Jumping Lunges",
@@ -369,14 +369,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/JumpingLunges1.JPG",
-      "Step 2": "img/JumpingLunges2.JPG",
-      "Step 3": "img/JumpingLunges3.JPG"
+      "Step 1": "img/JumpingLunges1.jpg",
+      "Step 2": "img/JumpingLunges2.jpg",
+      "Step 3": "img/JumpingLunges3.jpg"
     },
     "tagLine": "1 minute of jumping lunges, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/JumpingLunges1.JPG"
+    "coverImg": "img/JumpingLunges1.jpg"
   },
   {
     "name": "Lateral Jumps (Two Feet)",
@@ -392,13 +392,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/2FootLateralJumps1.JPG",
-      "Step 3": "img/2FootLateralJumps2.JPG"
+      "Step 1": "img/2FootLateralJumps1.jpg",
+      "Step 3": "img/2FootLateralJumps2.jpg"
     },
     "tagLine": "1 minute of 2 foot lateral jumps, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/2FootLateralJumps1.JPG"
+    "coverImg": "img/2FootLateralJumps1.jpg"
   },
   {
     "name": "Lateral Jumps (One Foot)",
@@ -414,13 +414,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/1FootLateralJumps1.JPG",
-      "Step 3": "img/1FootLateralJumps2.JPG"
+      "Step 1": "img/1FootLateralJumps1.jpg",
+      "Step 3": "img/1FootLateralJumps2.jpg"
     },
     "tagLine": "1 minute of 1 foot lateral jumps, 30 second break before next exercise",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/1FootLateralJumps2.JPG"
+    "coverImg": "img/1FootLateralJumps2.jpg"
   },
   {
     "name": "Side Lunges",
@@ -436,14 +436,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/SideLunges1.JPG",
-      "Step 2": "img/SideLunges2.JPG",
-      "Step 3": "img/SideLunges3.JPG"
+      "Step 1": "img/SideLunges1.jpg",
+      "Step 2": "img/SideLunges2.jpg",
+      "Step 3": "img/SideLunges3.jpg"
     },
     "tagLine": "1 minute of side lunges, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/SideLunges2.JPG"
+    "coverImg": "img/SideLunges2.jpg"
   },
   {
     "name": "Walking Lunges",
@@ -459,12 +459,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/WalkingLunges.JPG"
+      "Step 1": "img/WalkingLunges.jpg"
     },
     "tagLine": "2 minutes of walking lunges, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/WalkingLunges.JPG"
+    "coverImg": "img/WalkingLunges.jpg"
   },
   {
     "name": "Bulgarian Split Squat",
@@ -480,13 +480,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/BulgarianSplitSquat1.JPG",
-      "Step 2": "img/BulgarianSplitSquat2.JPG"
+      "Step 1": "img/BulgarianSplitSquat1.jpg",
+      "Step 2": "img/BulgarianSplitSquat2.jpg"
     },
     "tagLine": "1 minute on each leg, totalling 2 minutes, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/BulgarianSplitSquat2.JPG"
+    "coverImg": "img/BulgarianSplitSquat2.jpg"
   },
   {
     "name": "Step Ups",
@@ -502,13 +502,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/push_up_fig_1.png",
-      "Step 3": "img/push_up_fig_1.png"
+      "Step 1": "img/StepUps1.jpg",
+      "Step 2": "img/StepUps2.jpg",
+      "Step 3": "img/StepUps3.jpg"
     },
     "tagLine": "2 minutes of step ups, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/push_up_fig_1.png"
+    "coverImg": "img/StepUps1.jpg"
   },
   {
     "name": "Kettle Bell Swings",
@@ -524,13 +525,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/push_up_fig_1.png",
-      "Step 3": "img/push_up_fig_1.png"
+      "Step 1": "img/KettleBellSwings1.jpg",
+      "Step 2": "img/KettleBellSwings2.jpg",
+      "Step 3": "img/KettleBellSwings3.jpg"
     },
     "tagLine": "1 minute of kettle bell swings, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/push_up_fig_1.png"
+    "coverImg": "img/KettleBellSwings1.jpg"
   },
   {
     "name": "Pull Ups (assisted)",
@@ -546,13 +548,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/push_up_fig_1.png",
-      "Step 3": "img/push_up_fig_1.png"
+      "Step 1": "img/PullUps1.jpg",
+      "Step 2": "img/PullUps2.jpg"
     },
     "tagLine": "1 minute of pull ups, 60 second break between exercises.",
     "reps": 1,
     "sets": 60,
-    "coverImg": "img/push_up_fig_1.png"
+    "coverImg": "img/PullUps1.jpg"
   },
   {
     "name": "Front Plank",
@@ -568,13 +570,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/FrontPlank1.JPG",
-      "Step 2": "img/FrontPlank2.JPG"
+      "Step 1": "img/FrontPlank1.jpg",
+      "Step 2": "img/FrontPlank2.jpg"
     },
     "tagLine": "1 minute of front plank, 60 second break before next exercise.",
     "reps": 1,
     "sets": 60,
-    "coverImg": "img/FrontPlank2.JPG"
+    "coverImg": "img/FrontPlank2.jpg"
   },
   {
     "name": "Side Plank",
@@ -590,12 +592,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/SidePlank.JPG"
+      "Step 1": "img/SidePlank.jpg"
     },
     "tagLine": "1 minute of side plank, 30 second break before next exercise,",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/SidePlank.JPG"
+    "coverImg": "img/SidePlank.jpg"
   },
   {
     "name": "Calf Raises",
@@ -611,13 +613,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/CalfRaises1.JPG",
-      "Step 2": "img/CalfRaises2.JPG"
+      "Step 1": "img/CalfRaises1.jpg",
+      "Step 2": "img/CalfRaises2.jpg"
     },
     "tagLine": "2 minutes of calf raises, 15 second break before next exercise.",
     "reps": 2,
     "sets": 15,
-    "coverImg": "img/CalfRaises1.JPG"
+    "coverImg": "img/CalfRaises1.jpg"
   },
   {
     "name": "Bicycle Crunches",
@@ -633,13 +635,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/BicycleCrunches1.JPG",
-      "Step 2": "img/BicycleCrunches2.JPG"
+      "Step 1": "img/BicycleCrunches1.jpg",
+      "Step 2": "img/BicycleCrunches2.jpg"
     },
     "tagLine": "1 minute of bicycle crunches, 15 second break before next exercise.",
     "reps": 1,
     "sets": 15,
-    "coverImg": "img/BicycleCrunches2.JPG"
+    "coverImg": "img/BicycleCrunches2.jpg"
   },
   {
     "name": "Flutter Kicks",
@@ -655,13 +657,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/FlutterKicks1.JPG",
-      "Step 2": "img/FlutterKicks2.JPG"
+      "Step 1": "img/FlutterKicks1.jpg",
+      "Step 2": "img/FlutterKicks2.jpg"
     },
     "tagLine": "1 minute of flutter kicks, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/FlutterKicks1.JPG"
+    "coverImg": "img/FlutterKicks1.jpg"
   },
   {
     "name": "Sit Ups",
@@ -677,13 +679,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/SitUps1.JPG",
-      "Step 2": "img/SitUps2.JPG"
+      "Step 1": "img/SitUps1.jpg",
+      "Step 2": "img/SitUps2.jpg"
     },
     "tagLine": "1 minute of sit-ups, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/SitUps2.JPG"
+    "coverImg": "img/SitUps2.jpg"
   },
   {
     "name": "Heel Taps",
@@ -699,13 +701,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/HeelTouches1.JPG",
-      "Step 2": "img/HeelTouches2.JPG"
+      "Step 1": "img/HeelTouches1.jpg",
+      "Step 2": "img/HeelTouches2.jpg"
     },
     "tagLine": "1 minute of heel taps, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/HeelTouches2.JPG"
+    "coverImg": "img/HeelTouches2.jpg"
   },
   {
     "name": "Leg Raises",
@@ -721,14 +723,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/LegRaises1.JPG",
-      "Step 2": "img/LegRaises2.JPG",
-      "Step 3": "img/LegRaises3.JPG"
+      "Step 1": "img/LegRaises1.jpg",
+      "Step 2": "img/LegRaises2.jpg",
+      "Step 3": "img/LegRaises3.jpg"
     },
     "tagLine": "2 minutes of leg raises, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/LegRaises2.JPG"
+    "coverImg": "img/LegRaises2.jpg"
   },
   {
     "name": "Toe Touches",
@@ -744,13 +746,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/ToeTouches.JPG"
+      "Step 1": "img/ToeTouches.jpg"
 
     },
     "tagLine": "3 total minutes of toe touches, 30 second break before next exercise",
     "reps": 3,
     "sets": 30,
-    "coverImg": "img/ToeTouches.JPG"
+    "coverImg": "img/ToeTouches.jpg"
   },
   {
     "name": "V Ups",
@@ -766,14 +768,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/VUps1.JPG",
-      "Step 2": "img/VUps2.JPG",
-      "Step 3": "img/VUps3.JPG"
+      "Step 1": "img/VUps1.jpg",
+      "Step 2": "img/VUps2.jpg",
+      "Step 3": "img/VUps3.jpg"
     },
     "tagLine": "1 minute of V Ups, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/VUps2.JPG"
+    "coverImg": "img/VUps2.jpg"
   },
   {
     "name": "Ab Wheel Roll-Outs",
@@ -789,13 +791,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/push_up_fig_1.png",
-      "Step 3": "img/push_up_fig_1.png"
+      "Step 1": "img/AbRollOuts1.jpg",
+      "Step 2": "img/AbRollOuts2.jpg",
+      "Step 3": "img/AbRollOuts3.jpg"
     },
     "tagLine": "1 minute of roll outs, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/push_up_fig_1.png"
+    "coverImg": "img/AbRollOuts2.jpg"
   },
   {
     "name": "Russian Twists",
@@ -811,13 +814,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/RussianTwists1.JPG",
-      "Step 2": "img/RussianTwists2.JPG"
+      "Step 1": "img/RussianTwists1.jpg",
+      "Step 2": "img/RussianTwists2.jpg"
     },
     "tagLine": "2 minutes of russian twists, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/RussianTwists2.JPG"
+    "coverImg": "img/RussianTwists2.jpg"
   },
   {
     "name": "Pike to Superman (exercise ball)",
@@ -833,13 +836,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/PikeToSuperman1.JPG",
-      "Step 2": "img/PikeToSuperman2.JPG"
+      "Step 1": "img/PikeToSuperman1.jpg",
+      "Step 2": "img/PikeToSuperman2.jpg"
     },
     "tagLine": "2 minutes of pike to superman, 30 second break before next exercise.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/PikeToSuperman2.JPG"
+    "coverImg": "img/PikeToSuperman2.jpg"
   },
   {
     "name": "Mountain Climbers",
@@ -855,12 +858,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/MountainClimbers1.JPG",
-      "Step 2": "img/MountainClimbers2.JPG"
+      "Step 1": "img/MountainClimbers1.jpg",
+      "Step 2": "img/MountainClimbers2.jpg"
     },
     "tagLine": "2 minutes of mountain climbers, 30 second break between exercises.",
     "reps": 2,
     "sets": 30,
-    "coverImg": "img/MountainClimbers2.JPG"
+    "coverImg": "img/MountainClimbers2.jpg"
   }
 ]

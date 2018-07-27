@@ -13,13 +13,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Biking.jpg",
+      "Step 3": ""
     },
-    "tagLine": "Biking",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Biking.jpg"
   },
   {
     "name": "Elliptical",
@@ -35,13 +35,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Eliptical.jpg",
+      "Step 3": ""
     },
-    "tagLine": "Elliptical",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Eliptical.jpg"
   },
   {
     "name": "Rowing",
@@ -57,13 +57,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Rowing1.jpg",
+      "Step 2":"img/Rowing2.jpg",
+      "Step 3": "img/Rowing3.jpg"
     },
-    "tagLine": "Rowing",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Rowing3.jpg"
   },
   {
     "name": "Track Sprints",
@@ -79,13 +80,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Track1.jpg",
+      "Step 3": ""
     },
-    "tagLine": "Track Sprints",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Track1.jpg"
   },
   {
     "name": "Stair Sprints",
@@ -101,13 +102,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Stairs.jpg",
+      "Step 3": ""
     },
-    "tagLine": "Stair Sprints",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Stairs.jpg"
   },
   {
     "name": "Step Ups",
@@ -122,15 +123,16 @@
         "Step 3": "Make sure to keep a continuous pace, stepping up and back down. Make sure to breath. Add weight if desired (dumbbells)."
       }
     ],
-        "descripImgs": {
-          "Step 1": "main/res/drawable/push_up_fig_1.png",
-          "Step 3": "main/res/drawable/push_up_fig_1.png"
-        },
-        "tagLine": "Step Ups",
-        "reps": 0,
-        "sets": 0,
-        "coverImg": "main/res/drawable/push_up_fig_1.png"
-      },
+    "descripImgs": {
+      "Step 1": "img/StepUps1.jpg",
+      "Step 2":"img/StepUps2.jpg",
+      "Step 3": "img/StepUps3.jpg"
+    },
+    "tagLine": "",
+    "reps": 0,
+    "sets": 0,
+    "coverImg": "img/StepUps1.jpg"
+  },
   {
     "name": "Walk/Run",
     "description": [
@@ -145,13 +147,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/WalkRun.jpg",
+      "Step 3": ""
     },
-    "tagLine": "Walk/Run",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/WalkRun.jpg"
   },
   {
     "name": "Hill Repeats",
@@ -167,13 +169,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Hill.jpg",
+      "Step 3": ""
     },
-    "tagLine": "Hill Repeats",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Hill.jpg"
   },
   {
     "name": "Negative Split",
@@ -189,13 +191,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Trail.jpg",
+      "Step 3": "img/Track3.jpg"
     },
-    "tagLine": "Negative Split",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Trail.jpg"
   },
   {
     "name": "30/60 Sprint",
@@ -211,13 +213,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Trail.jpg",
+      "Step 3": "img/Track2.jpg"
     },
-    "tagLine": "Negative Split",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Trail.jpg"
   },
   {
     "name": "Lines",
@@ -233,13 +235,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/Lines1.jpg",
+      "Step 3": ""
     },
-    "tagLine": "Lines",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/Lines1.jpg"
   },
   {
     "name": "Pyramid Drop",
@@ -255,12 +257,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "main/res/drawable/push_up_fig_1.png",
-      "Step 3": "main/res/drawable/push_up_fig_1.png"
+      "Step 1": "img/PyramidDrop.jpg",
+      "Step 3": ""
     },
-    "tagLine": "Pyramid Drop",
+    "tagLine": "",
     "reps": 0,
     "sets": 0,
-    "coverImg": "main/res/drawable/push_up_fig_1.png"
+    "coverImg": "img/PyramidDrop.jpg"
   }
 ]

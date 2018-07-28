@@ -34,8 +34,6 @@
       "duration": 1
     }
   },
-
-
   {"name": "Bicep Curls",
     "equipment": true,
     "HIIT": true,
@@ -78,13 +76,6 @@
       "duration": 0
     }
   },
-  {"name": "Plank Ups",
-    "equipment": false,
-    "HIIT": true,
-    "cardio": {
-      "duration": 0
-    }
-  },
   {"name": "Inch Worm",
     "equipment": false,
     "HIIT": true,
@@ -113,8 +104,6 @@
       "duration": 0
     }
   },
-
-
   {"name": "Squat Jumps",
     "equipment": false,
     "HIIT": true,
@@ -171,8 +160,6 @@
     "duration": 0
   }
 },
-
-
   {"name": "Kettle Bell Swings",
     "equipment": true,
     "HIIT": true,

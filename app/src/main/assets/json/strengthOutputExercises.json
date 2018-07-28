@@ -947,13 +947,13 @@
       }
     ],
     "descripImgs":{
-      "Step 1":"img/DiamondPushUp.jpg",
+      "Step 1":"img/diamondpushup.jpg",
       "Step 2":""
     },
     "tagLine":"3 sets of 8 reps.",
     "reps":8,
     "sets":3,
-    "coverImg":"img/DiamondPushUp.jpg"
+    "coverImg":"img/diamondpushup.jpg"
   },
   {
     "name":"Reverse Grip Lat Pull Downs",

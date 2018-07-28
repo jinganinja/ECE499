@@ -791,14 +791,14 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/abrollouts1.JPG",
-      "Step 2": "img/abrollouts2.JPG",
-      "Step 3": "img/abrollouts3.JPG"
+      "Step 1": "img/abrollouts1.jpg",
+      "Step 2": "img/abrollouts2.jpg",
+      "Step 3": "img/abrollouts3.jpg"
     },
     "tagLine": "1 minute of roll outs, 30 second break before next exercise.",
     "reps": 1,
     "sets": 30,
-    "coverImg": "img/abrollouts2.JPG"
+    "coverImg": "img/abrollouts2.jpg"
   },
   {
     "name": "Russian Twists",

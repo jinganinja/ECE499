@@ -36,6 +36,9 @@ public class CustomWorkout extends AppCompatActivity {
     String jsonObjectAllAndWorkout;
     String workoutGenerated;
     JSONArray allExercisesDescriptions = new JSONArray();
+    JSONArray workoutGeneratedJSON = new JSONArray();
+    JSONArray iterationExercises = new JSONArray();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,14 +66,17 @@ public class CustomWorkout extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Toast.makeText(CustomWorkout.this, "You clicked Regenerate!", Toast.LENGTH_SHORT).show();
-                JSONArray iterationExercises = allExercisesDescriptions;
                 JSONObject workoutResults = new JSONObject();
                 JSONArray workoutObject = new JSONArray();
                 try {
                     int randomNum = 0;
-                    for(int i = 0; i < exercises.size(); i++) {
+                    Log.i(TAG, "the range of the loop: " + Integer.toString(exercises.size()));
+                    for (int j = 0; j < iterationExercises.length(); j++) {
+                        Log.i(TAG, "iteration exercises exercise number: " + Integer.toString(iterationExercises.length()) + ", name: " + iterationExercises.getJSONObject(j).getString("name"));
+                    }
+                    for (int i = 0; i < workoutGeneratedJSON.length(); i++) {
                         randomNum = generateRandomNumber(iterationExercises.length());
-                        workoutObject.put(allExercisesDescriptions.getJSONObject(randomNum));
+                        workoutObject.put(iterationExercises.getJSONObject(randomNum));
                         iterationExercises.remove(randomNum);
                     }
                     workoutResults.put("workoutDescriptions", workoutObject);
@@ -97,7 +103,10 @@ public class CustomWorkout extends AppCompatActivity {
         try {
             JSONObject allDescriptionsAndWorkout = new JSONObject(jsonObjectAllAndWorkout);
             workoutGenerated = allDescriptionsAndWorkout.get("workoutDescriptions").toString();
+            workoutGeneratedJSON = allDescriptionsAndWorkout.getJSONArray("workoutDescriptions");
             allExercisesDescriptions = allDescriptionsAndWorkout.getJSONArray("allWorkoutDescriptions");
+            iterationExercises = allDescriptionsAndWorkout.getJSONArray("allWorkoutDescriptions");
+            Log.i(TAG, "the number of exercise descriptions given: " + Integer.toString(allExercisesDescriptions.length()) + ", the number of exercises in workout: " + Integer.toString(workoutGeneratedJSON.length()));
         } catch (JSONException e) {
             e.printStackTrace();
         }

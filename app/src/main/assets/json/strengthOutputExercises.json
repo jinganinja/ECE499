@@ -1481,12 +1481,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/WalkingLunges.jpg"
+      "Step 1": "img/WalkingLunges.JPG"
     },
     "tagLine": "3 sets of 10 reps (5 each leg per rep). Add weight if desired.",
     "reps": 10,
     "sets": 3,
-    "coverImg": "img/WalkingLunges.jpg"
+    "coverImg": "img/WalkingLunges.JPG"
   },
   {
     "name": "Bulgarian Split Squat",
@@ -1613,13 +1613,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/CalfRaises1.jpg",
-      "Step 2": "img/CalfRaises2.jpg"
+      "Step 1": "img/CalfRaises1.JPG",
+      "Step 2": "img/CalfRaises2.JPG"
     },
     "tagLine": "3 sets of 8 reps. Add weight as desired.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/CalfRaises1.jpg"
+    "coverImg": "img/CalfRaises1.JPG"
   },
   {
     "name": "Bicycle Crunches",
@@ -2220,13 +2220,13 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/LegExtensions1.jpg",
-      "Step 2": "img/LegExtension2.jpg"
+      "Step 1": "img/legextensions1.jpg",
+      "Step 2": "img/legextension2.jpg"
     },
     "tagLine": "3 sets of 8 reps. Increase weight if desired.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/LegExtension2.jpg"
+    "coverImg": "img/legextension2.jpg"
   },
   {
     "name": "Goblet Squats",
@@ -2288,12 +2288,12 @@
       }
     ],
     "descripImgs": {
-      "Step 1": "img/HipThrust1.jpg",
-      "Step 3": "img/HipThrust2.jpg"
+      "Step 1": "img/hipthrust1.jpg",
+      "Step 3": "img/hipthrust2.jpg"
     },
     "tagLine": "3 sets of 8 reps. Increase weight if desired.",
     "reps": 8,
     "sets": 3,
-    "coverImg": "img/HipThrust1.jpg"
+    "coverImg": "img/hipthrust1.jpg"
   }
 ]
